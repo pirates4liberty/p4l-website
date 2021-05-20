@@ -4,7 +4,8 @@
 $theme-colors: map-merge(
                 $theme-colors,
                 (
-                        "warning": #f5dc00
+                        "warning": #f5dc00,
+                        "dark": #000000
                 )
 );
 
@@ -36,10 +37,4 @@ a {
   text-align: center;
   font-weight: bold;
   font-size: 1.2em;
-}
-
-.content .card {
-  font-weight: bold;
-  font-size: 1.2em;
-  text-align: center;
 }
