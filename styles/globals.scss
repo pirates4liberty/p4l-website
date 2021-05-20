@@ -1,3 +1,15 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$theme-colors: map-merge(
+                $theme-colors,
+                (
+                        "warning": #f5dc00
+                )
+);
+
+@import "~bootstrap/scss/bootstrap";
+
 html,
 body {
   padding: 0;
@@ -26,7 +38,7 @@ a {
   font-size: 1.2em;
 }
 
-.content {
+.content .card {
   font-weight: bold;
   font-size: 1.2em;
   text-align: center;
