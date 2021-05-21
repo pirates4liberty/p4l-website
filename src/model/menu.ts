@@ -1,15 +1,19 @@
 export class Menu {
     static items = [
         {
-            title: "Úvod",
+            title: "pages.home.title",
             url: "/"
         },
         {
-            title: "Rozcestník",
+            title: "pages.links.title",
             url: "/links"
         },
         {
-            title: "O nás",
+            title: "pages.events.title",
+            url: "/events"
+        },
+        {
+            title: "pages.about.title",
             url: "/about"
         }
     ];

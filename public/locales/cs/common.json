@@ -1,0 +1,56 @@
+{
+  "pages": {
+    "home": {
+      "title": "Úvod"
+    },
+    "links": {
+      "title": "Rozcestník",
+      "partiesByStates": "Pirátské strany dle států"
+    },
+    "about": {
+      "title": "O nás",
+      "p1": "Utváříme hatefree prostor pro diskuzi a hledání porozumění mezi Piráty a anarchokapitalisty, libertariány či minarchisty.",
+      "p2": "Naším cílem je hledat volnotržní řešení pro výzvy spjaté s naplňováním programu Pirátských stran ve světě. Nabízíme konkrétní libertariánské alternativy k běžným regulacím a prosazujeme možnost volby tam, kde regulace z jakéhokoliv důvodu být musí. Díky tomu, že nejsme svázáni s politickou stranou, můžeme se zasazovat o propagaci (i komerčních) řešení, která podporují svobodný volný trh a rozvoj našich hodnot. Ve své podstatě tak předcházíme případným státním intervencím.",
+      "p3": "Vítáme střet různých názorů a pohledů formou racionální a slušné diskuze. Snažme se respektovat navzájem a odstínit se od emocí tak, aby byla racionální diskuze možná."
+    },
+    "events": {
+      "title": "Akce"
+    }
+  },
+  "hashtags": {
+    "liberty": "svoboda",
+    "liberalisation": "liberalizace",
+    "deregulation": "deregulace",
+    "pirates": "piráti",
+    "responsibility": "zodpovědnost",
+    "discussion": "diskuze",
+    "hatefree": "hatefree",
+    "opensource": "open_source",
+    "crowdfunding": "crowdfunding",
+    "voluntariness": "dobrovolnost"
+  },
+  "values": {
+    "liberty": "Svoboda",
+    "stateTransparency": "Transparentnost státu",
+    "environment": "Životní prostředí",
+    "solidarity": "Solidarita"
+  },
+  "notices": {
+    "notPolitical": "Tato iniciativa není řízena Pirátskou stranou, ani jinou politickou stranou."
+  },
+  "states": {
+    "cz": "Česko",
+    "sk": "Slovensko",
+    "pl": "Polsko",
+    "at": "Rakousko"
+  },
+  "footer": {
+    "codeLicense": "Licence kódu",
+    "textContent": "textový obsah",
+    "ifNotSpecified": "pokud není uvedeno"
+  },
+  "socialLinks": {
+    "fbPage": "Facebook stránka",
+    "fbDiscussGroup": "Diskuzní skupina na Facebooku"
+  }
+}

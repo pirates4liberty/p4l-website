@@ -1,0 +1,56 @@
+{
+  "pages": {
+    "home": {
+      "title": "Home"
+    },
+    "links": {
+      "title": "Links",
+      "partiesByStates": "Pirate parties by states"
+    },
+    "about": {
+      "title": "About Us",
+      "p1": "We create a hate-free space for discussion and the search for understanding between Pirates and anarcho-capitalists, libertarians or minarchists.",
+      "p2": "Our goal is to find a free-market solutions for the challenges associated with the implementation of the Pirate Parties programs in the world. We offer specific libertarian alternatives to conventional regulations and promote choice where regulation for whatever reason must be. Thanks to the fact that we are not tied to a political party, we can advocate the promotion of (even commercial) solutions that support the free market and the development of our values. In essence, we prevent possible state interventions.",
+      "p3": "We welcome the clash of different opinions and views in the form of a rational and decent discussion. Let's try to respect each other and shield ourselves from emotions so that a rational discussion is possible."
+    },
+    "events": {
+      "title": "Events"
+    }
+  },
+  "hashtags": {
+    "liberty": "liberty",
+    "liberalisation": "liberalisation",
+    "deregulation": "deregulation",
+    "pirates": "pirates",
+    "responsibility": "responsibility",
+    "discussion": "discussion",
+    "hatefree": "hatefree",
+    "opensource": "open_source",
+    "crowdfunding": "crowdfunding",
+    "voluntariness": "voluntarity"
+  },
+  "values": {
+    "liberty": "Liberty",
+    "stateTransparency": "State transparency",
+    "environment": "Environment",
+    "solidarity": "Solidarity"
+  },
+  "notices": {
+    "notPolitical": "This initiative is not run by the Pirate Party or any other political party."
+  },
+  "states": {
+    "cz": "Czechia",
+    "sk": "Slovakia",
+    "pl": "Poland",
+    "at": "Austria"
+  },
+  "footer": {
+    "codeLicense": "Code license",
+    "textContent": "text content",
+    "ifNotSpecified": "if not specified"
+  },
+  "socialLinks": {
+    "fbPage": "Facebook page",
+    "fbDiscussGroup": "Facebook discuss group"
+  }
+}
