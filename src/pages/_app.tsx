@@ -3,8 +3,8 @@ import { AppProps } from "next/app";
 
 import nextI18NextConfig from "../../next-i18next.config.js"
 import "../../styles/globals.scss"
-import Footer from "../components/footer";
-import Header from "../components/header";
+import Footer from "../components/WebParts/Footer";
+import Header from "../components/WebParts/Header";
 
 function MyApp({Component, pageProps}: AppProps) {
 

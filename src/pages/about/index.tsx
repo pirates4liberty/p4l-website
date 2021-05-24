@@ -1,26 +1,25 @@
 import { useTranslation } from "next-i18next";
+import Content from "../../components/Content/Content";
+import ContentBox from "../../components/Content/ContentBox";
 import { TranslationHelper } from "../../helpers/translationHelper";
 
 export default function About() {
     const {t} = useTranslation();
 
     return (
-        <div className="bg-light">
-            <div className="container py-5">
-                <div className="p-3 bg-white rounded shadow-sm">
-                    <h2>{t("pages.about.title")}</h2>
-                    <p className="fw-bold">
-                        {t("pages.about.p1")}
-                    </p>
-                    <p>
-                        {t("pages.about.p2")}
-                    </p>
-                    <p>
-                        {t("pages.about.p3")}
-                    </p>
-                </div>
-            </div>
-        </div>
+        <Content>
+            <ContentBox title={t("pages.about.title")}>
+                <p className="fw-bold">
+                    {t("pages.about.p1")}
+                </p>
+                <p>
+                    {t("pages.about.p2")}
+                </p>
+                <p>
+                    {t("pages.about.p3")}
+                </p>
+            </ContentBox>
+        </Content>
     )
 }
 

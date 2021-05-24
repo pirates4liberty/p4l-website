@@ -14,5 +14,7 @@ module.exports = {
         keySeparator: ".",
         nsSeparator: ":"
     },
-    use: []
+    use: [
+       // I18nextBrowserLanguageDetector
+    ]
 }

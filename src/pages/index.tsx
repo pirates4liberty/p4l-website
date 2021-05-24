@@ -1,44 +1,53 @@
 import { faEnvira } from "@fortawesome/free-brands-svg-icons";
 import { faClipboardCheck, faRoute, faUsers } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Link from "next/link"
-import nextI18NextConfig from "../../next-i18next.config";
+import Content from "../components/Content/Content";
+import ContentBox from "../components/Content/ContentBox";
+import HashtagBox from "../components/Hashtag/HashtagBox";
 import { TranslationHelper } from "../helpers/translationHelper";
 
 export default function Home() {
     const {t} = useTranslation();
 
-    const hashtagsList = [
-        {
-            hashtag: 'hashtags.liberty',
-        },
-        {
-            hashtag: 'hashtags.liberalisation',
-        },
-        {
-            hashtag: 'hashtags.deregulation',
-        }
+    const hashtags = [
+        [
+            {hashtagTrans: "hashtags.liberty"},
+            {hashtagTrans: "hashtags.liberalisation"},
+            {hashtagTrans: "hashtags.deregulation"}
+        ],
+        [
+            {hashtagTrans: "hashtags.pirates", link: "/links"},
+            {hashtagTrans: "hashtags.responsibility"},
+            {hashtagTrans: "hashtags.discussion"},
+            {hashtagTrans: "hashtags.hatefree"}
+        ],
+        [
+            {hashtagTrans: "hashtags.opensource"},
+            {hashtagTrans: "hashtags.crowdfunding"},
+            {hashtagTrans: "hashtags.voluntariness"},
+            {hashtagTrans: "hashtags.evidenceBasedPolicy"}
+        ],
     ];
 
-    const valuesList = [
-        {
-            faIcon: faRoute,
-            title: "values.liberty"
-        },
-        {
-            faIcon: faClipboardCheck,
-            title: "values.stateTransparency"
-        },
-        {
-            faIcon: faEnvira,
-            title: "values.environment"
-        },
-        {
-            faIcon: faUsers,
-            title: "values.solidarity"
-        }
+    const values = [
+        [
+            {
+                faIcon: faRoute,
+                hashtagTrans: "values.liberty"
+            },
+            {
+                faIcon: faClipboardCheck,
+                hashtagTrans: "values.stateTransparency"
+            },
+            {
+                faIcon: faEnvira,
+                hashtagTrans: "values.environment"
+            },
+            {
+                faIcon: faUsers,
+                hashtagTrans: "values.solidarity"
+            }
+        ]
     ];
 
     return (
@@ -57,38 +66,12 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="container py-5">
-                <div className="p-3 bg-white rounded shadow-sm text-center fw-bold" style={{fontSize: "1.5em"}}>
-
-                    <span className="mx-2">#{t("hashtags.liberty")}</span>
-                    <span className="mx-2">#{t("hashtags.liberalisation")}</span>
-                    <span className="mx-2">#{t("hashtags.deregulation")}</span>
-                    <br/>
-                    <Link href="/links">
-                        <a className="mx-2">
-                            #{t("hashtags.pirates")}
-                        </a>
-                    </Link>
-                    <span className="mx-2">#{t("hashtags.responsibility")}</span>
-                    <span className="mx-2">#{t("hashtags.discussion")}</span>
-                    <span className="mx-2">#{t("hashtags.hatefree")}</span>
-                    <br/>
-                    <span className="mx-2">#{t("hashtags.opensource")}</span>
-                    <span className="mx-2">#{t("hashtags.crowdfunding")}</span>
-                    <span className="mx-2">#{t("hashtags.voluntariness")}</span>
-                </div>
-
-                <div className="p-3 bg-white rounded shadow-sm text-center fw-bold" style={{fontSize: "1.5em"}}>
-                    {
-                        valuesList.map(el => (
-                            <span className="mx-2" key={el.title}>
-                                <FontAwesomeIcon icon={el.faIcon}></FontAwesomeIcon>&nbsp;
-                                {t(el.title)}
-                            </span>
-                        ))
-                    }
-                </div>
-            </div>
+            <Content className="text-center fw-bold" style={{fontSize: "1.5em"}}>
+                <ContentBox>
+                    <HashtagBox hashtags={hashtags} className="mb-4"/>
+                    <HashtagBox hashtags={values}/>
+                </ContentBox>
+            </Content>
         </div>
     )
 }

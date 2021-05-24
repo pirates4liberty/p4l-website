@@ -6,7 +6,7 @@ import { useTranslation } from "next-i18next";
 import Link from "next/link"
 import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Menu } from "../model/menu";
+import { Menu } from "../../model/menu";
 
 export default function Header() {
     const menuItems = Menu.items;
