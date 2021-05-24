@@ -31,7 +31,7 @@ function init(props: Props) {
 
 function getHashtagSign(data: IHashtag) {
     if (data.faIcon) {
-        return <FontAwesomeIcon icon={data.faIcon} className="mr-2" />
+        return <FontAwesomeIcon icon={data.faIcon} className="mr-2"/>
     }
 
     return <>#</>;
