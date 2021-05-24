@@ -9,6 +9,8 @@ export interface IPirateParty {
     region?: string;
     website?: IExternalLink;
     fbGroups?: IExternalLink[];
+    fbPages?: IExternalLink[];
+    webSystems?: IExternalLink[];
 }
 
 const PirateParties: IPirateParty[] = [
@@ -39,6 +41,42 @@ const PirateParties: IPirateParty[] = [
             {
                 title: "Piráti - Praha",
                 url: "https://www.facebook.com/groups/125479366717/"
+            },
+            {
+                title: "Piráti Praha 1",
+                url: "https://www.facebook.com/groups/httpspraha1.pirati.cz/"
+            },
+            {
+                title: "Senioři na palubě",
+                url: "https://www.facebook.com/groups/seniorinapalube"
+            },
+            {
+                title: "Genderfuck Pirátské soirée aneb rovnost všem",
+                url: "https://www.facebook.com/groups/2454582831467775"
+            }
+        ],
+        fbPages: [
+            {
+                title: "Česká pirátská strana",
+                url: "https://www.facebook.com/ceska.piratska.strana"
+            },
+        ],
+        webSystems: [
+            {
+                title: "Fórum Pirátské strany",
+                url: "https://forum.pirati.cz/"
+            },
+            {
+                title: "Pirátský profil",
+                url: "https://profil.pirati.cz/"
+            },
+            {
+                title: "Mastodon",
+                url: "https://mastodon.pirati.cz/"
+            },
+            {
+                title: "Zulip",
+                url: "https://zulip.pirati.cz/"
             }
         ]
     },

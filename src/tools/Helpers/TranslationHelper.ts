@@ -11,6 +11,6 @@ export class StaticProps {
             props: {
                 ...await serverSideTranslations(locale, namespaces, nextI18NextConfig),
             },
-        });
+        } as any);
     }
 }

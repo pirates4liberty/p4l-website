@@ -15,6 +15,15 @@
     },
     "events": {
       "title": "Events"
+    },
+    "news": {
+      "title": "News",
+      "source": "Source"
+    },
+    "parties": {
+      "fbGroups": "Facebook groups",
+      "fbPages": "Facebook pages",
+      "webSystems": "Pirate systems"
     }
   },
   "hashtags": {

@@ -15,6 +15,15 @@
     },
     "events": {
       "title": "Akce"
+    },
+    "news": {
+      "title": "Novinky",
+      "source": "Zdroj"
+    },
+    "parties": {
+      "fbGroups": "Facebook skupiny",
+      "fbPages": "Facebook stránky",
+      "webSystems": "Pirátské systémy"
     }
   },
   "hashtags": {
