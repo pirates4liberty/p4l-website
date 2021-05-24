@@ -1,26 +1,16 @@
-import { Component } from "react";
-import { IHashtag } from "../../model/interfaces/IHashtag";
+import { IHashtag } from "../../model/IHashtag";
 import Hashtag from "./Hashtag";
-import HashtagTrans from "./HashtagTrans";
 
-export default class HashtagLine extends Component<any, any> {
-    render() {
-        const hashtags = this.props.hashtags;
+interface Props {
+    hashtags: IHashtag[]
+}
 
-        return <div>
+export default function HashtagLine(props: Props) {
+    return (
+        <div>
             {
-                hashtags.map((hashtag: IHashtag, i: number) => {
-                    if (hashtag.hashtag) {
-                        return <Hashtag key={i}
-                                        link={hashtag.link}
-                                        faIcon={hashtag.faIcon}>{hashtag.hashtag}</Hashtag>
-                    } else if (hashtag.hashtagTrans) {
-                        return <HashtagTrans key={i}
-                                             link={hashtag.link}
-                                             faIcon={hashtag.faIcon}>{hashtag.hashtagTrans}</HashtagTrans>
-                    }
-                })
+                props.hashtags.map((hashtag, i) => <Hashtag key={i} data={hashtag}/>)
             }
         </div>
-    }
+    );
 }

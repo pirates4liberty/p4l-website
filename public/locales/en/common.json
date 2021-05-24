@@ -53,5 +53,11 @@
   "socialLinks": {
     "fbPage": "Facebook page",
     "fbDiscussGroup": "Facebook discuss group"
+  },
+  "parties": {
+    "cz": "Czech Pirate Party",
+    "sk": "Pirate Party - Slovakia",
+    "pl": "Polsko",
+    "at": "Rakousko"
   }
 }

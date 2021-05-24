@@ -53,5 +53,11 @@
   "socialLinks": {
     "fbPage": "Facebook stránka",
     "fbDiscussGroup": "Diskuzní skupina na Facebooku"
+  },
+  "parties": {
+    "cz": "Česká pirátská strana",
+    "sk": "Pirátska strana – Slovensko",
+    "pl": "Polsko",
+    "at": "Rakousko"
   }
 }

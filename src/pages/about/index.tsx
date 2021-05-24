@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next";
 import Content from "../../components/Content/Content";
 import ContentBox from "../../components/Content/ContentBox";
-import { TranslationHelper } from "../../helpers/translationHelper";
+import { StaticProps } from "../../tools/Helpers/TranslationHelper";
 
 export default function About() {
     const {t} = useTranslation();
@@ -23,4 +23,4 @@ export default function About() {
     )
 }
 
-export const getStaticProps = TranslationHelper.getStaticProps();
+export const getStaticProps = StaticProps.default();

@@ -1,54 +1,16 @@
-import { faEnvira } from "@fortawesome/free-brands-svg-icons";
-import { faClipboardCheck, faRoute, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "next-i18next";
 import Content from "../components/Content/Content";
 import ContentBox from "../components/Content/ContentBox";
 import HashtagBox from "../components/Hashtag/HashtagBox";
-import { TranslationHelper } from "../helpers/translationHelper";
+import { HashtagsRepository } from "../data/Hashtags/Hashtags";
+import { ValuesRepository } from "../data/Hashtags/Values";
+import { StaticProps } from "../tools/Helpers/TranslationHelper";
 
 export default function Home() {
     const {t} = useTranslation();
 
-    const hashtags = [
-        [
-            {hashtagTrans: "hashtags.liberty"},
-            {hashtagTrans: "hashtags.liberalisation"},
-            {hashtagTrans: "hashtags.deregulation"}
-        ],
-        [
-            {hashtagTrans: "hashtags.pirates", link: "/links"},
-            {hashtagTrans: "hashtags.responsibility"},
-            {hashtagTrans: "hashtags.discussion"},
-            {hashtagTrans: "hashtags.hatefree"}
-        ],
-        [
-            {hashtagTrans: "hashtags.opensource"},
-            {hashtagTrans: "hashtags.crowdfunding"},
-            {hashtagTrans: "hashtags.voluntariness"},
-            {hashtagTrans: "hashtags.evidenceBasedPolicy"}
-        ],
-    ];
-
-    const values = [
-        [
-            {
-                faIcon: faRoute,
-                hashtagTrans: "values.liberty"
-            },
-            {
-                faIcon: faClipboardCheck,
-                hashtagTrans: "values.stateTransparency"
-            },
-            {
-                faIcon: faEnvira,
-                hashtagTrans: "values.environment"
-            },
-            {
-                faIcon: faUsers,
-                hashtagTrans: "values.solidarity"
-            }
-        ]
-    ];
+    const hashtags = (new HashtagsRepository()).getAll();
+    const values = (new ValuesRepository()).getAll();
 
     return (
         <div className="bg-light">
@@ -76,4 +38,4 @@ export default function Home() {
     )
 }
 
-export const getStaticProps = TranslationHelper.getStaticProps();
+export const getStaticProps = StaticProps.default();

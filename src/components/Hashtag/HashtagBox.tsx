@@ -1,4 +1,4 @@
-import { IHashtag } from "../../model/interfaces/IHashtag";
+import { IHashtag } from "../../model/IHashtag";
 import HashtagLine from "./HashtagLine";
 
 interface Props {

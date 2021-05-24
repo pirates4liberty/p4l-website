@@ -6,11 +6,11 @@ import { useTranslation } from "next-i18next";
 import Link from "next/link"
 import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Menu } from "../../model/menu";
+import { MenuItems } from "../../data/MenuItems";
 
 export default function Header() {
-    const menuItems = Menu.items;
     const {t} = useTranslation();
+    const menuItems = MenuItems;
 
     return (
         <header className="p-3 bg-dark text-white">
@@ -18,11 +18,11 @@ export default function Header() {
                 <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                     <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 mr-auto">
                         {
-                            menuItems.map(el => (
-                                <li key={el.title}>
-                                    <Link href={el.url}>
+                            menuItems.map(menuItem => (
+                                <li key={menuItem.title}>
+                                    <Link href={menuItem.url}>
                                         <a className="nav-link px-2 text-white">
-                                            {t(el.title)}
+                                            {t(menuItem.title)}
                                         </a>
                                     </Link>
                                 </li>
@@ -35,7 +35,7 @@ export default function Header() {
                             <a href="https://www.facebook.com/pirates4liberty.cz"
                                target="_blank"
                                className="btn btn-primary mx-1 d-inline-block">
-                                <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={faFacebookF} />
                             </a>
                         </OverlayTrigger>
 
@@ -43,7 +43,7 @@ export default function Header() {
                             <a href="https://www.facebook.com/groups/pirates4liberty.cz"
                                target="_blank"
                                className="btn btn-warning mx-2 d-inline-block">
-                                <FontAwesomeIcon icon={faComments}></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={faComments} />
                             </a>
                         </OverlayTrigger>
 
