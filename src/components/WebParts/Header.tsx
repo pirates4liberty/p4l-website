@@ -1,7 +1,7 @@
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { i18n, useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import Link from "next/link"
 import React, { BaseSyntheticEvent } from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
@@ -53,7 +53,7 @@ export default function Header() {
                         </OverlayTrigger>
 
                         <div className="d-inline-block mt-1">
-                            <select className="form-control" onChange={onLangChange} defaultValue={i18n.language}>
+                            <select className="form-control" onChange={onLangChange}>
                                 <option value={"cz"}>CZ</option>
                                 <option value={"en"}>EN</option>
                             </select>
