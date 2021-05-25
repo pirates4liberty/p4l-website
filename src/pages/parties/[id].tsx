@@ -1,14 +1,11 @@
-import { faFacebookF } from "@fortawesome/free-brands-svg-icons/faFacebookF";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons/faGlobe";
-import { faNewspaper } from "@fortawesome/free-solid-svg-icons/faNewspaper";
-import { faUsers } from "@fortawesome/free-solid-svg-icons/faUsers";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Content from "../../components/Content/Content";
 import ContentBox from "../../components/Content/ContentBox";
-import ExternalLink from "../../components/ExternalLink";
+import ContentHeading from "../../components/Content/ContentHeading";
+import PartiesContent from "../../components/PageParts/Parties/PartiesContent";
+import PartiesLeftMenu from "../../components/PageParts/Parties/PartiesLeftMenu";
 import { IPirateParty, PiratePartiesRepository } from "../../data/PirateParties";
 import { StaticProps } from "../../tools/Helpers/TranslationHelper";
 
@@ -24,7 +21,7 @@ export default function Parties() {
         return (
             <Content>
                 <ContentBox>
-                    Not Found
+                    {t("msg.notFound")}
                 </ContentBox>
             </Content>
         )
@@ -44,78 +41,19 @@ export default function Parties() {
                             </Link>
                         </li>
                         <li className="breadcrumb-item active" aria-current="page">
-                            {party.title}
+                            {t(party.title)}
                         </li>
                     </ol>
                 </nav>
 
-                <ContentBox title={party.title}>
-                    {
-                        party.website &&
-                        <ExternalLink data={party.website}
-                                      title={"Website"}
-                                      className={"btn btn-dark"}
-                                      faIcon={faGlobe}/>
-                    }
+                <ContentHeading>
+                    {t(party.title)}
+                </ContentHeading>
 
-                    <h3 className={"mt-4"}>
-                        <FontAwesomeIcon icon={faUsers} className={"mr-2"}/>
-                        {t("pages.parties.subParties")}
-                    </h3>
-                    {
-                        party.children?.map((child, i) => {
-                            return (
-                                <Link key={i} href={"/parties/" + child.id}>
-                                    <a className={"btn btn-dark m-1"}>
-                                        <FontAwesomeIcon icon={faUsers} className={"mr-2"}/>
-                                        {child.title}
-                                    </a>
-                                </Link>
-                            );
-                        })
-                    }
-
-                    <h3 className={"mt-4"}>
-                        <FontAwesomeIcon icon={faUsers} className={"mr-2"}/>
-                        {t("pages.parties.fbGroups")}
-                    </h3>
-                    {
-                        party.fbGroups?.map((fbGroup, i) => {
-                            return (
-                                <ExternalLink key={i} data={fbGroup}
-                                              className={"btn btn-primary m-1"}
-                                              faIcon={faFacebookF}/>
-                            );
-                        })
-                    }
-
-                    <h3 className={"mt-4"}>
-                        <FontAwesomeIcon icon={faNewspaper} className={"mr-2"}/>
-                        {t("pages.parties.fbPages")}
-                    </h3>
-                    {
-                        party.fbPages?.map((fbGroup, i) => {
-                            return (
-                                <ExternalLink key={i} data={fbGroup}
-                                              className={"btn btn-secondary m-1"}
-                                              faIcon={faFacebookF}/>
-                            );
-                        })
-                    }
-
-                    <h3 className={"mt-4"}>
-                        <FontAwesomeIcon icon={faGlobe} className={"mr-2"}/>
-                        {t("pages.parties.webSystems")}
-                    </h3>
-                    {
-                        party.webSystems?.map((fbGroup, i) => {
-                            return (
-                                <ExternalLink key={i} data={fbGroup}
-                                              className={"btn btn-danger m-1"}/>
-                            );
-                        })
-                    }
-                </ContentBox>
+                <div className={"row"}>
+                    <PartiesLeftMenu data={party} className={"col-md-3"}></PartiesLeftMenu>
+                    <PartiesContent data={party} className={"col-md-9"}></PartiesContent>
+                </div>
             </Content>
         )
     }
@@ -141,7 +79,7 @@ function getPartiesIdsRecursively(parties: IPirateParty[]): any[] {
     });
 
     return out;
-};
+}
 
 export const getStaticPaths = async () => {
     const repository = new PiratePartiesRepository();

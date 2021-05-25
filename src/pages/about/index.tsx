@@ -1,6 +1,8 @@
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
 import Content from "../../components/Content/Content";
 import ContentBox from "../../components/Content/ContentBox";
+import ContentHeading from "../../components/Content/ContentHeading";
 import { StaticProps } from "../../tools/Helpers/TranslationHelper";
 
 export default function About() {
@@ -8,7 +10,22 @@ export default function About() {
 
     return (
         <Content>
-            <ContentBox title={t("pages.about.title")}>
+            <nav aria-label="breadcrumb">
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item">
+                        <Link href={"/"}>
+                            <a>{t("pages.home.title")}</a>
+                        </Link>
+                    </li>
+                    <li className="breadcrumb-item active" aria-current="page">
+                        {t("pages.about.title")}
+                    </li>
+                </ol>
+            </nav>
+
+            <ContentHeading>{t("pages.about.title")}</ContentHeading>
+
+            <ContentBox>
                 <p className="fw-bold">
                     {t("pages.about.p1")}
                 </p>

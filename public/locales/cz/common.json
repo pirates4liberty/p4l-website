@@ -24,7 +24,13 @@
       "fbGroups": "Facebook skupiny",
       "fbPages": "Facebook stránky",
       "webSystems": "Pirátské systémy",
-      "subParties": "Podřazená sdružení"
+      "subParties": "Podřazená sdružení",
+      "superParty": "Nadřazené sdružení",
+      "unofficialInitiatives": "Neoficiální iniciativy",
+      "otherLinks": "Další odkazy"
+    },
+    "projects": {
+      "title": "Projekty"
     }
   },
   "hashtags": {
@@ -53,7 +59,9 @@
     "cz": "Česko",
     "sk": "Slovensko",
     "pl": "Polsko",
-    "at": "Rakousko"
+    "at": "Rakousko",
+    "eu": "Evropská unie",
+    "be": "Bělorusko"
   },
   "footer": {
     "codeLicense": "Licence kódu",
@@ -68,6 +76,15 @@
     "cz": "Česká pirátská strana",
     "sk": "Pirátska strana – Slovensko",
     "pl": "Polská pirátská strana",
-    "at": "Rakouská pirátská strana (piratenpartei)"
+    "at": "Rakouská pirátská strana (piratenpartei)",
+    "eu": "Evropská pirátská strana",
+    "international": "Internacionála pirátských stran",
+    "be": "Pirátské centrum Běloruska"
+  },
+  "msg": {
+    "notFound": "Nenalezeno."
+  },
+  "btn": {
+    "readMore": "Číst dále"
   }
 }

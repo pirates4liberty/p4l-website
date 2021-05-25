@@ -24,7 +24,13 @@
       "fbGroups": "Facebook groups",
       "fbPages": "Facebook pages",
       "webSystems": "Pirate systems",
-      "subParties": "Subordinate parties"
+      "subParties": "Subordinate groups",
+      "superParty": "Parent group",
+      "unofficialInitiatives": "Unofficial initiatives",
+      "otherLinks": "Other links"
+    },
+    "projects": {
+      "title": "Projects"
     }
   },
   "hashtags": {
@@ -53,7 +59,9 @@
     "cz": "Czechia",
     "sk": "Slovakia",
     "pl": "Poland",
-    "at": "Austria"
+    "at": "Austria",
+    "eu": "European Union",
+    "be": "Belarus"
   },
   "footer": {
     "codeLicense": "Code license",
@@ -68,6 +76,15 @@
     "cz": "Czech Pirate Party",
     "sk": "Pirate Party - Slovakia",
     "pl": "Polish Pirate Party",
-    "at": "Pirate Party of Austria (piratenpartei)"
+    "at": "Pirate Party of Austria (piratenpartei)",
+    "eu": "The European Pirate Party",
+    "international": "Pirate Parties International",
+    "be": "The Pirates Center of Belarus"
+  },
+  "msg": {
+    "notFound": "Not Found."
+  },
+  "btn": {
+    "readMore": "Read more"
   }
 }

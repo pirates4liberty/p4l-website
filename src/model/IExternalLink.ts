@@ -1,4 +1,5 @@
 export interface IExternalLink {
     url: string,
-    title?: string
+    title?: string,
+    tags?: string[]
 }

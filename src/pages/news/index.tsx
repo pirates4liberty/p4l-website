@@ -1,4 +1,5 @@
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import Parser from "rss-parser";
 import Content from "../../components/Content/Content";
@@ -26,19 +27,65 @@ export default function News(props: any) {
         }
     }, []);
 
+    const sources = [
+        {
+            title: "Pirati.cz",
+            rssFeed: "https://www.pirati.cz/feed.xml",
+            parties: ["cz"]
+        },
+        {
+            title: "KS Vysočina",
+            rssFeed: "https://vysocina.pirati.cz/feed.xml",
+            parties: ["cz-vys"]
+        }
+    ]
+
+    // TODO: Topics: E.g. Belarus, EU
+
     return (
         <Content>
-            <ContentBox title={t("pages.news.title")}/>
-            {
-                props.feed.items && props.feed.items.map((item: any, i: number) =>
-                    <ContentBox title={item.title} key={i}>
-                        <div className={"text-right"}>
-                            <span className={"mr-4"}>{t("pages.news.source")}: {new URL(item.link).hostname}</span>
-                            <ExternalLink url={item.link} className={"btn btn-dark"} title={"Číst dále…"}/>
+            <nav aria-label="breadcrumb">
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item">
+                        <Link href={"/"}>
+                            <a>{t("pages.home.title")}</a>
+                        </Link>
+                    </li>
+                    <li className="breadcrumb-item active" aria-current="page">
+                        {t("pages.news.title")}
+                    </li>
+                </ol>
+            </nav>
+
+            <h2>
+                <b>{t("pages.news.title")}</b>
+            </h2>
+
+            <div>
+                <span className={"font-weight-bold mr-2"}>Zdroje:</span>
+                {
+                    sources.map(source =>
+                        <span className={"btn btn-secondary m-1"}>{source.title}</span>
+                    )
+                }
+            </div>
+
+            <div className={"row"}>
+                {
+                    props.feed.items && props.feed.items.map((item: any, i: number) =>
+                        <div className={"col-md-6 my-1"} key={i}>
+                            <ContentBox title={item.title}>
+                                <div className={"text-right"}>
+                                    <span
+                                        className={"mr-4"}>{t("pages.news.source")}: {new URL(item.link).hostname}</span>
+                                    <ExternalLink url={item.link} className={"btn btn-dark"}
+                                                  title={t("btn.readMore") + "…"}/>
+                                </div>
+                            </ContentBox>
                         </div>
-                    </ContentBox>
-                )
-            }
+                    )
+                }
+            </div>
         </Content>
     )
 }

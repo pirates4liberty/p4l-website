@@ -21,14 +21,21 @@ export abstract class CachedRepository<T> {
         process: boolean = true,
         getChildren: (item: any) => T[] = (item: any) => {
             return item.children ?? [];
+        },
+        setParent: (item: any, parent: any) => void = (item: any, parent: any) => {
+            item.parent = parent;
         }
     ) {
         const items = this.getAll(cache, process);
 
-        return this.recursivelyGetWithChildren(items, getChildren);
+        return this.recursivelyGetWithChildren(items, getChildren, setParent);
     }
 
-    private recursivelyGetWithChildren(items: T[], getChildren: (item: any) => T[]) {
+    private recursivelyGetWithChildren(
+        items: T[],
+        getChildren: (item: any) => T[],
+        setParent: (item: any, parent: any) => void
+    ) {
         let out: T[] = [];
 
         items.forEach((item) => {
@@ -36,8 +43,12 @@ export abstract class CachedRepository<T> {
 
             let children = getChildren(item);
 
+            children.forEach(child => {
+                setParent(child, item);
+            })
+
             if (children.length) {
-                out = out.concat(out, this.recursivelyGetWithChildren(children, getChildren));
+                out = out.concat(out, this.recursivelyGetWithChildren(children, getChildren, setParent));
             }
         })
 
