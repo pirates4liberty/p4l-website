@@ -21,11 +21,11 @@ export default function Parties() {
 
     const party = repository.getAllRecursively().find(party => {
         if(party.projects) {
-            return party.projects.find(project => project.id === id);
+            return party.projects?.find(project => project.id === id);
         }
     });
 
-    const project = party.projects.find(project => project.id === id);
+    const project = party?.projects?.find(project => project.id === id);
 
     if (project === undefined) {
         return (
