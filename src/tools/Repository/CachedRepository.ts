@@ -16,6 +16,34 @@ export abstract class CachedRepository<T> {
         return this.cacheOut.load(() => this.processAll());
     }
 
+    getAllRecursively(
+        cache: boolean = true,
+        process: boolean = true,
+        getChildren: (item: any) => T[] = (item: any) => {
+            return item.children ?? [];
+        }
+    ) {
+        const items = this.getAll(cache, process);
+
+        return this.recursivelyGetWithChildren(items, getChildren);
+    }
+
+    private recursivelyGetWithChildren(items: T[], getChildren: (item: any) => T[]) {
+        let out: T[] = [];
+
+        items.forEach((item) => {
+            out.push(item);
+
+            let children = getChildren(item);
+
+            if (children.length) {
+                out = out.concat(out, this.recursivelyGetWithChildren(children, getChildren));
+            }
+        })
+
+        return out;
+    }
+
     protected processItem: (item: T) => T = (item) => item;
 
     protected abstract fetchAll(): T[];

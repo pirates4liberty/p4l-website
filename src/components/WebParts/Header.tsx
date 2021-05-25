@@ -1,14 +1,14 @@
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useTranslation } from "next-i18next";
+import { i18n, useTranslation } from "next-i18next";
 import Link from "next/link"
 import React, { BaseSyntheticEvent } from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { MenuItems } from "../../data/MenuItems";
 
 function onLangChange(e: BaseSyntheticEvent) {
-    window.location.href = "/" + e.target.value;
+    i18n?.changeLanguage(e.target.value);
 }
 
 export default function Header() {
@@ -53,9 +53,12 @@ export default function Header() {
                         </OverlayTrigger>
 
                         <div className="d-inline-block mt-1">
-                            <select className="form-control" onChange={onLangChange}>
-                                <option value={"cz"}>CZ</option>
-                                <option value={"en"}>EN</option>
+                            <select className="form-control" value={i18n?.language} onChange={onLangChange}>
+                                {["en", "cz"].map(lang => (
+                                    <option key={lang} value={lang}>
+                                        {lang.toUpperCase()}
+                                    </option>
+                                ))}
                             </select>
                         </div>
                     </div>

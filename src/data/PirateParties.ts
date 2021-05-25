@@ -11,6 +11,8 @@ export interface IPirateParty {
     fbGroups?: IExternalLink[];
     fbPages?: IExternalLink[];
     webSystems?: IExternalLink[];
+    children?: IPirateParty[];
+    parent?: IPirateParty;
 }
 
 const PirateParties: IPirateParty[] = [
@@ -37,14 +39,6 @@ const PirateParties: IPirateParty[] = [
             {
                 title: "Supertajnánekvotováskupinatopsecretvoe",
                 url: "https://www.facebook.com/groups/2017699364980792"
-            },
-            {
-                title: "Piráti - Praha",
-                url: "https://www.facebook.com/groups/125479366717/"
-            },
-            {
-                title: "Piráti Praha 1",
-                url: "https://www.facebook.com/groups/httpspraha1.pirati.cz/"
             },
             {
                 title: "Senioři na palubě",
@@ -77,6 +71,110 @@ const PirateParties: IPirateParty[] = [
             {
                 title: "Zulip",
                 url: "https://zulip.pirati.cz/"
+            },
+            {
+                title: "Wiki",
+                url: "https://wiki.pirati.cz/"
+            },
+            {
+                title: "Redmine",
+                url: "http://redmine.pirati.cz/"
+            },
+            {
+                title: "Pirátské listy",
+                url: "http://www.piratskelisty.cz/"
+            },
+            {
+                title: "E-shop",
+                url: "http://shop.pirati.cz/"
+            },
+            {
+                title: "Registr smluv",
+                url: "https://smlouvy.pirati.cz/"
+            },
+            {
+                title: "Evidence lobystických kontaktů",
+                url: "https://smlouvy.pirati.cz/"
+            },
+            {
+                title: "Otevřené účetnictví",
+                url: "https://piroplaceni.pirati.cz/"
+            }
+        ],
+        children: [
+            {
+                id: "cz-jc",
+                title: "KS Jihočeský kraj"
+            },
+            {
+                id: "cz-jm",
+                title: "KS Jihomoravský kraj"
+            },
+            {
+                id: "cz-kv",
+                title: "KS Karlovarský kraj"
+            },
+            {
+                id: "cz-hk",
+                title: "KS Královéhradecké kraj"
+            },
+            {
+                id: "cz-lib",
+                title: "KS Liberecký kraj"
+            },
+            {
+                id: "cz-ms",
+                title: "KS Moravskoslezský kraj"
+            },
+            {
+                id: "cz-ol",
+                title: "KS Olomoucký kraj"
+            },
+            {
+                id: "cz-par",
+                title: "KS Pardubický kraj"
+            },
+            {
+                id: "cz-plz",
+                title: "KS Plzeňský kraj"
+            },
+            {
+                id: "cz-praha",
+                title: "KS Praha",
+                children: [
+                    {
+                        id: "cz-praha-1",
+                        title: "MS Praha 1",
+                        fbGroups: [
+                            {
+                                title: "Piráti Praha 1",
+                                url: "https://www.facebook.com/groups/httpspraha1.pirati.cz/"
+                            }
+                        ]
+                    }
+                ],
+                fbGroups: [
+                    {
+                        title: "Piráti - Praha",
+                        url: "https://www.facebook.com/groups/125479366717/"
+                    }
+                ]
+            },
+            {
+                id: "cz-sc",
+                title: "KS Středočeský kraj"
+            },
+            {
+                id: "cz-uk",
+                title: "KS Ústecký kraj"
+            },
+            {
+                id: "cz-vys",
+                title: "KS Vysočina"
+            },
+            {
+                id: "cz-zk",
+                title: "KS Zlínský kraj"
             }
         ]
     },
@@ -127,5 +225,4 @@ export class PiratePartiesRepository extends CachedRepository<IPirateParty> {
     protected fetchAll() {
         return PirateParties;
     }
-
 }

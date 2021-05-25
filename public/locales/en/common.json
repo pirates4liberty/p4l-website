@@ -23,7 +23,8 @@
     "parties": {
       "fbGroups": "Facebook groups",
       "fbPages": "Facebook pages",
-      "webSystems": "Pirate systems"
+      "webSystems": "Pirate systems",
+      "subParties": "Subordinate parties"
     }
   },
   "hashtags": {
