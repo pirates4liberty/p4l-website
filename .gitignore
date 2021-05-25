@@ -35,3 +35,7 @@ yarn-error.log*
 
 # IDEs
 .idea/
+
+# Generated public files
+public/sitemap*.xml
+public/robots.txt
