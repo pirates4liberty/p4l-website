@@ -1,9 +1,11 @@
+import { faNewspaper } from "@fortawesome/free-solid-svg-icons/faNewspaper";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Parser from "rss-parser";
 import Content from "../../components/Content/Content";
 import ContentBox from "../../components/Content/ContentBox";
+import ContentHeading from "../../components/Content/ContentHeading";
 import ExternalLink from "../../components/ExternalLink";
 import { StaticProps } from "../../tools/Helpers/TranslationHelper";
 
@@ -29,14 +31,43 @@ export default function News(props: any) {
 
     const sources = [
         {
+            id: "cz-pirati",
             title: "Pirati.cz",
             rssFeed: "https://www.pirati.cz/feed.xml",
             parties: ["cz"]
         },
         {
+            id: "cz-pirati-pracuji",
+            title: "Piráti pracují.cz",
+            rssFeed: "https://www.pirati.cz/feed.xml",
+            parties: ["cz"]
+        },
+        {
+            id: "cz-ks-vysocina",
             title: "KS Vysočina",
             rssFeed: "https://vysocina.pirati.cz/feed.xml",
             parties: ["cz-vys"]
+        }
+    ]
+
+    const topics = [
+        {
+            title: "EU",
+            filter: (item: any) => {
+
+            }
+        },
+        {
+            title: "Rusko",
+            filter: (item: any) => {
+
+            }
+        },
+        {
+            title: "Bělorusko",
+            filter: (item: any) => {
+
+            }
         }
     ]
 
@@ -57,15 +88,30 @@ export default function News(props: any) {
                 </ol>
             </nav>
 
-            <h2>
-                <b>{t("pages.news.title")}</b>
-            </h2>
+            <ContentHeading faIcon={faNewspaper}>
+                {t("pages.news.title")}
+            </ContentHeading>
 
             <div>
                 <span className={"font-weight-bold mr-2"}>Zdroje:</span>
+
+                <span className={"btn btn-secondary m-1"}>Vše</span>
+
                 {
                     sources.map(source =>
                         <span className={"btn btn-secondary m-1"}>{source.title}</span>
+                    )
+                }
+            </div>
+
+            <div>
+                <span className={"font-weight-bold mr-2"}>Témata:</span>
+
+                <span className={"btn btn-secondary m-1"}>Vše</span>
+
+                {
+                    topics.map(topic =>
+                        <span className={"btn btn-secondary m-1"}>{topic.title}</span>
                     )
                 }
             </div>

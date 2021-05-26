@@ -1,4 +1,5 @@
 import { useTranslation } from "next-i18next";
+import Image from "next/image";
 import Content from "../components/Content/Content";
 import ContentBox from "../components/Content/ContentBox";
 import HashtagBox from "../components/Hashtag/HashtagBox";
@@ -17,7 +18,13 @@ export default function Home() {
             <div className="cover">
                 <div className="container">
                     <a href="https://www.facebook.com/groups/pirates4liberty.cz">
-                        <img src="pirates4liberty_cover_text1.png"/>
+                        <Image
+                            src="/pirates4liberty_cover_text1.png"
+                            alt="Pirates 4 Liberty - Svoboda a zodpovědnost"
+                            layout="responsive"
+                            width={1110}
+                            height={624}
+                        />
                     </a>
                 </div>
             </div>
