@@ -49,10 +49,10 @@ export default function Links() {
                                 <div className={"row"}>
                                     {
                                         party.children && party.children.map((subParty, j) => (
-                                            <div className={"col-md-4 p-2"}>
+                                            <div className={"col-md-4 p-2"} key={j}>
                                                 <Link href={"/parties/" + subParty.id}>
                                                     <a className={"btn btn-lg btn-dark btn-block"}>
-                                                        {t(subParty.title)} - {subParty.id.toUpperCase()}
+                                                        {t("states." + subParty.id)}
                                                     </a>
                                                 </Link>
                                             </div>

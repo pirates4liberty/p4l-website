@@ -368,6 +368,25 @@ const PirateParties: IPirateParty[] = [
             {
                 id: "be",
                 title: "parties.be"
+            },
+            {
+                id: "ba",
+                title: "parties.ba"
+            },
+            {
+                id: "br",
+                title: "parties.br",
+                website: {
+                    url: "https://partidopirata.org/"
+                }
+            },
+            {
+                id: "bg",
+                title: "parties.bg"
+            },
+            {
+                id: "cat",
+                title: "parties.cat"
             }
         ]
     }

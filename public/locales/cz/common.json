@@ -61,7 +61,11 @@
     "pl": "Polsko",
     "at": "Rakousko",
     "eu": "Evropská unie",
-    "be": "Bělorusko"
+    "be": "Bělorusko",
+    "ba": "Bosna a Hercegovina",
+    "br": "Brazílie",
+    "bg": "Bulharsko",
+    "cat": "Katalánsko"
   },
   "footer": {
     "codeLicense": "Licence kódu",
@@ -79,7 +83,11 @@
     "at": "Rakouská pirátská strana (piratenpartei)",
     "eu": "Evropská pirátská strana",
     "international": "Internacionála pirátských stran",
-    "be": "Pirátské centrum Běloruska"
+    "be": "Pirátské centrum Běloruska",
+    "ba": "Pirátská strana Bosny a Hercegoviny",
+    "br": "Pirátská strana Brazílie",
+    "bg": "Pirátská strana Bulharska",
+    "cat": "Pirátská strana Katalánska"
   },
   "msg": {
     "notFound": "Nenalezeno."

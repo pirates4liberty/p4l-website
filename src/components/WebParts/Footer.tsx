@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="container">
                 <ul className="bd-footer-links ps-0 mb-3">
                     <li className="d-inline-block">
-                        <a href="https://github.com/cothema/pirates4liberty" rel="noreferrer">
+                        <a href="https://github.com/miloshavlicek/pirates4liberty" rel="noreferrer">
                             <FontAwesomeIcon icon={faGithub}/>&nbsp;
                             GitHub
                         </a>
@@ -19,7 +19,7 @@ export default function Footer() {
 
                 <p className="mb-0">
                     {t("footer.codeLicense")}:&nbsp;
-                    <a href=" https://github.com/cothema/pirates4liberty-web/tree/main/LICENSE"
+                    <a href=" https://github.com/miloshavlicek/pirates4liberty-web/tree/main/LICENSE"
                        rel="license noopener noreferrer"
                        target="_blank">
                         MIT

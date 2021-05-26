@@ -61,7 +61,11 @@
     "pl": "Poland",
     "at": "Austria",
     "eu": "European Union",
-    "be": "Belarus"
+    "be": "Belarus",
+    "ba": "Bosnia and Herzegovina",
+    "br": "Brazil",
+    "bg": "Bulgaria",
+    "cat": "Catalonia"
   },
   "footer": {
     "codeLicense": "Code license",
@@ -79,7 +83,11 @@
     "at": "Pirate Party of Austria (piratenpartei)",
     "eu": "The European Pirate Party",
     "international": "Pirate Parties International",
-    "be": "The Pirates Center of Belarus"
+    "be": "The Pirates Center of Belarus",
+    "ba": "Pirate Party of Bosnia and Herzegovina (PiratskaPartija.ba)",
+    "br": "Pirate Party of Brazil",
+    "bg": "Pirate Party of Bulgaria",
+    "cat": "Pirate Party of Catalonia"
   },
   "msg": {
     "notFound": "Not Found."
