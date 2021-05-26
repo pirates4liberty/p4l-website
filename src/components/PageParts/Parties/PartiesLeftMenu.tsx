@@ -1,9 +1,10 @@
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons/faFacebookF";
+import { faWikipediaW } from "@fortawesome/free-brands-svg-icons/faWikipediaW";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons/faGlobe";
 import { faSitemap } from "@fortawesome/free-solid-svg-icons/faSitemap";
 import { faUsers } from "@fortawesome/free-solid-svg-icons/faUsers";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useTranslation } from "next-i18next";
+import { i18n, useTranslation } from "next-i18next";
 import Link from "next/link";
 import { IPirateParty } from "../../../data/PirateParties";
 import ContentBox from "../../Content/ContentBox";
@@ -19,6 +20,8 @@ export default function PartiesLeftMenu(props: Props) {
 
     const party = props.data || {} as IPirateParty;
 
+    const wikiLink = party.links?.find(link => link.tags?.includes("wikipedia") && link.lang === i18n?.language);
+
     return (
         <ContentBox className={props.className}>
             {
@@ -27,6 +30,13 @@ export default function PartiesLeftMenu(props: Props) {
                               title={"Website"}
                               className={"btn btn-secondary btn-block"}
                               faIcon={faGlobe}/>
+            }
+            {
+                wikiLink &&
+                <ExternalLink data={wikiLink}
+                              title={"Wikipedia"}
+                              className={"btn btn-secondary btn-sm btn-block"}
+                              faIcon={faWikipediaW}/>
             }
 
             {
@@ -63,7 +73,7 @@ export default function PartiesLeftMenu(props: Props) {
                     </h3>
 
                     <Link href={"/parties/" + party.parent.id}>
-                        <a className={"btn btn-secondary btn-block text-left"}>
+                        <a className={"btn btn-secondary btn-sm btn-block text-left"}>
                             {t(party.parent.title)}
                         </a>
                     </Link>

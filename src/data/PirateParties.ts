@@ -25,6 +25,7 @@ export interface IPirateParty {
     children?: IPirateParty[];
     parent?: IPirateParty;
     projects?: IProject[];
+    links?: IExternalLink[];
 }
 
 const PirateParties: IPirateParty[] = [
@@ -35,6 +36,18 @@ const PirateParties: IPirateParty[] = [
         website: {
             url: "https://pp-international.net/"
         },
+        links: [
+            {
+                url: "https://en.wikipedia.org/wiki/Pirate_Parties_International",
+                lang: "en",
+                tags: ["wikipedia"]
+            },
+            {
+                url: "https://cs.wikipedia.org/wiki/Internacion%C3%A1la_pir%C3%A1tsk%C3%BDch_stran",
+                lang: "cz",
+                tags: ["wikipedia"]
+            }
+        ],
         children: [
             {
                 id: "eu",
@@ -103,15 +116,15 @@ const PirateParties: IPirateParty[] = [
                     },
                     {
                         title: "Redmine",
-                        url: "http://redmine.pirati.cz/"
+                        url: "https://redmine.pirati.cz/"
                     },
                     {
                         title: "Pirátské listy",
-                        url: "http://www.piratskelisty.cz/"
+                        url: "https://www.piratskelisty.cz/"
                     },
                     {
-                        title: "E-shop",
-                        url: "http://shop.pirati.cz/"
+                        title: "Pirátský obchod (e-shop)",
+                        url: "https://www.piratskyobchod.cz/"
                     },
                     {
                         title: "Registr smluv",
@@ -338,6 +351,14 @@ const PirateParties: IPirateParty[] = [
                             }
                         ],
                         tags: ["unofficial"]
+                    },
+                    {
+                        id: "piratskatelevize",
+                        title: "Pirátská televize",
+                        tags: ["unofficial"],
+                        website: {
+                            url: "https://piratskatelevize.cz/"
+                        }
                     }
                 ]
             },
@@ -387,6 +408,49 @@ const PirateParties: IPirateParty[] = [
             {
                 id: "cat",
                 title: "parties.cat"
+            },
+            {
+                id: "cl",
+                title: "parties.cl",
+                website: {
+                    url: "https://www.partidopirata.cl/"
+                },
+                links: [
+                    {
+                        url: "https://en.wikipedia.org/wiki/Pirate_Party_of_Chile",
+                        lang: "en",
+                        tags: ["wikipedia"]
+                    }
+                ]
+            },
+            {
+                id: "ee",
+                title: "parties.ee",
+                website: {
+                    url: "https://piraadipartei.ee/"
+                },
+                links: [
+                    {
+                        url: "https://en.wikipedia.org/wiki/Estonian_Pirate_Party",
+                        lang: "en",
+                        tags: ["wikipedia"]
+                    }
+                ]
+            },
+            {
+                id: "fr",
+                title: "parties.fr",
+                website: {
+                    url: "https://partipirate.org/",
+                    lang: "fr"
+                },
+                links: [
+                    {
+                        url: "https://en.wikipedia.org/wiki/Pirate_Party_(France)",
+                        lang: "en",
+                        tags: ["wikipedia"]
+                    }
+                ]
             }
         ]
     }

@@ -21,10 +21,13 @@ export default function PartiesContent(props: Props) {
 
     return (
         <ContentBox className={props.className}>
-            <h3 className={"mt-4"}>
-                <FontAwesomeIcon icon={faProjectDiagram} className={"mr-2"}/>
-                {t("pages.projects.title")}
-            </h3>
+            {
+                party.projects?.length &&
+                <h3 className={"mt-4"}>
+                    <FontAwesomeIcon icon={faProjectDiagram} className={"mr-2"}/>
+                    {t("pages.projects.title")}
+                </h3>
+            }
             {
                 party.projects?.map((project, i) => {
                     let note = "";
@@ -45,10 +48,13 @@ export default function PartiesContent(props: Props) {
                 })
             }
 
-            <h3 className={"mt-4"}>
-                <FontAwesomeIcon icon={faGlobe} className={"mr-2"}/>
-                {t("pages.parties.webSystems")}
-            </h3>
+            {
+                party.webSystems?.length &&
+                <h3 className={"mt-4"}>
+                    <FontAwesomeIcon icon={faGlobe} className={"mr-2"}/>
+                    {t("pages.parties.webSystems")}
+                </h3>
+            }
             {
                 party.webSystems?.map((fbGroup, i) => {
                     return (

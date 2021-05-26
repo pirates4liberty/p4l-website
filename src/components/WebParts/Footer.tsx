@@ -1,6 +1,7 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
 
 export default function Footer() {
     const {t} = useTranslation();
@@ -10,6 +11,10 @@ export default function Footer() {
             <div className="container">
                 <ul className="bd-footer-links ps-0 mb-3">
                     <li className="d-inline-block">
+                        <Link href={"/terms"}>
+                            <a>{t("pages.terms.title")}</a>
+                        </Link>
+                        &nbsp;|&nbsp;
                         <a href="https://github.com/miloshavlicek/pirates4liberty" rel="noreferrer">
                             <FontAwesomeIcon icon={faGithub}/>&nbsp;
                             GitHub

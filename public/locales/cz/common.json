@@ -31,6 +31,9 @@
     },
     "projects": {
       "title": "Projekty"
+    },
+    "terms": {
+      "title": "Podmínky užití"
     }
   },
   "hashtags": {
@@ -65,7 +68,10 @@
     "ba": "Bosna a Hercegovina",
     "br": "Brazílie",
     "bg": "Bulharsko",
-    "cat": "Katalánsko"
+    "cat": "Katalánsko",
+    "cl": "Chile",
+    "ee": "Estonsko",
+    "fr": "Francie"
   },
   "footer": {
     "codeLicense": "Licence kódu",
@@ -87,7 +93,10 @@
     "ba": "Pirátská strana Bosny a Hercegoviny",
     "br": "Pirátská strana Brazílie",
     "bg": "Pirátská strana Bulharska",
-    "cat": "Pirátská strana Katalánska"
+    "cat": "Pirátská strana Katalánska",
+    "cl": "Pirátská strana Chile",
+    "ee": "Estonská pirátská strana",
+    "fr": "Pirátská strana Francie"
   },
   "msg": {
     "notFound": "Nenalezeno."
