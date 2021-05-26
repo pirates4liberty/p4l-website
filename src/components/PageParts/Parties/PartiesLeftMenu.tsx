@@ -1,6 +1,9 @@
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons/faFacebookF";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons/faTwitter";
 import { faWikipediaW } from "@fortawesome/free-brands-svg-icons/faWikipediaW";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons/faGlobe";
+import { faRss } from "@fortawesome/free-solid-svg-icons/faRss";
 import { faSitemap } from "@fortawesome/free-solid-svg-icons/faSitemap";
 import { faUsers } from "@fortawesome/free-solid-svg-icons/faUsers";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,13 +23,24 @@ export default function PartiesLeftMenu(props: Props) {
 
     const party = props.data || {} as IPirateParty;
 
+    let website = party.links?.find(link => link.tags?.includes("website") && link.lang === i18n?.language);
+    if (!website) {
+        website = party.links?.find(link => link.tags?.includes("website"));
+    }
+
     const wikiLink = party.links?.find(link => link.tags?.includes("wikipedia") && link.lang === i18n?.language);
+
+    const twitter = party.links?.find(link => link.tags?.includes("twitter"));
+
+    const instagram = party.links?.find(link => link.tags?.includes("instagram"));
+
+    const rss = party.links?.find(link => link.tags?.includes("rss/atom"));
 
     return (
         <ContentBox className={props.className}>
             {
-                party.website &&
-                <ExternalLink data={party.website}
+                website &&
+                <ExternalLink data={website}
                               title={"Website"}
                               className={"btn btn-secondary btn-block"}
                               faIcon={faGlobe}/>
@@ -39,17 +53,42 @@ export default function PartiesLeftMenu(props: Props) {
                               faIcon={faWikipediaW}/>
             }
 
-            {
-                party.fbPages?.filter(fbPage => {
-                    return fbPage.tags?.includes("official");
-                }).map((fbPage, i) => {
-                    return (
-                        <ExternalLink key={i} data={fbPage}
-                                      className={"btn btn-primary btn-block"}
-                                      faIcon={faFacebookF}/>
-                    );
-                })
-            }
+            <div className={"my-2 text-center"}>
+                {
+                    party.fbPages?.filter(fbPage => {
+                        return fbPage.tags?.includes("official");
+                    }).map((fbPage, i) => {
+                        return (
+                            <ExternalLink key={i}
+                                          data={fbPage}
+                                          title={""}
+                                          className={"btn btn-primary mr-1"}
+                                          faIcon={faFacebookF}/>
+                        );
+                    })
+                }
+                {
+                    twitter &&
+                    <ExternalLink data={twitter}
+                                  title={""}
+                                  className={"btn btn-primary mr-1"}
+                                  faIcon={faTwitter}/>
+                }
+                {
+                    instagram &&
+                    <ExternalLink data={instagram}
+                                  title={""}
+                                  className={"btn btn-danger mr-1"}
+                                  faIcon={faInstagram}/>
+                }
+                {
+                    rss &&
+                    <ExternalLink data={rss}
+                                  title={""}
+                                  className={"btn btn-warning mr-1"}
+                                  faIcon={faRss}/>
+                }
+            </div>
 
             {
                 party.fbGroups?.filter(fbGroup => {

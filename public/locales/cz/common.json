@@ -71,7 +71,10 @@
     "cat": "Katalánsko",
     "cl": "Chile",
     "ee": "Estonsko",
-    "fr": "Francie"
+    "fr": "Francie",
+    "de": "Německo",
+    "gr": "Řecko",
+    "hu": "Maďarsko"
   },
   "footer": {
     "codeLicense": "Licence kódu",
@@ -96,7 +99,10 @@
     "cat": "Pirátská strana Katalánska",
     "cl": "Pirátská strana Chile",
     "ee": "Estonská pirátská strana",
-    "fr": "Pirátská strana Francie"
+    "fr": "Pirátská strana Francie",
+    "de": "Pirátská strana Německo",
+    "gr": "Pirátská strana Řecka",
+    "hu": "Pirátská strana Maďarska"
   },
   "msg": {
     "notFound": "Nenalezeno."

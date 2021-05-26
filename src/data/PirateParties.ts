@@ -18,7 +18,6 @@ export interface IPirateParty {
     title: string;
     abbrev?: string;
     region?: string;
-    website?: IExternalLink;
     fbGroups?: IExternalLink[];
     fbPages?: IExternalLink[];
     webSystems?: IExternalLink[];
@@ -33,10 +32,12 @@ const PirateParties: IPirateParty[] = [
         id: "international",
         title: "parties.international",
         abbrev: "PPI",
-        website: {
-            url: "https://pp-international.net/"
-        },
         links: [
+            {
+                url: "https://pp-international.net/",
+                lang: "en",
+                tags: ["website"]
+            },
             {
                 url: "https://en.wikipedia.org/wiki/Pirate_Parties_International",
                 lang: "en",
@@ -52,18 +53,107 @@ const PirateParties: IPirateParty[] = [
             {
                 id: "eu",
                 title: "parties.eu",
-                website: {
-                    title: "states.eu",
-                    url: "https://european-pirateparty.eu/"
-                }
+                links: [
+                    {
+                        title: "states.eu",
+                        url: "https://european-pirateparty.eu/",
+                        lang: "en",
+                        tags: ["website"]
+                    }
+                ]
+            },
+            {
+                id: "at",
+                title: "parties.at",
+                links: [
+                    {
+                        title: "states.at",
+                        url: "https://piratenpartei.at/",
+                        lang: "at",
+                        tags: ["website"]
+                    }
+                ]
+            },
+            {
+                id: "pl",
+                title: "parties.pl",
+                links: [
+                    {
+                        title: "states.pl",
+                        url: "https://polskapartiapiratow.pl/",
+                        lang: "pl",
+                        tags: ["website"]
+                    }
+                ]
+            },
+            {
+                id: "be",
+                title: "parties.be"
+            },
+            {
+                id: "ba",
+                title: "parties.ba"
+            },
+            {
+                id: "br",
+                title: "parties.br",
+                links: [
+                    {
+                        url: "https://partidopirata.org/",
+                        lang: "br",
+                        tags: ["website"]
+                    }
+                ]
+            },
+            {
+                id: "bg",
+                title: "parties.bg"
+            },
+            {
+                id: "cat",
+                title: "parties.cat"
+            },
+            {
+                id: "cl",
+                title: "parties.cl",
+                links: [
+                    {
+                        url: "https://en.wikipedia.org/wiki/Pirate_Party_of_Chile",
+                        lang: "en",
+                        tags: ["wikipedia"]
+                    },
+                    {
+                        url: "https://www.partidopirata.cl/",
+                        lang: "cl",
+                        tags: ["website"]
+                    }
+                ]
             },
             {
                 id: "cz",
                 title: "parties.cz",
-                website: {
-                    title: "states.cz",
-                    url: "https://www.pirati.cz/"
-                },
+                links: [
+                    {
+                        url: "https://www.pirati.cz/",
+                        lang: "cz",
+                        tags: ["website"]
+                    },
+                    {
+                        url: "https://www.twitter.com/PiratskaStrana",
+                        lang: "cz",
+                        tags: ["twitter"]
+                    },
+                    {
+                        url: "https://www.instagram.com/pirati.cz/",
+                        lang: "cz",
+                        tags: ["instagram"]
+                    },
+                    {
+                        url: "https://www.pirati.cz/feed.xml",
+                        lang: "cz",
+                        tags: ["rss/atom"]
+                    }
+                ],
                 fbGroups: [
                     {
                         title: "Piráti v médiích",
@@ -363,92 +453,88 @@ const PirateParties: IPirateParty[] = [
                 ]
             },
             {
-                id: "sk",
-                title: "parties.sk",
-                website: {
-                    title: "states.sk",
-                    url: "https://www.slovenskipirati.sk/"
-                }
-            },
-            {
-                id: "at",
-                title: "parties.at",
-                website: {
-                    title: "states.at",
-                    url: "https://piratenpartei.at/"
-                }
-            },
-            {
-                id: "pl",
-                title: "parties.pl",
-                website: {
-                    title: "states.pl",
-                    url: "https://polskapartiapiratow.pl/"
-                }
-            },
-            {
-                id: "be",
-                title: "parties.be"
-            },
-            {
-                id: "ba",
-                title: "parties.ba"
-            },
-            {
-                id: "br",
-                title: "parties.br",
-                website: {
-                    url: "https://partidopirata.org/"
-                }
-            },
-            {
-                id: "bg",
-                title: "parties.bg"
-            },
-            {
-                id: "cat",
-                title: "parties.cat"
-            },
-            {
-                id: "cl",
-                title: "parties.cl",
-                website: {
-                    url: "https://www.partidopirata.cl/"
-                },
-                links: [
-                    {
-                        url: "https://en.wikipedia.org/wiki/Pirate_Party_of_Chile",
-                        lang: "en",
-                        tags: ["wikipedia"]
-                    }
-                ]
-            },
-            {
                 id: "ee",
                 title: "parties.ee",
-                website: {
-                    url: "https://piraadipartei.ee/"
-                },
                 links: [
                     {
                         url: "https://en.wikipedia.org/wiki/Estonian_Pirate_Party",
                         lang: "en",
                         tags: ["wikipedia"]
+                    },
+                    {
+                        url: "https://piraadipartei.ee/",
+                        lang: "ee",
+                        tags: ["website"]
                     }
                 ]
             },
             {
                 id: "fr",
                 title: "parties.fr",
-                website: {
-                    url: "https://partipirate.org/",
-                    lang: "fr"
-                },
                 links: [
                     {
                         url: "https://en.wikipedia.org/wiki/Pirate_Party_(France)",
                         lang: "en",
                         tags: ["wikipedia"]
+                    },
+                    {
+                        url: "https://partipirate.org/",
+                        lang: "fr",
+                        tags: ["website"]
+                    }
+                ]
+            },
+            {
+                id: "de",
+                title: "parties.de",
+                links: [
+                    {
+                        url: "https://en.wikipedia.org/wiki/Pirate_Party_Germany",
+                        lang: "en",
+                        tags: ["wikipedia"]
+                    },
+                    {
+                        url: "https://www.piratenpartei.de/",
+                        lang: "de",
+                        tags: ["website"]
+                    }
+                ]
+            },
+            {
+                id: "gr",
+                title: "parties.de",
+                links: [
+                    {
+                        url: "https://en.wikipedia.org/wiki/Pirate_Party_of_Greece",
+                        lang: "en",
+                        tags: ["wikipedia"]
+                    },
+                    {
+                        url: "https://www.pirateparty.gr/",
+                        lang: "gr",
+                        tags: ["website"]
+                    },
+                ]
+            },
+            {
+                id: "hu",
+                title: "parties.hu",
+                links: [
+                    {
+                        url: "https://en.wikipedia.org/wiki/Pirate_Party_of_Hungary",
+                        lang: "en",
+                        tags: ["wikipedia"]
+                    }
+                ]
+            },
+            {
+                id: "sk",
+                title: "parties.sk",
+                links: [
+                    {
+                        title: "states.sk",
+                        url: "https://www.slovenskipirati.sk/",
+                        tags: ["website"]
                     }
                 ]
             }
@@ -467,9 +553,11 @@ export class PiratePartiesRepository extends CachedRepository<IPirateParty> {
             copy.title = t(copy.title);
         }
 
-        if (copy.website?.title) {
-            copy.website.title = t(copy.website.title);
-        }
+        copy.links?.forEach(link => {
+            if (link?.title) {
+                link.title = t(link.title);
+            }
+        })
 
         return copy;
     }

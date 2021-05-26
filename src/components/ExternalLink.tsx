@@ -15,11 +15,12 @@ export default function ExternalLink(props: Props) {
     data.title = props.title ?? data.title;
     data.url = props.url ?? data.url ?? "#";
 
-    const icon = props.faIcon ? (<FontAwesomeIcon icon={props.faIcon} className="mr-2"/>) : "";
+    const title = data.title ?? data.url;
+    const icon = props.faIcon ? (<FontAwesomeIcon icon={props.faIcon} className={title.length ? "mr-2" : ""}/>) : "";
 
     return (
         <a href={data.url} target="_blank" className={props.className}>
-            {icon}{data.title ?? data.url}
+            {icon}{title}
         </a>
     );
 }

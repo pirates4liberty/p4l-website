@@ -71,7 +71,10 @@
     "cat": "Catalonia",
     "cl": "Chile",
     "ee": "Estonia",
-    "fr": "France"
+    "fr": "France",
+    "de": "Germany",
+    "gr": "Greece",
+    "hu": "Hungary"
   },
   "footer": {
     "codeLicense": "Code license",
@@ -96,7 +99,10 @@
     "cat": "Pirate Party of Catalonia",
     "cl": "Pirate Party of Chile",
     "ee": "Estonian Pirate Party",
-    "fr": "Pirate Party of France"
+    "fr": "Pirate Party of France",
+    "de": "Pirate Party Germany",
+    "gr": "Pirate Party of Greece",
+    "hu": "Pirate Party of Hungary"
   },
   "msg": {
     "notFound": "Not Found."
