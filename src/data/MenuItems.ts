@@ -12,10 +12,10 @@ export const MenuItems: IMenuItem[] = [
         title: "pages.links.title",
         url: "/links"
     },
-    {
-        title: "pages.events.title",
-        url: "/events"
-    },
+    // {
+    //     title: "pages.events.title",
+    //     url: "/events"
+    // },
     {
         title: "pages.news.title",
         url: "/news"

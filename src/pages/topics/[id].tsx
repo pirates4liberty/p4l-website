@@ -1,3 +1,5 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "next-i18next";
 import Head from "next/head";
 import Link from "next/link";
@@ -5,18 +7,18 @@ import { useRouter } from "next/router";
 import Content from "../../components/Content/Content";
 import ContentBox from "../../components/Content/ContentBox";
 import ContentHeading from "../../components/Content/ContentHeading";
-import { PiratePartiesRepository } from "../../data/PirateParties";
+import { TopicsRepository } from "../../data/Topics";
 import { StaticProps } from "../../tools/Helpers/TranslationHelper";
 
-export default function Parties() {
+export default function Topics() {
     const {t} = useTranslation();
     const router = useRouter();
     const {id} = router.query;
-    const repository = new PiratePartiesRepository();
 
-    const party = repository.getAllRecursively().find(party => party.id === id);
+    const repository = new TopicsRepository();
+    const topic = repository.getAll().find(topic => topic.id === id);
 
-    if (party === undefined) {
+    if (topic === undefined) {
         return (
             <Content>
                 <ContentBox>
@@ -55,9 +57,26 @@ export default function Parties() {
                     {title}
                 </ContentHeading>
 
-                <ContentBox>
-
-                </ContentBox>
+                <h3>{t("pages.topics.links")}</h3>
+                <div className={"row"}>
+                    {
+                        topic.links?.map(link => (
+                            <div className={"col-md-6"}>
+                                <ContentBox>
+                                    <h4>{link?.title}</h4>
+                                    <p>{link?.description}</p>
+                                    <div>
+                                        <Link href={link.url}>
+                                            <a className={"btn btn-primary"} target={"_blank"} rel="noreferrer">
+                                                {t("btn.goToWebsite")} &nbsp;<FontAwesomeIcon icon={faArrowRight}/>
+                                            </a>
+                                        </Link>
+                                    </div>
+                                </ContentBox>
+                            </div>
+                        ))
+                    }
+                </div>
             </Content>
         )
     }
@@ -66,10 +85,15 @@ export default function Parties() {
 export const getStaticProps = StaticProps.default();
 
 export const getStaticPaths = async () => {
-    // const repository = new PiratePartiesRepository();
+    const repository = new TopicsRepository();
 
-    // const ids = repository.getAll(false, false);
-    const ids: any[] = [];
+    const ids = repository.getAll(false, false).map(topic => {
+        return {
+            params: {
+                id: topic.id
+            }
+        }
+    });
 
     return {
         paths: ids,

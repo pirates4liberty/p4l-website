@@ -38,6 +38,7 @@ export default function Header() {
                                         overlay={<Tooltip id="1">{t("socialLinks.fbPage")}</Tooltip>}>
                             <a href="https://www.facebook.com/pirates4liberty.cz"
                                target="_blank"
+                               rel="noreferrer"
                                className="btn btn-primary mx-1 d-inline-block">
                                 <FontAwesomeIcon icon={faFacebookF}/>
                             </a>
@@ -47,6 +48,7 @@ export default function Header() {
                                         overlay={<Tooltip id="2">{t("socialLinks.fbDiscussGroup")}</Tooltip>}>
                             <a href="https://www.facebook.com/groups/pirates4liberty.cz"
                                target="_blank"
+                               rel="noreferrer"
                                className="btn btn-warning mx-2 d-inline-block">
                                 <FontAwesomeIcon icon={faComments}/>
                             </a>

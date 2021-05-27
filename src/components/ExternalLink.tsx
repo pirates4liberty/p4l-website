@@ -19,7 +19,7 @@ export default function ExternalLink(props: Props) {
     const icon = props.faIcon ? (<FontAwesomeIcon icon={props.faIcon} className={title.length ? "mr-2" : ""}/>) : "";
 
     return (
-        <a href={data.url} target="_blank" className={props.className}>
+        <a href={data.url} target="_blank" rel="noreferrer" className={props.className}>
             {icon}{title}
         </a>
     );

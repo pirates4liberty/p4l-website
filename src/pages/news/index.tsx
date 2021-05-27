@@ -99,29 +99,29 @@ export default function News(props: any) {
                 {title}
             </ContentHeading>
 
-            <div>
-                <span className={"font-weight-bold mr-2"}>Zdroje:</span>
+            {/*<div>*/}
+            {/*    <span className={"font-weight-bold mr-2"}>Zdroje:</span>*/}
 
-                <span className={"btn btn-secondary m-1"}>Vše</span>
+            {/*    <span className={"btn btn-secondary m-1"}>Vše</span>*/}
 
-                {
-                    sources.map(source =>
-                        <span className={"btn btn-secondary m-1"}>{source.title}</span>
-                    )
-                }
-            </div>
+            {/*    {*/}
+            {/*        sources.map(source =>*/}
+            {/*            <span className={"btn btn-secondary m-1"}>{source.title}</span>*/}
+            {/*        )*/}
+            {/*    }*/}
+            {/*</div>*/}
 
-            <div>
-                <span className={"font-weight-bold mr-2"}>Témata:</span>
+            {/*<div>*/}
+            {/*    <span className={"font-weight-bold mr-2"}>Témata:</span>*/}
 
-                <span className={"btn btn-secondary m-1"}>Vše</span>
+            {/*    <span className={"btn btn-secondary m-1"}>Vše</span>*/}
 
-                {
-                    topics.map(topic =>
-                        <span className={"btn btn-secondary m-1"}>{topic.title}</span>
-                    )
-                }
-            </div>
+            {/*    {*/}
+            {/*        topics.map(topic =>*/}
+            {/*            <span className={"btn btn-secondary m-1"}>{topic.title}</span>*/}
+            {/*        )*/}
+            {/*    }*/}
+            {/*</div>*/}
 
             <div className={"row"}>
                 {

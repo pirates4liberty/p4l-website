@@ -1,4 +1,5 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faComments } from "@fortawesome/free-solid-svg-icons/faComments";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
@@ -14,10 +15,23 @@ export default function Footer() {
                         <Link href={"/terms"}>
                             <a>{t("pages.terms.title")}</a>
                         </Link>
-                        &nbsp;|&nbsp;
-                        <a href="https://github.com/miloshavlicek/pirates4liberty" rel="noreferrer">
+                        <> </>
+                        |
+                        <> </>
+                        <a href="https://github.com/miloshavlicek/pirates4liberty"
+                           rel="noreferrer"
+                           target="_blank">
                             <FontAwesomeIcon icon={faGithub}/>&nbsp;
                             GitHub
+                        </a>
+                        <> </>
+                        |
+                        <> </>
+                        <a href="https://matrix.to/#pirates4liberty:matrix.org?via=matrix.org"
+                           rel="noreferrer"
+                           target="_blank">
+                            <FontAwesomeIcon icon={faComments}/>&nbsp;
+                            Matrix (chat)
                         </a>
                     </li>
                 </ul>

@@ -36,6 +36,11 @@
       "title": "Podmínky užití"
     }
   },
+  "topics": {
+    "opensource": "Open source",
+    "vaccination": "Očkování",
+    "schoolSystem": "Skolství"
+  },
   "hashtags": {
     "liberty": "svoboda",
     "liberalisation": "liberalizace",
@@ -48,7 +53,8 @@
     "crowdfunding": "crowdfunding",
     "voluntariness": "dobrovolnost",
     "evidenceBasedPolicy": "evidence-based",
-    "interoperability": "interoperabilita"
+    "interoperability": "interoperabilita",
+    "schoolSystem": "školství"
   },
   "values": {
     "liberty": "Svoboda",
@@ -65,7 +71,7 @@
     "pl": "Polsko",
     "at": "Rakousko",
     "eu": "Evropská unie",
-    "be": "Bělorusko",
+    "by": "Bělorusko",
     "ba": "Bosna a Hercegovina",
     "br": "Brazílie",
     "bg": "Bulharsko",
@@ -75,7 +81,9 @@
     "fr": "Francie",
     "de": "Německo",
     "gr": "Řecko",
-    "hu": "Maďarsko"
+    "hu": "Maďarsko",
+    "is": "Island",
+    "au": "Austrálie"
   },
   "footer": {
     "codeLicense": "Licence kódu",
@@ -93,7 +101,7 @@
     "at": "Rakouská pirátská strana (piratenpartei)",
     "eu": "Evropská pirátská strana",
     "international": "Internacionála pirátských stran",
-    "be": "Pirátské centrum Běloruska",
+    "by": "Pirátské centrum Běloruska",
     "ba": "Pirátská strana Bosny a Hercegoviny",
     "br": "Pirátská strana Brazílie",
     "bg": "Pirátská strana Bulharska",
@@ -109,6 +117,7 @@
     "notFound": "Nenalezeno."
   },
   "btn": {
-    "readMore": "Číst dále"
+    "readMore": "Číst dále",
+    "goToWebsite": "Přejít na web"
   }
 }
