@@ -47,7 +47,8 @@
     "opensource": "open_source",
     "crowdfunding": "crowdfunding",
     "voluntariness": "dobrovolnost",
-    "evidenceBasedPolicy": "evidence-based"
+    "evidenceBasedPolicy": "evidence-based",
+    "interoperability": "interoperabilita"
   },
   "values": {
     "liberty": "Svoboda",

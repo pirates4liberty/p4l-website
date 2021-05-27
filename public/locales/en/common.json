@@ -47,7 +47,8 @@
     "opensource": "open_source",
     "crowdfunding": "crowdfunding",
     "voluntariness": "voluntarity",
-    "evidenceBasedPolicy": "evidence-based"
+    "evidenceBasedPolicy": "evidence-based",
+    "interoperability": "interoperability"
   },
   "values": {
     "liberty": "Liberty",

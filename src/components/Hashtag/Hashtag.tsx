@@ -40,11 +40,11 @@ function getHashtagSign(data: IHashtag) {
 export default function Hashtag(props: Props) {
     const data = init(props);
 
-    let out = <span className="mx-2">{getHashtagSign(data)}{data.hashtag}</span>
+    let out = <span className="mx-1">{getHashtagSign(data)}{data.hashtag}</span>
 
     if (data.link) {
         out = <Link href={data.link}><a>{out}</a></Link>
     }
 
-    return out;
+    return <> {out} </>;
 }

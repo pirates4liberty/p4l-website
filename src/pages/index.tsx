@@ -1,5 +1,6 @@
-import { useTranslation } from "next-i18next";
+import { i18n, useTranslation } from "next-i18next";
 import Image from "next/image";
+import { Carousel } from "react-bootstrap";
 import Content from "../components/Content/Content";
 import ContentBox from "../components/Content/ContentBox";
 import HashtagBox from "../components/Hashtag/HashtagBox";
@@ -13,35 +14,73 @@ export default function Home() {
     const hashtags = (new HashtagsRepository()).getAll();
     const values = (new ValuesRepository()).getAll();
 
+    const carouselData: {
+        imgSrc: string,
+        alt?: string,
+        title?: string,
+        text?: string
+    }[] = [];
+
+    if (i18n?.language === "cz") {
+        carouselData.push({
+            imgSrc: "/img/carousel/p4l_cover_cz.png",
+            alt: "Pirates 4 Liberty - Svoboda a zodpovědnost",
+        });
+    } else {
+        carouselData.push({
+            imgSrc: "/img/carousel/p4l_cover_en.png",
+            alt: "Pirates 4 Liberty - Liberty & Responsibility"
+        });
+    }
+
     return (
-        <div className="bg-light">
+        <>
             <div className="cover">
                 <div className="container">
-                    <a href="https://www.facebook.com/groups/pirates4liberty.cz">
-                        <Image
-                            src="/pirates4liberty_cover_text1.png"
-                            alt="Pirates 4 Liberty - Svoboda a zodpovědnost"
-                            layout="responsive"
-                            width={1110}
-                            height={624}
-                        />
-                    </a>
+                    <Carousel controls={carouselData.length > 1} indicators={carouselData.length > 1}>
+                        {
+                            carouselData.map((carouselItem, i) => (
+                                <Carousel.Item key={i}>
+                                    <Image
+                                        src={carouselItem.imgSrc}
+                                        alt={carouselItem.alt}
+                                        className="d-block w-100"
+                                        layout="responsive"
+                                        width={1110}
+                                        height={624}
+                                    />
+                                    <Carousel.Caption>
+                                        {
+                                            carouselItem.title &&
+                                            <h3>{carouselItem.title}</h3>
+                                        }
+                                        {
+                                            carouselItem.text &&
+                                            <p>{carouselItem.text}</p>
+                                        }
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                            ))
+                        }
+                    </Carousel>
                 </div>
             </div>
 
-            <div className="notice-line">
-                <div className="container">
-                    {t("notices.notPolitical")}
+            <div className="bg-light">
+                <div className="notice-line">
+                    <div className="container">
+                        {t("notices.notPolitical")}
+                    </div>
                 </div>
-            </div>
 
-            <Content className="text-center fw-bold" style={{fontSize: "1.5em"}}>
-                <ContentBox>
-                    <HashtagBox hashtags={hashtags} className="mb-4"/>
-                    <HashtagBox hashtags={values}/>
-                </ContentBox>
-            </Content>
-        </div>
+                <Content className="text-center fw-bold" style={{fontSize: "1.5em"}}>
+                    <ContentBox>
+                        <HashtagBox hashtags={hashtags} className="mb-4"/>
+                        <HashtagBox hashtags={values}/>
+                    </ContentBox>
+                </Content>
+            </div>
+        </>
     )
 }
 
