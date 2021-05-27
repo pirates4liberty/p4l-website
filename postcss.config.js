@@ -1,5 +1,7 @@
+const isProduction = (process.env.NODE_ENV === 'production');
+
 module.exports = {
-    "plugins": process.env.NODE_ENV === 'production'
+    "plugins": isProduction
         ? [
             "postcss-flexbugs-fixes",
             [
