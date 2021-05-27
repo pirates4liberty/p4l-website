@@ -13,13 +13,19 @@ function MyApp({Component, pageProps}: AppProps) {
         <>
             <Head>
                 <title>{"Pirates4Liberty"}</title>
+
+                <link rel="icon" type="image/png" sizes="196x196" href="img/pwa/g/favicon-196.png"/>
+
+                <link rel="apple-touch-icon" href="img/pwa/g/apple-icon-180.png"/>
+
+                <meta name="apple-mobile-web-app-capable" content="yes"/>
             </Head>
 
-            <Header></Header>
+            <Header/>
 
-            <Component {...pageProps} />
+            <Component {...pageProps}/>
 
-            <Footer></Footer>
+            <Footer/>
         </>
     )
 }

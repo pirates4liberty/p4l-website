@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "start": "next start"
+    "start": "next start",
+    "g:assets": "rm -rf public/img/pwa/g && pwa-asset-generator public/img/pwa/p4l_square.svg public/img/pwa/g --background \"#f5dc00\" --opaque false --manifest public/manifest.json --favicon --xhtml --portrait-only --icon-only"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -19,10 +20,12 @@
     "bootstrap": "^4.6.0",
     "next": "10.2.0",
     "next-i18next": "^8.3.0",
+    "next-pwa": "^5.2.21",
     "next-sitemap": "^1.6.80",
     "node-sass": "^5.0.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^6.7.0",
+    "pwa-asset-generator": "^4.1.1",
     "react": "17.0.2",
     "react-bootstrap": "^1.6.0",
     "react-dom": "17.0.2",
