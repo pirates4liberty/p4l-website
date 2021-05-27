@@ -1,4 +1,5 @@
 import { useTranslation } from "next-i18next";
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Content from "../../components/Content/Content";
@@ -26,8 +27,14 @@ export default function Parties() {
             </Content>
         )
     } else {
+        const title = t(party.title);
+
         return (
             <Content>
+                <Head>
+                    <title>{title + " | Pirates4Liberty"}</title>
+                </Head>
+
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
                         <li className="breadcrumb-item">
@@ -41,13 +48,13 @@ export default function Parties() {
                             </Link>
                         </li>
                         <li className="breadcrumb-item active" aria-current="page">
-                            {t(party.title)}
+                            {title}
                         </li>
                     </ol>
                 </nav>
 
                 <ContentHeading>
-                    {t(party.title)}
+                    {title}
                 </ContentHeading>
 
                 <div className={"row"}>

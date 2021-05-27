@@ -25,6 +25,7 @@ export interface IPirateParty {
     parent?: IPirateParty;
     projects?: IProject[];
     links?: IExternalLink[];
+    primaryLanguage?: string;
 }
 
 const PirateParties: IPirateParty[] = [
@@ -53,6 +54,7 @@ const PirateParties: IPirateParty[] = [
             {
                 id: "eu",
                 title: "parties.eu",
+                primaryLanguage: 'en',
                 links: [
                     {
                         title: "states.eu",
@@ -132,6 +134,7 @@ const PirateParties: IPirateParty[] = [
             {
                 id: "cz",
                 title: "parties.cz",
+                primaryLanguage: 'cz',
                 links: [
                     {
                         url: "https://www.pirati.cz/",

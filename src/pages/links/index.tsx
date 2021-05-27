@@ -1,4 +1,5 @@
-import { useTranslation } from "next-i18next";
+import { i18n, useTranslation } from "next-i18next";
+import Head from "next/head";
 import Link from "next/link";
 import Content from "../../components/Content/Content";
 import ContentBox from "../../components/Content/ContentBox";
@@ -13,8 +14,14 @@ export default function Links() {
 
     const parties = repository.getAll();
 
+    const title = t("pages.links.title");
+
     return (
         <Content>
+            <Head>
+                <title>{title + " | Pirates4Liberty"}</title>
+            </Head>
+
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item">
@@ -23,7 +30,7 @@ export default function Links() {
                         </Link>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
-                        {t("pages.links.title")}
+                        {title}
                     </li>
                 </ol>
             </nav>
@@ -51,7 +58,7 @@ export default function Links() {
                                         party.children && party.children.map((subParty, j) => (
                                             <div className={"col-md-4 p-2"} key={j}>
                                                 <Link href={"/parties/" + subParty.id}>
-                                                    <a className={"btn btn-lg btn-dark btn-block"}>
+                                                    <a className={"btn btn-lg " + (subParty.primaryLanguage === i18n?.language ? "btn-warning" : "btn-dark") + " btn-block"}>
                                                         {t("states." + subParty.id)}
                                                     </a>
                                                 </Link>

@@ -1,4 +1,5 @@
 import { i18n, useTranslation } from "next-i18next";
+import Head from "next/head";
 import Image from "next/image";
 import { Carousel } from "react-bootstrap";
 import Content from "../components/Content/Content";
@@ -35,6 +36,9 @@ export default function Home() {
 
     return (
         <>
+            <Head>
+                <title>{t("Pirates4Liberty")}</title>
+            </Head>
             <div className="cover">
                 <div className="container">
                     <Carousel controls={carouselData.length > 1} indicators={carouselData.length > 1}>

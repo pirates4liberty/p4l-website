@@ -1,5 +1,6 @@
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons/faNewspaper";
 import { useTranslation } from "next-i18next";
+import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Parser from "rss-parser";
@@ -73,8 +74,14 @@ export default function News(props: any) {
 
     // TODO: Topics: E.g. Belarus, EU
 
+    const title = t("pages.news.title");
+
     return (
         <Content>
+            <Head>
+                <title>{title + " | Pirates4Liberty"}</title>
+            </Head>
+
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item">
@@ -83,13 +90,13 @@ export default function News(props: any) {
                         </Link>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
-                        {t("pages.news.title")}
+                        {title}
                     </li>
                 </ol>
             </nav>
 
             <ContentHeading faIcon={faNewspaper}>
-                {t("pages.news.title")}
+                {title}
             </ContentHeading>
 
             <div>

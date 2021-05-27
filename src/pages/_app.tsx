@@ -1,5 +1,6 @@
 import { appWithTranslation } from "next-i18next"
 import { AppProps } from "next/app";
+import Head from "next/head";
 
 import nextI18NextConfig from "../../next-i18next.config.js"
 import "../../styles/globals.scss"
@@ -10,6 +11,10 @@ function MyApp({Component, pageProps}: AppProps) {
 
     return (
         <>
+            <Head>
+                <title>{"Pirates4Liberty"}</title>
+            </Head>
+
             <Header></Header>
 
             <Component {...pageProps} />

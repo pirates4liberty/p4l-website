@@ -1,5 +1,6 @@
 import { faCalendar } from "@fortawesome/free-solid-svg-icons/faCalendar";
 import { useTranslation } from "next-i18next";
+import Head from "next/head";
 import Link from "next/link";
 import Content from "../../components/Content/Content";
 import ContentBox from "../../components/Content/ContentBox";
@@ -9,8 +10,14 @@ import { StaticProps } from "../../tools/Helpers/TranslationHelper";
 export default function Events() {
     const {t} = useTranslation();
 
+    const title = t("pages.terms.title");
+
     return (
         <Content>
+            <Head>
+                <title>{title + " | Pirates4Liberty"}</title>
+            </Head>
+
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item">
@@ -19,13 +26,13 @@ export default function Events() {
                         </Link>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
-                        {t("pages.terms.title")}
+                        {title}
                     </li>
                 </ol>
             </nav>
 
             <ContentHeading>
-                {t("pages.terms.title")}
+                {title}
             </ContentHeading>
 
             <ContentBox/>
