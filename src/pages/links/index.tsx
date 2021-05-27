@@ -1,9 +1,11 @@
-import { i18n, useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import Head from "next/head";
 import Link from "next/link";
 import Content from "../../components/Content/Content";
 import ContentBox from "../../components/Content/ContentBox";
 import ContentHeading from "../../components/Content/ContentHeading";
+import PartiesList from "../../components/PageParts/Parties/PartiesList";
+import PartiesSubList from "../../components/PageParts/Parties/PartiesSubList";
 import { PiratePartiesRepository } from "../../data/PirateParties";
 import { StaticProps } from "../../tools/Helpers/TranslationHelper";
 
@@ -39,37 +41,11 @@ export default function Links() {
                 {t("pages.links.partiesByStates")}
             </ContentHeading>
             <ContentBox>
-                {
-                    parties.map((party, i) => (
-                            <div key={i}>
-                                <div className={"row text-center"}>
-                                    <div className={"col-md-4"}></div>
-                                    <div className={"col-md-4 p-2"}>
-                                        <Link href={"/parties/" + party.id}>
-                                            <a className={"btn btn-lg btn-secondary btn-block"}>
-                                                {party.title} ({party.abbrev})
-                                            </a>
-                                        </Link>
-                                    </div>
-                                </div>
+                <PartiesList data={parties.filter(party => party.children?.length)}></PartiesList>
 
-                                <div className={"row"}>
-                                    {
-                                        party.children && party.children.map((subParty, j) => (
-                                            <div className={"col-md-4 p-2"} key={j}>
-                                                <Link href={"/parties/" + subParty.id}>
-                                                    <a className={"btn btn-lg " + (subParty.primaryLanguage === i18n?.language ? "btn-warning" : "btn-dark") + " btn-block"}>
-                                                        {t("states." + subParty.id)}
-                                                    </a>
-                                                </Link>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-                            </div>
-                        )
-                    )
-                }
+                <hr/>
+
+                <PartiesSubList data={parties.filter(party => !party.children?.length)}></PartiesSubList>
             </ContentBox>
         </Content>
     )

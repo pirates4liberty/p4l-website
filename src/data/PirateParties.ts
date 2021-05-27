@@ -26,6 +26,7 @@ export interface IPirateParty {
     projects?: IProject[];
     links?: IExternalLink[];
     primaryLanguage?: string;
+    tags?: string[];
 }
 
 const PirateParties: IPirateParty[] = [
@@ -33,6 +34,7 @@ const PirateParties: IPirateParty[] = [
         id: "international",
         title: "parties.international",
         abbrev: "PPI",
+        tags: ["organizational"],
         links: [
             {
                 url: "https://pp-international.net/",
@@ -54,10 +56,10 @@ const PirateParties: IPirateParty[] = [
             {
                 id: "eu",
                 title: "parties.eu",
-                primaryLanguage: 'en',
+                abbrev: "PPEU",
+                primaryLanguage: "en",
                 links: [
                     {
-                        title: "states.eu",
                         url: "https://european-pirateparty.eu/",
                         lang: "en",
                         tags: ["website"]
@@ -69,7 +71,6 @@ const PirateParties: IPirateParty[] = [
                 title: "parties.at",
                 links: [
                     {
-                        title: "states.at",
                         url: "https://piratenpartei.at/",
                         lang: "at",
                         tags: ["website"]
@@ -81,7 +82,6 @@ const PirateParties: IPirateParty[] = [
                 title: "parties.pl",
                 links: [
                     {
-                        title: "states.pl",
                         url: "https://polskapartiapiratow.pl/",
                         lang: "pl",
                         tags: ["website"]
@@ -89,8 +89,8 @@ const PirateParties: IPirateParty[] = [
                 ]
             },
             {
-                id: "be",
-                title: "parties.be"
+                id: "by",
+                title: "parties.by"
             },
             {
                 id: "ba",
@@ -134,7 +134,7 @@ const PirateParties: IPirateParty[] = [
             {
                 id: "cz",
                 title: "parties.cz",
-                primaryLanguage: 'cz',
+                primaryLanguage: "cz",
                 links: [
                     {
                         url: "https://www.pirati.cz/",
@@ -535,14 +535,123 @@ const PirateParties: IPirateParty[] = [
                 title: "parties.sk",
                 links: [
                     {
-                        title: "states.sk",
                         url: "https://www.slovenskipirati.sk/",
+                        tags: ["website"]
+                    }
+                ]
+            },
+            {
+                id: "il",
+                title: "parties.il",
+                links: [
+                    {
+                        url: "https://piratim.org/",
+                        tags: ["website"]
+                    }
+                ]
+            },
+            {
+                id: "it",
+                title: "parties.it",
+                links: [
+                    {
+                        url: "https://www.partito-pirata.it/",
                         tags: ["website"]
                     }
                 ]
             }
         ]
-    }
+    },
+    {
+        id: "au",
+        title: "parties.au",
+        links: [
+            {
+                url: "https://pirateparty.org.au/",
+                tags: ["website"]
+            }
+        ]
+    },
+    {
+        id: "se",
+        title: "parties.se",
+        links: [
+            {
+                url: "https://piratpartiet.se/",
+                tags: ["website"]
+            }
+        ]
+    },
+    {
+        id: "is",
+        title: "parties.is",
+        links: [
+            {
+                url: "https://piratar.is/",
+                tags: ["website"]
+            }
+        ]
+    },
+    {
+        id: "ca",
+        title: "parties.ca",
+        links: [
+            {
+                url: "https://en.wikipedia.org/wiki/Pirate_Party_of_Canada",
+                tags: ["wikipedia"],
+                lang: "en"
+            }
+        ]
+    },
+    {
+        id: "be",
+        title: "parties.be",
+        links: [
+            {
+                url: "https://pirateparty.be/",
+                tags: ["website"],
+                lang: "be"
+            },
+            {
+                url: "https://en.wikipedia.org/wiki/Pirate_Party_(Belgium)",
+                tags: ["wikipedia"],
+                lang: "en"
+            }
+        ]
+    },
+    {
+        id: "uk",
+        title: "parties.uk",
+        links: [
+            {
+                url: "https://www.pirateparty.org.uk/",
+                tags: ["website"],
+                lang: "en"
+            },
+            {
+                url: "https://en.wikipedia.org/wiki/Pirate_Party_UK",
+                tags: ["wikipedia"],
+                lang: "en"
+            }
+        ]
+    },
+    {
+        id: "pwb",
+        title: "parties.pwb",
+        links: [
+            {
+                url: "https://pirates-without-borders.ch/",
+                tags: ["website"],
+                lang: "en"
+            },
+            {
+                url: "https://www.facebook.com/pirateswithoutborders",
+                tags: ["fb:page"],
+                lang: "en"
+            }
+        ],
+        tags: ["organizational"],
+    },
 ];
 
 export class PiratePartiesRepository extends CachedRepository<IPirateParty> {

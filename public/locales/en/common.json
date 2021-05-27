@@ -59,24 +59,6 @@
   "notices": {
     "notPolitical": "This initiative is not run by the Pirate Party or any other political party."
   },
-  "states": {
-    "cz": "Czechia",
-    "sk": "Slovakia",
-    "pl": "Poland",
-    "at": "Austria",
-    "eu": "European Union",
-    "be": "Belarus",
-    "ba": "Bosnia and Herzegovina",
-    "br": "Brazil",
-    "bg": "Bulgaria",
-    "cat": "Catalonia",
-    "cl": "Chile",
-    "ee": "Estonia",
-    "fr": "France",
-    "de": "Germany",
-    "gr": "Greece",
-    "hu": "Hungary"
-  },
   "footer": {
     "codeLicense": "Code license",
     "textContent": "text content",
@@ -86,6 +68,32 @@
     "fbPage": "Facebook page",
     "fbDiscussGroup": "Facebook discuss group"
   },
+  "states": {
+    "cz": "Czechia",
+    "sk": "Slovakia",
+    "pl": "Poland",
+    "at": "Austria",
+    "eu": "European Union",
+    "by": "Belarus",
+    "ba": "Bosnia and Herzegovina",
+    "br": "Brazil",
+    "bg": "Bulgaria",
+    "cat": "Catalonia",
+    "cl": "Chile",
+    "ee": "Estonia",
+    "fr": "France",
+    "de": "Germany",
+    "gr": "Greece",
+    "hu": "Hungary",
+    "il": "Israel",
+    "it": "Italy",
+    "se": "Sweden",
+    "ca": "Canada",
+    "is": "Iceland",
+    "au": "Australia",
+    "be": "Belgium",
+    "uk": "United Kingdom"
+  },
   "parties": {
     "cz": "Czech Pirate Party",
     "sk": "Pirate Party - Slovakia",
@@ -93,7 +101,7 @@
     "at": "Pirate Party of Austria (piratenpartei)",
     "eu": "The European Pirate Party",
     "international": "Pirate Parties International",
-    "be": "The Pirates Center of Belarus",
+    "by": "The Pirates Center of Belarus",
     "ba": "Pirate Party of Bosnia and Herzegovina (PiratskaPartija.ba)",
     "br": "Pirate Party of Brazil",
     "bg": "Pirate Party of Bulgaria",
@@ -103,7 +111,16 @@
     "fr": "Pirate Party of France",
     "de": "Pirate Party Germany",
     "gr": "Pirate Party of Greece",
-    "hu": "Pirate Party of Hungary"
+    "hu": "Pirate Party of Hungary",
+    "il": "Pirate Party of Israel",
+    "it": "Italian Pirate Party",
+    "se": "Pirate Party (Sweden)",
+    "ca": "Pirate Party of Canada",
+    "is": "Pirate Party (Iceland)",
+    "au": "Pirate Party Australia",
+    "be": "Pirate Party (Belgium)",
+    "uk": "Pirate Party UK",
+    "pwb": "Pirates without Borders"
   },
   "msg": {
     "notFound": "Not Found."
