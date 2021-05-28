@@ -1,5 +1,7 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn";
 import { faComments } from "@fortawesome/free-solid-svg-icons/faComments";
+import { faUsers } from "@fortawesome/free-solid-svg-icons/faUsers";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
@@ -13,25 +15,41 @@ export default function Footer() {
                 <ul className="bd-footer-links ps-0 mb-3">
                     <li className="d-inline-block">
                         <Link href={"/terms"}>
-                            <a>{t("pages.terms.title")}</a>
+                            <a className="mx-3">
+                                {t("pages.terms.title")}
+                            </a>
                         </Link>
-                        <> </>
-                        |
-                        <> </>
+
                         <a href="https://github.com/miloshavlicek/pirates4liberty"
                            rel="noreferrer"
-                           target="_blank">
-                            <FontAwesomeIcon icon={faGithub}/>&nbsp;
+                           target="_blank"
+                           className="mx-3">
+                            <FontAwesomeIcon icon={faGithub} className="mr-1"/>
                             GitHub
                         </a>
-                        <> </>
-                        |
-                        <> </>
+
+                        <a href="https://mastodon.social/@pirates4liberty"
+                           rel="noreferrer"
+                           target="_blank"
+                           className="mx-3">
+                            <FontAwesomeIcon icon={faUsers} className="mr-1"/>
+                            Mastodon <small>(social network)</small>
+                        </a>
+
                         <a href="https://matrix.to/#pirates4liberty:matrix.org?via=matrix.org"
                            rel="noreferrer"
-                           target="_blank">
-                            <FontAwesomeIcon icon={faComments}/>&nbsp;
-                            Matrix (chat)
+                           target="_blank"
+                           className="mx-3">
+                            <FontAwesomeIcon icon={faComments} className="mr-1"/>
+                            Matrix <small>(chat)</small>
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/73202902/"
+                           rel="noreferrer"
+                           target="_blank"
+                           className="mx-3">
+                            <FontAwesomeIcon icon={faLinkedinIn} className="mr-1"/>
+                            LinkedIn
                         </a>
                     </li>
                 </ul>
@@ -49,7 +67,7 @@ export default function Footer() {
                        target="_blank">
                         CC BY 3.0
                     </a>
-                    &nbsp;({t("footer.ifNotSpecified")})
+                    <small className="ml-1">({t("footer.ifNotSpecified")})</small>
                 </p>
             </div>
         </footer>

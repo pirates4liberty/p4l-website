@@ -43,7 +43,8 @@
   "topics": {
     "opensource": "Open source",
     "vaccination": "Vaccination",
-    "schoolSystem": "School system"
+    "schoolSystem": "School system",
+    "cryptocurrencies": "Cryptocurrencies"
   },
   "hashtags": {
     "liberty": "liberty",
@@ -58,7 +59,8 @@
     "voluntariness": "voluntarity",
     "evidenceBasedPolicy": "evidence-based",
     "interoperability": "interoperability",
-    "schoolSystem": "school_system"
+    "schoolSystem": "school_system",
+    "cryptocurrencies": "cryptocurrencies"
   },
   "values": {
     "liberty": "Liberty",

@@ -39,7 +39,8 @@
   "topics": {
     "opensource": "Open source",
     "vaccination": "Očkování",
-    "schoolSystem": "Skolství"
+    "schoolSystem": "Skolství",
+    "cryptocurrencies": "Kryptoměny"
   },
   "hashtags": {
     "liberty": "svoboda",
@@ -54,7 +55,8 @@
     "voluntariness": "dobrovolnost",
     "evidenceBasedPolicy": "evidence-based",
     "interoperability": "interoperabilita",
-    "schoolSystem": "školství"
+    "schoolSystem": "školství",
+    "cryptocurrencies": "kryptoměny"
   },
   "values": {
     "liberty": "Svoboda",

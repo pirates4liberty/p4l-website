@@ -50,16 +50,25 @@ const Topics: ITopic[] = [
         title: "topics.opensource",
         links: [
             {
-                title: "Signal",
-                description: "Signal is a cross-platform end-to-end encrypted messaging service. Unlike regular communicators, no one but you and the recipients can read your messages.",
-                url: "https://signal.org/en/",
-                lang: "en"
-            },
-            {
                 title: "Matrix",
                 description: "Matrix is open decentralized network for secure communication.",
                 url: "https://matrix.org/",
-                lang: "en"
+                lang: "en",
+                tags: ['recommended:top']
+            },
+            {
+                title: "Signal",
+                description: "Signal is a cross-platform end-to-end encrypted messaging service. Unlike regular communicators, no one but you and the recipients can read your messages.",
+                url: "https://signal.org/en/",
+                lang: "en",
+                tags: ['recommended']
+            },
+            {
+                title: "Mastodon",
+                description: "Social network alternative to Twitter. No ads, no corporate surveillance, ethical design, and decentralization! Own your data with Mastodon!",
+                url: "https://joinmastodon.org/",
+                lang: "en",
+                tags: ['recommended:top']
             }
         ]
     },
@@ -76,6 +85,18 @@ const Topics: ITopic[] = [
             {
                 title: "Vize vzdělávání 2030",
                 url: "https://vzdelavani2030.cz/",
+                lang: "cz",
+                tags: ["parties:cz"]
+            }
+        ]
+    },
+    {
+        id: "cryptocurrencies",
+        title: "topics.cryptocurrencies",
+        links: [
+            {
+                title: "Pracovní skupina kryptoměny - Fórum Pirátské strany",
+                url: "https://forum.pirati.cz/viewtopic.php?f=554&t=38605",
                 lang: "cz",
                 tags: ["parties:cz"]
             }

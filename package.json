@@ -7,7 +7,7 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "g:assets": "rm -rf public/img/pwa/g && pwa-asset-generator public/img/pwa/p4l_square.svg public/img/pwa/g --background \"#f5dc00\" --opaque false --manifest public/manifest.json --favicon --xhtml --portrait-only --icon-only"
+    "g:assets": "rm -rf public/img/pwa/g && pwa-asset-generator public/img/pwa/p4l_square.svg public/img/pwa/g --background \"#f5dc00\" --opaque false --manifest public/manifest.json --favicon false --xhtml --portrait-only --icon-only"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",

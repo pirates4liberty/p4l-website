@@ -53,6 +53,10 @@ const data: IHashtag[][] = [
             hashtag: "hashtags.schoolSystem",
             link: "/topics/school_system"
         },
+        {
+            hashtag: "hashtags.cryptocurrencies",
+            link: "/topics/cryptocurrencies"
+        },
     ]
 ];
 
