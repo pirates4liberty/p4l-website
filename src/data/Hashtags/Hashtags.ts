@@ -28,6 +28,9 @@ const data: IHashtag[][] = [
         },
         {
             hashtag: "hashtags.hatefree"
+        },
+        {
+            hashtag: "hashtags.peace"
         }
     ],
     [

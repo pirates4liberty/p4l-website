@@ -14,7 +14,7 @@ export default function About() {
     return (
         <Content>
             <Head>
-                <title>{title + " | Pirates4Liberty"}</title>
+                <title>{title + " | Pirates 4 Liberty"}</title>
             </Head>
 
             <nav aria-label="breadcrumb">

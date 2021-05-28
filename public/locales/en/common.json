@@ -44,7 +44,10 @@
     "opensource": "Open source",
     "vaccination": "Vaccination",
     "schoolSystem": "School system",
-    "cryptocurrencies": "Cryptocurrencies"
+    "cryptocurrencies": "Cryptocurrencies",
+    "eu": "EU",
+    "russia": "Russia",
+    "belarus": "Belarus"
   },
   "hashtags": {
     "liberty": "liberty",
@@ -60,7 +63,8 @@
     "evidenceBasedPolicy": "evidence-based",
     "interoperability": "interoperability",
     "schoolSystem": "school_system",
-    "cryptocurrencies": "cryptocurrencies"
+    "cryptocurrencies": "cryptocurrencies",
+    "peace": "peace"
   },
   "values": {
     "liberty": "Liberty",

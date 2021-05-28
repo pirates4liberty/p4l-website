@@ -7,23 +7,28 @@ export interface ITopic {
     id: string;
     title: string;
     links?: IExternalLink[];
+    filter?: (item: any) => void,
+    tags?: string[]
 }
 
 const Topics: ITopic[] = [
     {
         id: "eu",
         title: "topics.eu",
-        links: []
+        links: [],
+        tags: ["regional"]
     },
     {
         id: "russia",
         title: "topics.russia",
-        links: []
+        links: [],
+        tags: ["regional"]
     },
     {
         id: "belarus",
         title: "topics.belarus",
-        links: []
+        links: [],
+        tags: ["regional"]
     },
     {
         id: "state-transparency",
@@ -54,21 +59,21 @@ const Topics: ITopic[] = [
                 description: "Matrix is open decentralized network for secure communication.",
                 url: "https://matrix.org/",
                 lang: "en",
-                tags: ['recommended:top']
+                tags: ["recommended:top"]
             },
             {
                 title: "Signal",
                 description: "Signal is a cross-platform end-to-end encrypted messaging service. Unlike regular communicators, no one but you and the recipients can read your messages.",
                 url: "https://signal.org/en/",
                 lang: "en",
-                tags: ['recommended']
+                tags: ["recommended"]
             },
             {
                 title: "Mastodon",
                 description: "Social network alternative to Twitter. No ads, no corporate surveillance, ethical design, and decentralization! Own your data with Mastodon!",
                 url: "https://joinmastodon.org/",
                 lang: "en",
-                tags: ['recommended:top']
+                tags: ["recommended:top"]
             }
         ]
     },

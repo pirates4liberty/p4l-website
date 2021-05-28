@@ -40,7 +40,10 @@
     "opensource": "Open source",
     "vaccination": "Očkování",
     "schoolSystem": "Skolství",
-    "cryptocurrencies": "Kryptoměny"
+    "cryptocurrencies": "Kryptoměny",
+    "eu": "EU",
+    "russia": "Rusko",
+    "belarus": "Bělorusko"
   },
   "hashtags": {
     "liberty": "svoboda",
@@ -56,7 +59,8 @@
     "evidenceBasedPolicy": "evidence-based",
     "interoperability": "interoperabilita",
     "schoolSystem": "školství",
-    "cryptocurrencies": "kryptoměny"
+    "cryptocurrencies": "kryptoměny",
+    "peace": "mír"
   },
   "values": {
     "liberty": "Svoboda",

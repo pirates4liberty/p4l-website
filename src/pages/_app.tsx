@@ -12,7 +12,7 @@ function MyApp({Component, pageProps}: AppProps) {
     return (
         <>
             <Head>
-                <title>{"Pirates4Liberty"}</title>
+                <title>{"Pirates 4 Liberty"}</title>
             </Head>
 
             <Header/>
