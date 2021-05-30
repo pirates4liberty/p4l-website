@@ -1,6 +1,6 @@
 import { faEnvira } from "@fortawesome/free-brands-svg-icons";
 import { faClipboardCheck, faRoute, faUsers } from "@fortawesome/free-solid-svg-icons";
-import { IHashtag } from "../../model/IHashtag";
+import { IHashtag } from "../../model/Hashtag";
 import { HashtagsRepository } from "./Hashtags";
 
 const data: IHashtag[][] = [

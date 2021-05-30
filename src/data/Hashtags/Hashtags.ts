@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next";
-import { IHashtag } from "../../model/IHashtag";
+import { IHashtag } from "../../model/Hashtag";
 import { deepCopy } from "../../tools/Helpers/Tools";
 import { CachedRepository } from "../../tools/Repository/CachedRepository";
 
