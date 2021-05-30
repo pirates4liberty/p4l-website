@@ -1,4 +1,5 @@
 import { useTranslation } from "next-i18next";
+import { IExternalLink } from "../model/IExternalLink";
 import { deepCopy } from "../tools/Helpers/Tools";
 import { CachedRepository } from "../tools/Repository/CachedRepository";
 
@@ -6,6 +7,7 @@ export interface IIdeologyOpinion {
     id: string,
     opinion?: "yes" | "no",
     tags?: string[];
+    sources?: IExternalLink[];
 }
 
 export interface IIdeology {
@@ -21,15 +23,15 @@ const data: IIdeology[] = [
         title: "ideologies.libertarians",
         opinions: [
             {
-                id: "deregulationDrugs",
-                opinion: "yes"
-            },
-            {
                 id: "transparentState",
                 opinion: "yes"
             },
             {
                 id: "sameSexMarriage",
+                opinion: "yes"
+            },
+            {
+                id: "deregulationDrugs",
                 opinion: "yes"
             },
             {
@@ -58,6 +60,10 @@ const data: IIdeology[] = [
             },
             {
                 id: "communicationPrivacy",
+                opinion: "yes"
+            },
+            {
+                id: "cryptoPositive",
                 opinion: "yes"
             }
         ]
@@ -67,15 +73,15 @@ const data: IIdeology[] = [
         title: "ideologies.pirates",
         opinions: [
             {
-                id: "deregulationDrugs",
-                opinion: "yes"
-            },
-            {
                 id: "transparentState",
                 opinion: "yes"
             },
             {
                 id: "sameSexMarriage",
+                opinion: "yes"
+            },
+            {
+                id: "deregulationDrugs",
                 opinion: "yes"
             },
             {
@@ -92,7 +98,14 @@ const data: IIdeology[] = [
             },
             {
                 id: "schoolLiberalization",
-                opinion: "yes"
+                opinion: "yes",
+                sources: [
+                    {
+                        url: "https://vzdelavani2030.cz/",
+                        lang: "cz",
+                        title: "Vize vzdělávání 2030 - Pirátská strana"
+                    }
+                ]
             },
             {
                 id: "freeSpeech",
@@ -101,6 +114,10 @@ const data: IIdeology[] = [
             },
             {
                 id: "communicationPrivacy",
+                opinion: "yes"
+            },
+            {
+                id: "cryptoPositive",
                 opinion: "yes"
             }
         ]

@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import Content from "../../../components/Content/Content";
 import ContentBox from "../../../components/Content/ContentBox";
 import ContentHeading from "../../../components/Content/ContentHeading";
+import LinkExternal from "../../../components/LinkExternal";
 import { IdeologiesRepository, IIdeology } from "../../../data/Ideologies";
 import { StaticProps } from "../../../tools/Helpers/TranslationHelper";
 
@@ -83,25 +84,25 @@ export default function Topics() {
 
                                         return (
                                             <td className={"text-center"}>
-                                                <span style={{fontSize: "1.7em"}}>
-                                                {
-                                                    (() => {
-                                                        switch (opinion?.opinion) {
-                                                            case "yes":
-                                                                return <>
-                                                                    <FontAwesomeIcon icon={faCheckCircle}
-                                                                                     className={"text-success"}/>
-                                                                </>
-                                                            case "no":
-                                                                return <>
-                                                                    <FontAwesomeIcon icon={faWindowClose}
-                                                                                     className={"text-danger"}/>
-                                                                </>
-                                                            default:
-                                                                return "";
-                                                        }
-                                                    })()
-                                                }
+                                                <div style={{fontSize: "1.7em"}}>
+                                                    {
+                                                        (() => {
+                                                            switch (opinion?.opinion) {
+                                                                case "yes":
+                                                                    return <>
+                                                                        <FontAwesomeIcon icon={faCheckCircle}
+                                                                                         className={"text-success"}/>
+                                                                    </>
+                                                                case "no":
+                                                                    return <>
+                                                                        <FontAwesomeIcon icon={faWindowClose}
+                                                                                         className={"text-danger"}/>
+                                                                    </>
+                                                                default:
+                                                                    return "";
+                                                            }
+                                                        })()
+                                                    }
                                                     {
                                                         isWarning &&
                                                         <sup>
@@ -109,7 +110,17 @@ export default function Topics() {
                                                                              className={"text-warning ml-2"}/>
                                                         </sup>
                                                     }
-                                                </span>
+                                                </div>
+                                                {
+                                                    opinion?.sources?.length &&
+                                                    <div>
+                                                        {
+                                                            opinion?.sources.map((source, j) =>
+                                                                <LinkExternal url={source.url}>[{j+1}]</LinkExternal>
+                                                            )
+                                                        }
+                                                    </div>
+                                                }
                                             </td>
                                         );
                                     }

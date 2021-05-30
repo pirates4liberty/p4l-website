@@ -60,8 +60,8 @@ export default function Topics() {
                 <h3>{t("pages.topics.links")}</h3>
                 <div className={"row"}>
                     {
-                        topic.links?.map(link => (
-                            <div className={"col-md-6"}>
+                        topic.links?.map((link, i) => (
+                            <div className={"col-md-6"} key={i}>
                                 <ContentBox>
                                     <h4>{link?.title}</h4>
                                     <p>{link?.description}</p>
