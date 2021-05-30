@@ -28,7 +28,9 @@ module.exports = {
                         standard: ["html", "body"],
                         greedy: [
                             /bg-(primary|secondary|success|info|warning|danger|light|dark)$/,
-                            /text-(white|dark)$/,
+                            /text-(primary|secondary|success|info|warning|danger|light|dark|white)$/,
+                            /ml-2$/,
+                            /mr-2$/,
                             /tooltip/
                         ]
                     }
