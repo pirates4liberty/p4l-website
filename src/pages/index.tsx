@@ -10,6 +10,7 @@ import HashtagBox from "../components/Hashtag/HashtagBox";
 import { HashtagsRepository } from "../data/Hashtags/Hashtags";
 import { ValuesRepository } from "../data/Hashtags/Values";
 import { StaticProps } from "../tools/Helpers/TranslationHelper";
+import { CssColor } from "../types/CssColor";
 
 export default function Home() {
     const {t} = useTranslation();
@@ -38,7 +39,7 @@ export default function Home() {
 
     const ctaButtons:
         {
-            bgColor: string;
+            bgColor: CssColor;
             link: string;
             description: string;
             title: string,

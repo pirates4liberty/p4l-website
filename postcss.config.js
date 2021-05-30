@@ -26,7 +26,11 @@ module.exports = {
                     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
                     safelist: {
                         standard: ["html", "body"],
-                        greedy: [/\.bg-\w*$/, /\.text-(white|dark)$/, /.*tooltip.*/]
+                        greedy: [
+                            /bg-(primary|secondary|success|info|warning|danger|light|dark)$/,
+                            /text-(white|dark)$/,
+                            /tooltip/
+                        ]
                     }
                 }
             ],
