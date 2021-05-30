@@ -50,7 +50,8 @@ export default function Home() {
             title: t("pages.home.cta.areYouLibertarian.title"),
             link: "https://8values.github.io/",
             description: t("pages.home.cta.areYouLibertarian.description"),
-            bgColor: "warning"
+            bgColor: "warning",
+            isLinkExternal: true
         },
         {
             title: t("pages.home.cta.inCommon.title") + " ❤️",
@@ -64,7 +65,8 @@ export default function Home() {
             link: "https://en.wikipedia.org/wiki/Pirate_Party",
             description: t("pages.home.cta.whoArePirates.description"),
             bgColor: "dark",
-            textColor: "white"
+            textColor: "white",
+            isLinkExternal: true
         }
     ];
 

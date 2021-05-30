@@ -46,7 +46,7 @@ export default function Header() {
 
                         <OverlayTrigger placement="bottom"
                                         overlay={<Tooltip id="2">{t("socialLinks.fbDiscussGroup")}</Tooltip>}>
-                            <a href="https://www.facebook.com/groups/pirates4liberty"
+                            <a href="https://www.facebook.com/groups/pirates4liberty.cz"
                                target="_blank"
                                rel="noreferrer"
                                className="btn btn-warning mx-2 d-inline-block">
