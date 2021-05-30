@@ -39,12 +39,12 @@ export default function Home() {
 
     const ctaButtons:
         {
-            bgColor: CssColor;
-            link: string;
-            description: string;
             title: string,
+            description?: string;
+            link: string;
+            isLinkExternal?: boolean
+            bgColor: CssColor;
             textColor?: string,
-            isExternal?: boolean
         }[] = [
         {
             title: t("pages.home.cta.areYouLibertarian.title"),
@@ -52,13 +52,13 @@ export default function Home() {
             description: t("pages.home.cta.areYouLibertarian.description"),
             bgColor: "warning"
         },
-        // {
-        //     title: t("pages.home.cta.inCommon.title") + " ❤️",
-        //     link: "/about-us",
-        //     bgColor: "success",
-        //     textColor: "white",
-        //     isExternal: false
-        // },
+        {
+            title: t("pages.home.cta.inCommon.title") + " ❤️",
+            link: "/compare/pirates/libertarians",
+            bgColor: "success",
+            textColor: "white",
+            isLinkExternal: false
+        },
         {
             title: t("pages.home.cta.whoArePirates.title") + " 🏴‍☠️",
             link: "https://en.wikipedia.org/wiki/Pirate_Party",
@@ -121,7 +121,7 @@ export default function Home() {
                                         bgColor={ctaButton.bgColor}
                                         textColor={ctaButton.textColor}
                                         link={ctaButton.link}
-                                        isLinkExternal={ctaButton.isExternal}
+                                        isLinkExternal={ctaButton.isLinkExternal}
                                     >
                                         {ctaButton.description}
                                     </CardButton>

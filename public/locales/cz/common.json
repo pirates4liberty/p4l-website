@@ -141,5 +141,20 @@
   "btn": {
     "readMore": "Číst dále",
     "goToWebsite": "Přejít na web"
+  },
+  "ideologies": {
+    "libertarians": "Libertariáni",
+    "pirates": "Piráti"
+  },
+  "ideologyOpinions": {
+    "deregulationDrugs": "Liberalizace drogové politiky",
+    "transparentState": "Transparentnost státu",
+    "sameSexMarriage": "Manželství stejnopohlavních párů",
+    "socialState": "Státní přerozdělování prostředků potřebným",
+    "largeComSubsidies": "Dotace i pro velké společnosti",
+    "largeComRegulations": "Legislativní regulace velkých společností",
+    "schoolLiberalization": "Liberalizace školského systému",
+    "freeSpeech": "Svoboda projevu",
+    "communicationPrivacy": "Nenarušení soukromí komunikace státem"
   }
 }

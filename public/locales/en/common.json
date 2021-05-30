@@ -160,5 +160,20 @@
   "btn": {
     "readMore": "Read more",
     "goToWebsite": "Go to website"
+  },
+  "ideologies": {
+    "libertarians": "Libertarians",
+    "pirates": "Pirates"
+  },
+  "ideologyOpinions": {
+    "deregulationDrugs": "Liberalization of drug policy",
+    "transparentState": "State transparency",
+    "sameSexMarriage": "Same-sex marriage",
+    "socialState": "State redistribution of funds to the needy",
+    "largeComSubsidies": "Subsidies also for large companies",
+    "largeComRegulations": "Legislative regulation of dominant companies",
+    "schoolLiberalization": "Liberalization of the school system",
+    "freeSpeech": "Freedom of speech",
+    "communicationPrivacy": "Not violating the privacy of communication by the state"
   }
 }
