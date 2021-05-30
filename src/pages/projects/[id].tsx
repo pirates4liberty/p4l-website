@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import Content from "../../components/Content/Content";
 import ContentBox from "../../components/Content/ContentBox";
 import ContentHeading from "../../components/Content/ContentHeading";
-import ExternalLink from "../../components/ExternalLink";
+import LinkExternal from "../../components/LinkExternal";
 import { IPirateParty, PiratePartiesRepository } from "../../data/PirateParties";
 import { StaticProps } from "../../tools/Helpers/TranslationHelper";
 
@@ -42,7 +42,7 @@ export default function Parties() {
         return (
             <Content>
                 <Head>
-                    <title>{title + " | Pirates 4 Liberty"}</title>
+                    <title>{title + " | " + t("app.title")}</title>
                 </Head>
 
                 <nav aria-label="breadcrumb">
@@ -70,7 +70,7 @@ export default function Parties() {
                 <ContentBox>
                     {
                         project.website &&
-                        <ExternalLink data={project.website}
+                        <LinkExternal data={project.website}
                                       title={"Website"}
                                       className={"btn btn-dark"}
                                       faIcon={faGlobe}/>
@@ -83,7 +83,7 @@ export default function Parties() {
                     {
                         project.fbGroups?.map((fbGroup, i) => {
                             return (
-                                <ExternalLink key={i} data={fbGroup}
+                                <LinkExternal key={i} data={fbGroup}
                                               className={"btn btn-primary m-1"}
                                               faIcon={faFacebookF}/>
                             );
@@ -97,7 +97,7 @@ export default function Parties() {
                     {
                         project.fbPages?.map((fbGroup, i) => {
                             return (
-                                <ExternalLink key={i} data={fbGroup}
+                                <LinkExternal key={i} data={fbGroup}
                                               className={"btn btn-secondary m-1"}
                                               faIcon={faFacebookF}/>
                             );
@@ -111,7 +111,7 @@ export default function Parties() {
                     {
                         project.webSystems?.map((fbGroup, i) => {
                             return (
-                                <ExternalLink key={i} data={fbGroup}
+                                <LinkExternal key={i} data={fbGroup}
                                               className={"btn btn-danger m-1"}/>
                             );
                         })

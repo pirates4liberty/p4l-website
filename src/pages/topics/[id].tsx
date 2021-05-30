@@ -32,7 +32,7 @@ export default function Topics() {
         return (
             <Content>
                 <Head>
-                    <title>{title + " | Pirates 4 Liberty"}</title>
+                    <title>{title + " | " + t("app.title")}</title>
                 </Head>
 
                 <nav aria-label="breadcrumb">

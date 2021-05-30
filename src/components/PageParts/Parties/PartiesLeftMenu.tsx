@@ -11,7 +11,7 @@ import { i18n, useTranslation } from "next-i18next";
 import Link from "next/link";
 import { IPirateParty } from "../../../data/PirateParties";
 import ContentBox from "../../Content/ContentBox";
-import ExternalLink from "../../ExternalLink";
+import LinkExternal from "../../LinkExternal";
 
 type Props = {
     data?: IPirateParty,
@@ -40,14 +40,14 @@ export default function PartiesLeftMenu(props: Props) {
         <ContentBox className={props.className}>
             {
                 website &&
-                <ExternalLink data={website}
+                <LinkExternal data={website}
                               title={"Website"}
                               className={"btn btn-secondary btn-block"}
                               faIcon={faGlobe}/>
             }
             {
                 wikiLink &&
-                <ExternalLink data={wikiLink}
+                <LinkExternal data={wikiLink}
                               title={"Wikipedia"}
                               className={"btn btn-secondary btn-sm btn-block"}
                               faIcon={faWikipediaW}/>
@@ -59,7 +59,7 @@ export default function PartiesLeftMenu(props: Props) {
                         return fbPage.tags?.includes("official");
                     }).map((fbPage, i) => {
                         return (
-                            <ExternalLink key={i}
+                            <LinkExternal key={i}
                                           data={fbPage}
                                           title={""}
                                           className={"btn btn-primary mr-1"}
@@ -69,21 +69,21 @@ export default function PartiesLeftMenu(props: Props) {
                 }
                 {
                     twitter &&
-                    <ExternalLink data={twitter}
+                    <LinkExternal data={twitter}
                                   title={""}
                                   className={"btn btn-primary mr-1"}
                                   faIcon={faTwitter}/>
                 }
                 {
                     instagram &&
-                    <ExternalLink data={instagram}
+                    <LinkExternal data={instagram}
                                   title={""}
                                   className={"btn btn-danger mr-1"}
                                   faIcon={faInstagram}/>
                 }
                 {
                     rss &&
-                    <ExternalLink data={rss}
+                    <LinkExternal data={rss}
                                   title={""}
                                   className={"btn btn-warning mr-1"}
                                   faIcon={faRss}/>
@@ -95,7 +95,7 @@ export default function PartiesLeftMenu(props: Props) {
                     return fbGroup.tags?.includes("official");
                 }).map((fbGroup, i) => {
                     return (
-                        <ExternalLink key={i} data={fbGroup}
+                        <LinkExternal key={i} data={fbGroup}
                                       className={"btn btn-primary btn-block"}
                                       faIcon={faUsers}/>
                     );

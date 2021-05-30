@@ -1,13 +1,15 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "next-i18next";
 import Link from "next/link"
+import { ReactNode } from "react";
 import { IHashtag } from "../../model/IHashtag";
 
 interface Props {
     data?: IHashtag,
-    faIcon?: any,
+    faIcon?: IconProp,
     link?: string
-    children?: any,
+    children?: ReactNode,
 }
 
 function init(props: Props) {

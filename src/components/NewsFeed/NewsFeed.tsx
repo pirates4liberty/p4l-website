@@ -2,7 +2,7 @@ import { useTranslation } from "next-i18next";
 import Parser from "rss-parser";
 import { RssFeed, RssItem } from "../../tools/Rss/NewsLoader";
 import ContentBox from "../Content/ContentBox";
-import ExternalLink from "../ExternalLink";
+import LinkExternal from "../LinkExternal";
 
 export type RssSource = {
     id: string;
@@ -40,7 +40,7 @@ export default function NewsFeed(props: Props) {
                                 <div className={"text-right"}>
                                     <span
                                         className={"mr-4"}>{t("pages.news.source")}: {new URL(item.link).hostname}</span>
-                                    <ExternalLink url={item.link}
+                                    <LinkExternal url={item.link}
                                                   className={"btn btn-dark"}
                                                   title={t("btn.readMore") + "…"}/>
                                 </div>

@@ -1,7 +1,23 @@
 {
+  "app": {
+    "title": "Pirates 4 Liberty"
+  },
   "pages": {
     "home": {
-      "title": "Úvod"
+      "title": "Úvod",
+      "cta": {
+        "areYouLibertarian": {
+          "title": "Do jaké míry jsi libertarián?",
+          "description": "Vyplň si test (cca 7 min.)"
+        },
+        "whoArePirates": {
+          "title": "Kdo jsou to Piráti?",
+          "description": "Zjisti více o smyslu pirátských stran."
+        },
+        "inCommon": {
+          "title": "Co mají Piráti a libertariáni společného?"
+        }
+      }
     },
     "links": {
       "title": "Rozcestník",

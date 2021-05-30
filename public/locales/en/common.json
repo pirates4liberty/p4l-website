@@ -1,7 +1,23 @@
 {
+  "app": {
+    "title": "Pirates 4 Liberty"
+  },
   "pages": {
     "home": {
-      "title": "Home"
+      "title": "Home",
+      "cta": {
+        "areYouLibertarian": {
+          "title": "How libertarian are you?",
+          "description": "Take a test (approx. 7 min.)"
+        },
+        "whoArePirates": {
+          "title": "Who are the Pirates?",
+          "description": "Find out more about the purpose of pirate parties."
+        },
+        "inCommon": {
+          "title": "What do Pirates and Libertarians have in common?"
+        }
+      }
     },
     "links": {
       "title": "Links",

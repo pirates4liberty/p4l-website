@@ -1,9 +1,11 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { ReactNode } from "react";
 
 type Props = {
-    children?: any,
+    children?: ReactNode,
     className?: string,
-    faIcon?: any
+    faIcon?: IconProp,
 }
 
 export default function ContentHeading(props: Props) {

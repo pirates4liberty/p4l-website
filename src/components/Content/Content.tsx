@@ -1,7 +1,9 @@
+import { CSSProperties, ReactNode } from "react";
+
 class Props {
     className?: string;
-    style?: any;
-    children?: any;
+    style?: CSSProperties;
+    children?: ReactNode;
 }
 
 export default function Content(props: Props) {

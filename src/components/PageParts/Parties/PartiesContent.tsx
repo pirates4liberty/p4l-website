@@ -7,7 +7,7 @@ import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { IPirateParty } from "../../../data/PirateParties";
 import ContentBox from "../../Content/ContentBox";
-import ExternalLink from "../../ExternalLink";
+import LinkExternal from "../../LinkExternal";
 
 type Props = {
     data?: IPirateParty,
@@ -58,7 +58,7 @@ export default function PartiesContent(props: Props) {
             {
                 party.webSystems?.map((fbGroup, i) => {
                     return (
-                        <ExternalLink key={i} data={fbGroup}
+                        <LinkExternal key={i} data={fbGroup}
                                       className={"btn btn-danger m-1"}/>
                     );
                 })
@@ -72,7 +72,7 @@ export default function PartiesContent(props: Props) {
                     return !fbPage.tags?.includes("official");
                 }).map((fbGroup, i) => {
                     return (
-                        <ExternalLink key={i} data={fbGroup}
+                        <LinkExternal key={i} data={fbGroup}
                                       className={"btn btn-primary m-1"}
                                       faIcon={faFacebookF}/>
                     );
@@ -88,7 +88,7 @@ export default function PartiesContent(props: Props) {
                     }
 
                     return (
-                        <ExternalLink key={i} data={fbGroup}
+                        <LinkExternal key={i} data={fbGroup}
                                       className={"btn btn-primary m-1"}
                                       faIcon={faUsers}
                                       title={fbGroup.title + note}/>

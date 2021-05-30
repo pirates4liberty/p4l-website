@@ -1,4 +1,4 @@
-import { appWithTranslation } from "next-i18next"
+import { appWithTranslation, useTranslation } from "next-i18next"
 import { AppProps } from "next/app";
 import Head from "next/head";
 
@@ -9,10 +9,12 @@ import Header from "../components/WebParts/Header";
 
 function MyApp({Component, pageProps}: AppProps) {
 
+    const {t} = useTranslation();
+
     return (
         <>
             <Head>
-                <title>{"Pirates 4 Liberty"}</title>
+                <title>{t("app.title")}</title>
             </Head>
 
             <Header/>

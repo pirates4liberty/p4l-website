@@ -1,7 +1,9 @@
 import { i18n, useTranslation } from "next-i18next";
 import Head from "next/head";
 import Image from "next/image";
+import React from "react";
 import { Carousel } from "react-bootstrap";
+import CardButton from "../components/Content/CardButton";
 import Content from "../components/Content/Content";
 import ContentBox from "../components/Content/ContentBox";
 import HashtagBox from "../components/Hashtag/HashtagBox";
@@ -34,10 +36,33 @@ export default function Home() {
         });
     }
 
+    const ctaButtons = [
+        {
+            title: t("pages.home.cta.areYouLibertarian.title"),
+            link: "https://8values.github.io/",
+            description: t("pages.home.cta.areYouLibertarian.description"),
+            bgColor: "warning"
+        },
+        // {
+        //     title: t("pages.home.cta.inCommon.title") + " ❤️",
+        //     link: "/about-us",
+        //     bgColor: "success",
+        //     textColor: "white",
+        //     isExternal: false
+        // },
+        {
+            title: t("pages.home.cta.whoArePirates.title") + " 🏴‍☠️",
+            link: "https://en.wikipedia.org/wiki/Pirate_Party",
+            description: t("pages.home.cta.whoArePirates.description"),
+            bgColor: "dark",
+            textColor: "white"
+        }
+    ];
+
     return (
         <>
             <Head>
-                <title>{t("Pirates4Liberty")}</title>
+                <title>{t("app.title")}</title>
             </Head>
             <div className="cover">
                 <div className="container">
@@ -77,8 +102,26 @@ export default function Home() {
                     </div>
                 </div>
 
-                <Content className="text-center fw-bold" style={{fontSize: "1.5em"}}>
-                    <ContentBox>
+                <Content className="text-center fw-bold">
+                    <div className={"row"}>
+                        {
+                            ctaButtons.map((ctaButton, i) =>
+                                <div key={i} className={"col-md-4"}>
+                                    <CardButton
+                                        title={ctaButton.title}
+                                        bgColor={ctaButton.bgColor}
+                                        textColor={ctaButton.textColor}
+                                        link={ctaButton.link}
+                                        isLinkExternal={ctaButton.isExternal}
+                                    >
+                                        {ctaButton.description}
+                                    </CardButton>
+                                </div>
+                            )
+                        }
+                    </div>
+
+                    <ContentBox style={{fontSize: "1.5em"}}>
                         <HashtagBox hashtags={hashtags} className="mb-4"/>
                         <HashtagBox hashtags={values}/>
                     </ContentBox>
