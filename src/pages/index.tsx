@@ -36,7 +36,15 @@ export default function Home() {
         });
     }
 
-    const ctaButtons = [
+    const ctaButtons:
+        {
+            bgColor: string;
+            link: string;
+            description: string;
+            title: string,
+            textColor?: string,
+            isExternal?: boolean
+        }[] = [
         {
             title: t("pages.home.cta.areYouLibertarian.title"),
             link: "https://8values.github.io/",
