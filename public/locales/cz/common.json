@@ -166,7 +166,16 @@
     "netNeutrality": "Síťová neutralita",
     "decentralization": "Důraz na decentralizaci",
     "liberalPrefer": "Preference liberálních postojů",
-    "liberalGunPolicy": "Liberalizace držení zbraní a nakládání s nimi"
+    "liberalGunPolicy": "Liberalizace držení zbraní a nakládání s nimi",
+    "euPositive": "Pozitivní postoj k EU",
+    "euMoneyPositive": "Pozitivní postoj přijetí k eura"
+  },
+  "ideologyCat": {
+    "general": "Obecné postoje",
+    "individual": "Práva jednotlivce",
+    "technology": "Technologie",
+    "economy": "Ekonomika",
+    "state": "Státní politika"
   },
   "parts": {
     "recommendations": {

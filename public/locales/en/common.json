@@ -185,7 +185,16 @@
     "netNeutrality": "Net neutrality",
     "decentralization": "Emphasis on decentralization",
     "liberalPrefer": "Preferences of liberal attitudes",
-    "liberalGunPolicy": "Liberalization of weapons possession and handling"
+    "liberalGunPolicy": "Liberalization of weapons possession and handling",
+    "euPositive": "Positive attitude towards the EU",
+    "euMoneyPositive": "Positive attitude towards the euro"
+  },
+  "ideologyCat": {
+    "general": "General attitudes",
+    "individual": "Individual rights",
+    "technology": "Technology",
+    "economy": "Economy",
+    "state": "State policy"
   },
   "parts": {
     "recommendations": {

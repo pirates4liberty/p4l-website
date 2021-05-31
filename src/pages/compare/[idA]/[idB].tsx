@@ -9,7 +9,7 @@ import Content from "../../../components/Content/Content";
 import ContentBox from "../../../components/Content/ContentBox";
 import ContentHeading from "../../../components/Content/ContentHeading";
 import LinkExternal from "../../../components/LinkExternal";
-import { IdeologiesRepository, IIdeology, OpinionType } from "../../../data/Ideologies";
+import { IdeologiesRepository, ideologyCategories, IIdeology, OpinionType } from "../../../data/Ideologies";
 import { onlyUnique } from "../../../tools/Helpers/Tools";
 import { StaticProps } from "../../../tools/Helpers/TranslationHelper";
 
@@ -110,10 +110,6 @@ export default function Topics() {
     const ideologyA = repository.getAll().find(ideology => ideology.id === idA);
     const ideologyB = repository.getAll().find(ideology => ideology.id === idB);
 
-    const opinionIdsA = ideologyA?.opinions.map(opinion => opinion.id) || [];
-    const opinionIdsB = ideologyB?.opinions.map(opinion => opinion.id) || [];
-    const opinionIds = opinionIdsA.concat(opinionIdsB).filter(onlyUnique);
-
     if (!ideologyA || !ideologyB || ideologyA.id === ideologyB.id) {
         return (
             <Content>
@@ -152,34 +148,45 @@ export default function Topics() {
                     <table className={"table table-striped table-responsive"}>
                         <thead>
                         <tr>
-                            <th style={{width: "20%"}}></th>
-                            <th style={{width: "40%", fontSize: "1.4em"}}
+                            <th style={{width: "30%"}}></th>
+                            <th style={{width: "35%", fontSize: "1.4em"}}
                                 className={"text-center"}>{t(ideologyA.title)}</th>
-                            <th style={{width: "40%", fontSize: "1.4em"}}
+                            <th style={{width: "35%", fontSize: "1.4em"}}
                                 className={"text-center"}>{t(ideologyB.title)}</th>
                         </tr>
                         </thead>
-                        <tbody>
                         {
-                            opinionIds.map((opinionId, i) => {
-                                    const match = isMatch(opinionId, ideologyA, ideologyB);
-
-                                    return (
-                                        <tr key={i}>
-                                            <th style={{fontSize: "1.4em"}}
-                                                className={
-                                                    match ? "text-success" : (match === false ? "text-danger" : "")
-                                                }>
-                                                {t("ideologyOpinions." + opinionId)}
+                            ideologyCategories.map((ideologyCategory, i) => {
+                                    let out = (
+                                        <tr className={"bg-secondary text-white"}>
+                                            <th colSpan={3}>
+                                                {t("ideologyCat." + ideologyCategory.id)}:
                                             </th>
-                                            {renderCol(ideologyA, opinionId)}
-                                            {renderCol(ideologyB, opinionId)}
                                         </tr>
                                     );
+
+                                    ideologyCategory.opinions.map(opinion => {
+                                        const match = isMatch(opinion.id, ideologyA, ideologyB);
+
+                                        out = <>
+                                            {out}
+                                            <tr key={i}>
+                                                <th style={{fontSize: "1.4em"}}
+                                                    className={
+                                                        match ? "text-success" : (match === false ? "text-danger" : "")
+                                                    }>
+                                                    {t("ideologyOpinions." + opinion.id)}
+                                                </th>
+                                                {renderCol(ideologyA, opinion.id)}
+                                                {renderCol(ideologyB, opinion.id)}
+                                            </tr>
+                                        </>;
+                                    })
+
+                                    return <tbody>{out}</tbody>;
                                 }
                             )
                         }
-                        </tbody>
                     </table>
                 </ContentBox>
             </Content>

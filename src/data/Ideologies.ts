@@ -19,6 +19,85 @@ export interface IIdeology {
     tags?: string[];
 }
 
+export const ideologyCategories: {
+    id: string,
+    opinions: { id: string }[]
+}[] = [
+    {
+        id: "general",
+        opinions: [
+            {
+                id: "liberalPrefer"
+            },
+            {
+                id: "decentralization"
+            }
+        ]
+    },
+    {
+        id: "individual",
+        opinions: [
+            {
+                id: "sameSexMarriage"
+            },
+            {
+                id: "freeSpeech"
+            },
+            {
+                id: "deregulationDrugs"
+            },
+            {
+                id: "liberalGunPolicy"
+            }
+        ]
+    },
+    {
+        id: "technology",
+        opinions: [
+            {
+                id: "communicationPrivacy"
+            },
+            {
+                id: "cryptoPositive"
+            },
+            {
+                id: "netNeutrality"
+            }
+        ]
+    },
+    {
+        id: "state",
+        opinions: [
+            {
+                id: "transparentState"
+            },
+            {
+                id: "socialState"
+            },
+            {
+                id: "schoolLiberalization"
+            },
+            {
+                id: "euPositive"
+            }
+        ]
+    },
+    {
+        id: "economy",
+        opinions: [
+            {
+                id: "largeComSubsidies"
+            },
+            {
+                id: "largeComRegulations"
+            },
+            {
+                id: "euMoneyPositive"
+            }
+        ]
+    }
+]
+
 const data: IIdeology[] = [
     {
         id: "libertarians",
@@ -79,6 +158,14 @@ const data: IIdeology[] = [
             {
                 id: "liberalGunPolicy",
                 opinion: "yes"
+            },
+            {
+                id: "euPositive",
+                opinion: "no"
+            },
+            {
+                id: "euMoneyPositive",
+                opinion: "no"
             }
         ]
     },
@@ -182,6 +269,14 @@ const data: IIdeology[] = [
                         title: "Vnitro a otevřený stát"
                     }
                 ]
+            },
+            {
+                id: "euPositive",
+                opinion: "yes"
+            },
+            {
+                id: "euMoneyPositive",
+                opinion: "yes"
             }
         ]
     }
