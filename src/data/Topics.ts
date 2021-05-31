@@ -110,6 +110,13 @@ const data: ITopic[] = [
                 lang: "en",
                 tags: ["recommended"]
             },
+            {
+                title: "Weblate",
+                description: "Weblate is an open-source translation tool with integration to GIT.",
+                url: "https://weblate.org/",
+                lang: "en",
+                tags: ["recommended"]
+            },
         ]
     },
     {

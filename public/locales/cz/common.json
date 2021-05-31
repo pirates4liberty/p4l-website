@@ -79,7 +79,10 @@
     "interoperability": "interoperabilita",
     "schoolSystem": "školství",
     "cryptocurrencies": "kryptoměny",
-    "peace": "mír"
+    "peace": "mír",
+    "privacy": "soukromí",
+    "peer2peer": "peer2peer",
+    "decentralization": "decentralizace"
   },
   "values": {
     "liberty": "Svoboda",
@@ -162,7 +165,8 @@
     "cryptoPositive": "Pozitivní přístup ke kriptoměnám",
     "netNeutrality": "Síťová neutralita",
     "decentralization": "Důraz na decentralizaci",
-    "liberalPrefer": "Preference liberálních postojů"
+    "liberalPrefer": "Preference liberálních postojů",
+    "liberalGunPolicy": "Liberalizace držení zbraní a nakládání s nimi"
   },
   "parts": {
     "recommendations": {

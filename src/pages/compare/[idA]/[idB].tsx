@@ -1,11 +1,10 @@
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons/faCheckCircle";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons/faExclamationTriangle";
-import { faWindowClose } from "@fortawesome/free-solid-svg-icons/faWindowClose";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useTranslation } from "next-i18next";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import CompareIcon from "../../../components/CompareIcon";
 import Content from "../../../components/Content/Content";
 import ContentBox from "../../../components/Content/ContentBox";
 import ContentHeading from "../../../components/Content/ContentHeading";
@@ -68,23 +67,6 @@ function isMatch(opinionId: string, ...ideologies: IIdeology[]): boolean | undef
     return out;
 }
 
-function renderOpinionIcon(opinion: OpinionType | undefined): JSX.Element {
-    switch (opinion) {
-        case "yes":
-            return <>
-                <FontAwesomeIcon icon={faCheckCircle}
-                                 className={"text-success"}/>
-            </>
-        case "no":
-            return <>
-                <FontAwesomeIcon icon={faWindowClose}
-                                 className={"text-danger"}/>
-            </>
-        default:
-            return <></>
-    }
-}
-
 function renderCol(ideology: IIdeology, opinionId: string): JSX.Element {
     const opinion = ideology.opinions.find(opinion => opinion.id === opinionId);
     const isWarning = opinion?.tags?.find(tag => tag === "warning");
@@ -92,7 +74,7 @@ function renderCol(ideology: IIdeology, opinionId: string): JSX.Element {
     return (
         <td className={"text-center"}>
             <div style={{fontSize: "1.7em"}}>
-                {renderOpinionIcon(opinion?.opinion)}
+                <CompareIcon opinion={opinion?.opinion}/>
                 {
                     isWarning &&
                     <sup>

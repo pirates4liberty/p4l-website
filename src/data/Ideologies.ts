@@ -3,7 +3,7 @@ import { IExternalLink } from "../model/IExternalLink";
 import { deepCopy } from "../tools/Helpers/Tools";
 import { CachedRepository } from "../tools/Repository/CachedRepository";
 
-export type OpinionType = "yes" | "no";
+export type OpinionType = "higher" | "yes" | "equal" | "unknown" | "neutral" | "no" | "lower";
 
 export interface IIdeologyOpinion {
     id: string,
@@ -65,10 +65,6 @@ const data: IIdeology[] = [
                 opinion: "yes"
             },
             {
-                id: "freeSpeech",
-                opinion: "yes"
-            },
-            {
                 id: "communicationPrivacy",
                 opinion: "yes"
             },
@@ -79,6 +75,10 @@ const data: IIdeology[] = [
             {
                 id: "netNeutrality",
                 opinion: "no"
+            },
+            {
+                id: "liberalGunPolicy",
+                opinion: "yes"
             }
         ]
     },
@@ -144,7 +144,14 @@ const data: IIdeology[] = [
             {
                 id: "freeSpeech",
                 opinion: "yes",
-                tags: ["warning"]
+                tags: ["warning"],
+                sources: [
+                    {
+                        url: "https://forum.pirati.cz/viewtopic.php?f=544&t=57272",
+                        lang: "cz",
+                        title: "Svoboda projevu vs podmínky platformy (EU regulace) - Fórum Pirátské strany"
+                    }
+                ]
             },
             {
                 id: "communicationPrivacy",
@@ -162,6 +169,17 @@ const data: IIdeology[] = [
                         url: "https://en.wikipedia.org/wiki/Pirate_Party",
                         lang: "en",
                         title: "Pirate Party - Wikipedia"
+                    }
+                ]
+            },
+            {
+                id: "liberalGunPolicy",
+                opinion: "equal",
+                sources: [
+                    {
+                        url: "https://www.pirati.cz/program/psp2017/vnitro/",
+                        lang: "cz",
+                        title: "Vnitro a otevřený stát"
                     }
                 ]
             }

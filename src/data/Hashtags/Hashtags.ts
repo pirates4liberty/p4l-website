@@ -49,6 +49,15 @@ const data: IHashtag[][] = [
         },
         {
             hashtag: "hashtags.interoperability"
+        },
+        {
+            hashtag: "hashtags.privacy"
+        },
+        {
+            hashtag: "hashtags.decentralization"
+        },
+        {
+            hashtag: "hashtags.peer2peer"
         }
     ],
     [

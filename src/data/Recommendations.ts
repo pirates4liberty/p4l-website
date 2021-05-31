@@ -31,7 +31,9 @@ export class RecommendationsRepository extends CachedRepository<IExternalLink> {
             .forEach(
                 topic => {
                     out = out.concat(
-                        topic.links?.filter(link => link?.tags?.includes("recommended") || link?.tags?.includes("recommended:top")) || []
+                        topic.links?.filter(
+                            link => link?.tags?.includes("recommended") || link?.tags?.includes("recommended:top")
+                        ) || []
                     );
                 }
             );

@@ -83,7 +83,10 @@
     "interoperability": "interoperability",
     "schoolSystem": "school_system",
     "cryptocurrencies": "cryptocurrencies",
-    "peace": "peace"
+    "peace": "peace",
+    "privacy": "privacy",
+    "peer2peer": "peer2peer",
+    "decentralization": "decentralization"
   },
   "values": {
     "liberty": "Liberty",
@@ -181,7 +184,8 @@
     "cryptoPositive": "Positive approach to cryptocurrencies",
     "netNeutrality": "Net neutrality",
     "decentralization": "Emphasis on decentralization",
-    "liberalPrefer": "Preferences of liberal attitudes"
+    "liberalPrefer": "Preferences of liberal attitudes",
+    "liberalGunPolicy": "Liberalization of weapons possession and handling"
   },
   "parts": {
     "recommendations": {
