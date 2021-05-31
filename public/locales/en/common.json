@@ -54,6 +54,9 @@
     "topics": {
       "title": "Topics",
       "links": "Links"
+    },
+    "recommendations": {
+      "title": "Recommendations"
     }
   },
   "topics": {
@@ -176,6 +179,14 @@
     "freeSpeech": "Freedom of speech",
     "communicationPrivacy": "Not violating the privacy of communication by the state",
     "cryptoPositive": "Positive approach to cryptocurrencies",
-    "netNeutrality": "Net neutrality"
+    "netNeutrality": "Net neutrality",
+    "decentralization": "Emphasis on decentralization",
+    "liberalPrefer": "Preferences of liberal attitudes"
+  },
+  "parts": {
+    "recommendations": {
+      "title": "We recommend",
+      "more": "More recommendations"
+    }
   }
 }

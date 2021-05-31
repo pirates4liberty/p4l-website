@@ -3,9 +3,11 @@ import { IExternalLink } from "../model/IExternalLink";
 import { deepCopy } from "../tools/Helpers/Tools";
 import { CachedRepository } from "../tools/Repository/CachedRepository";
 
+export type OpinionType = "yes" | "no";
+
 export interface IIdeologyOpinion {
     id: string,
-    opinion?: "yes" | "no",
+    opinion?: OpinionType,
     tags?: string[];
     sources?: IExternalLink[];
 }
@@ -22,6 +24,14 @@ const data: IIdeology[] = [
         id: "libertarians",
         title: "ideologies.libertarians",
         opinions: [
+            {
+                id: "liberalPrefer",
+                opinion: "yes"
+            },
+            {
+                id: "decentralization",
+                opinion: "yes"
+            },
             {
                 id: "transparentState",
                 opinion: "yes"
@@ -76,6 +86,14 @@ const data: IIdeology[] = [
         id: "pirates",
         title: "ideologies.pirates",
         opinions: [
+            {
+                id: "liberalPrefer",
+                opinion: "yes"
+            },
+            {
+                id: "decentralization",
+                opinion: "yes"
+            },
             {
                 id: "transparentState",
                 opinion: "yes",

@@ -1,3 +1,5 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { i18n, useTranslation } from "next-i18next";
 import Head from "next/head";
 import Image from "next/image";
@@ -7,7 +9,8 @@ import CardButton from "../components/Content/CardButton";
 import Content from "../components/Content/Content";
 import ContentBox from "../components/Content/ContentBox";
 import HashtagBox from "../components/Hashtag/HashtagBox";
-import Recommendations from "../components/WebParts/Recommendations";
+import LinkInternal from "../components/LinkInternal";
+import RecommendationsList from "../components/WebParts/RecommendationsList";
 import { HashtagsRepository } from "../data/Hashtags/Hashtags";
 import { ValuesRepository } from "../data/Hashtags/Values";
 import { StaticProps } from "../tools/Helpers/TranslationHelper";
@@ -138,7 +141,22 @@ export default function Home() {
                         <HashtagBox hashtags={values}/>
                     </ContentBox>
 
-                    <Recommendations />
+                    <div>
+                        <h3>
+                            {t("parts.recommendations.title")}
+                        </h3>
+
+                        <RecommendationsList topOnly={true}/>
+
+                        <div className={"text-center"}>
+                            <LinkInternal url={"/recommendations"}>
+                                <a className={"btn btn-outline-dark btn-lg"}>
+                                    {t("parts.recommendations.more")}
+                                    <FontAwesomeIcon icon={faArrowRight} className={"ml-2"}/>
+                                </a>
+                            </LinkInternal>
+                        </div>
+                    </div>
                 </Content>
             </div>
         </>

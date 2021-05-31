@@ -50,6 +50,9 @@
     },
     "terms": {
       "title": "Podmínky užití"
+    },
+    "recommendations": {
+      "title": "Doporučení"
     }
   },
   "topics": {
@@ -157,6 +160,14 @@
     "freeSpeech": "Svoboda projevu",
     "communicationPrivacy": "Nenarušení soukromí komunikace státem",
     "cryptoPositive": "Pozitivní přístup ke kriptoměnám",
-    "netNeutrality": "Síťová neutralita"
+    "netNeutrality": "Síťová neutralita",
+    "decentralization": "Důraz na decentralizaci",
+    "liberalPrefer": "Preference liberálních postojů"
+  },
+  "parts": {
+    "recommendations": {
+      "title": "Doporučujeme",
+      "more": "Více doporučení"
+    }
   }
 }

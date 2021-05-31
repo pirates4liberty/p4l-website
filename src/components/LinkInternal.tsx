@@ -1,5 +1,6 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Link from "next/link"
 import { ReactNode } from "react";
 import { IExternalLink } from "../model/IExternalLink";
 import { deepCopy } from "../tools/Helpers/Tools";
@@ -31,12 +32,12 @@ export default function LinkInternal(props: Props) {
     const children = <>{props.children ?? <>{data.title}{titleSubEl}</>}</>
 
     return (
-        <a href={data.url}
-           target={props.target}
-           rel={props.rel}
-           className={props.className}
-        >
-            {icon}{children}
-        </a>
+        <Link href={data.url}>
+            <a target={props.target}
+               rel={props.rel}
+               className={props.className}>
+                {icon}{children}
+            </a>
+        </Link>
     );
 }

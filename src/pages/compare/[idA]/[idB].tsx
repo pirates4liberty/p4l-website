@@ -10,9 +10,114 @@ import Content from "../../../components/Content/Content";
 import ContentBox from "../../../components/Content/ContentBox";
 import ContentHeading from "../../../components/Content/ContentHeading";
 import LinkExternal from "../../../components/LinkExternal";
-import { IdeologiesRepository, IIdeology } from "../../../data/Ideologies";
+import { IdeologiesRepository, IIdeology, OpinionType } from "../../../data/Ideologies";
 import { onlyUnique } from "../../../tools/Helpers/Tools";
 import { StaticProps } from "../../../tools/Helpers/TranslationHelper";
+
+function getPositivity(opinion?: OpinionType): boolean | undefined {
+    if (opinion === undefined) {
+        return undefined;
+    }
+
+    const positiveList = ["yes"];
+
+    if (positiveList.includes(opinion)) {
+        return true;
+    }
+
+    const negativeList = ["no"];
+
+    if (negativeList.includes(opinion)) {
+        return false;
+    }
+
+    return undefined;
+}
+
+function isHardContradiction(opinionA?: OpinionType, opinionB?: OpinionType): boolean | undefined {
+    let opinionAPositivity = getPositivity(opinionA);
+    let opinionBPositivity = getPositivity(opinionB);
+
+    if (opinionAPositivity === undefined || opinionBPositivity === undefined) {
+        return undefined;
+    }
+
+    return opinionAPositivity !== opinionBPositivity;
+}
+
+function isMatch(opinionId: string, ...ideologies: IIdeology[]): boolean | undefined {
+    let out: boolean | undefined = undefined;
+
+    let baseOpinion: OpinionType | undefined = undefined;
+
+
+    for (let i = 0; ideologies[i]; i++) {
+        const opinion = ideologies[i].opinions.find(opinion => opinion.id === opinionId);
+
+        if (i === 0) {
+            baseOpinion = opinion?.opinion;
+        } else {
+            if (baseOpinion === opinion?.opinion) {
+                out = true;
+            } else if (isHardContradiction(baseOpinion, opinion?.opinion)) {
+                return false;
+            }
+        }
+    }
+
+    return out;
+}
+
+function renderOpinionIcon(opinion: OpinionType | undefined): JSX.Element {
+    switch (opinion) {
+        case "yes":
+            return <>
+                <FontAwesomeIcon icon={faCheckCircle}
+                                 className={"text-success"}/>
+            </>
+        case "no":
+            return <>
+                <FontAwesomeIcon icon={faWindowClose}
+                                 className={"text-danger"}/>
+            </>
+        default:
+            return <></>
+    }
+}
+
+function renderCol(ideology: IIdeology, opinionId: string): JSX.Element {
+    const opinion = ideology.opinions.find(opinion => opinion.id === opinionId);
+    const isWarning = opinion?.tags?.find(tag => tag === "warning");
+
+    return (
+        <td className={"text-center"}>
+            <div style={{fontSize: "1.7em"}}>
+                {renderOpinionIcon(opinion?.opinion)}
+                {
+                    isWarning &&
+                    <sup>
+                        <FontAwesomeIcon icon={faExclamationTriangle}
+                                         className={"text-warning ml-2"}/>
+                    </sup>
+                }
+            </div>
+            {
+                opinion?.sources?.length &&
+                <div>
+                    {
+                        opinion?.sources.map((source, j) =>
+                            <LinkExternal key={j}
+                                          url={source.url}
+                                          className={"my-1"}>
+                                [{j + 1}]
+                            </LinkExternal>
+                        )
+                    }
+                </div>
+            }
+        </td>
+    );
+}
 
 export default function Topics() {
     const {t} = useTranslation();
@@ -75,62 +180,18 @@ export default function Topics() {
                         <tbody>
                         {
                             opinionIds.map((opinionId, i) => {
-                                    const renderCol = (ideology: IIdeology) => {
-                                        const opinion = ideology.opinions.find(opinion => opinion.id === opinionId);
-                                        const isWarning = opinion?.tags?.find(tag => tag === "warning");
-
-                                        return (
-                                            <td className={"text-center"}>
-                                                <div style={{fontSize: "1.7em"}}>
-                                                    {
-                                                        (() => {
-                                                            switch (opinion?.opinion) {
-                                                                case "yes":
-                                                                    return <>
-                                                                        <FontAwesomeIcon icon={faCheckCircle}
-                                                                                         className={"text-success"}/>
-                                                                    </>
-                                                                case "no":
-                                                                    return <>
-                                                                        <FontAwesomeIcon icon={faWindowClose}
-                                                                                         className={"text-danger"}/>
-                                                                    </>
-                                                                default:
-                                                                    return "";
-                                                            }
-                                                        })()
-                                                    }
-                                                    {
-                                                        isWarning &&
-                                                        <sup>
-                                                            <FontAwesomeIcon icon={faExclamationTriangle}
-                                                                             className={"text-warning ml-2"}/>
-                                                        </sup>
-                                                    }
-                                                </div>
-                                                {
-                                                    opinion?.sources?.length &&
-                                                    <div>
-                                                        {
-                                                            opinion?.sources.map((source, j) =>
-                                                                <LinkExternal key={j}
-                                                                    url={source.url}
-                                                                    className={"my-1"}>
-                                                                    [{j + 1}]
-                                                                </LinkExternal>
-                                                            )
-                                                        }
-                                                    </div>
-                                                }
-                                            </td>
-                                        );
-                                    }
+                                    const match = isMatch(opinionId, ideologyA, ideologyB);
 
                                     return (
                                         <tr key={i}>
-                                            <th style={{fontSize: "1.4em"}}>{t("ideologyOpinions." + opinionId)}</th>
-                                            {renderCol(ideologyA)}
-                                            {renderCol(ideologyB)}
+                                            <th style={{fontSize: "1.4em"}}
+                                                className={
+                                                    match ? "text-success" : (match === false ? "text-danger" : "")
+                                                }>
+                                                {t("ideologyOpinions." + opinionId)}
+                                            </th>
+                                            {renderCol(ideologyA, opinionId)}
+                                            {renderCol(ideologyB, opinionId)}
                                         </tr>
                                     );
                                 }
