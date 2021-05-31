@@ -1,4 +1,5 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
+import { faStar } from "@fortawesome/free-solid-svg-icons/faStar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "next-i18next";
 import Head from "next/head";
@@ -63,7 +64,17 @@ export default function Topics() {
                         topic.links?.map((link, i) => (
                             <div className={"col-md-6"} key={i}>
                                 <ContentBox>
-                                    <h4>{link?.title}</h4>
+                                    <h4>
+                                        {link?.title}
+                                        {
+                                            link?.tags?.find(tag => tag === "recommended:top") &&
+                                            <FontAwesomeIcon icon={faStar} className={"ml-2 text-warning"}/>
+                                        }
+                                        {
+                                            link?.tags?.find(tag => tag === "recommended") &&
+                                            <FontAwesomeIcon icon={faStar} className={"ml-2 text-secondary"}/>
+                                        }
+                                    </h4>
                                     <p>{link?.description}</p>
                                     <div>
                                         <Link href={link.url}>

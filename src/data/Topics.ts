@@ -56,7 +56,7 @@ const Topics: ITopic[] = [
         links: [
             {
                 title: "Matrix",
-                description: "Matrix is open decentralized network for secure communication.",
+                description: "Matrix is open decentralized network for secure communication. Alternative to Messanger / WhatsApp / Signal etc.",
                 url: "https://matrix.org/",
                 lang: "en",
                 tags: ["recommended:top"]
@@ -74,7 +74,14 @@ const Topics: ITopic[] = [
                 url: "https://joinmastodon.org/",
                 lang: "en",
                 tags: ["recommended:top"]
-            }
+            },
+            {
+                title: "PeerTube",
+                description: "PeerTube is free decentralized alternative to YouTube or Vimeo.",
+                url: "https://joinpeertube.org/",
+                lang: "en",
+                tags: ["recommended:top"]
+            },
         ]
     },
     {

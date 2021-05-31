@@ -13,3 +13,7 @@ export function deepCopy<T>(source: T): T {
                 }, Object.create(Object.getPrototypeOf(source)))
                 : source as T;
 }
+
+export function onlyUnique<T>(value: T, index: number, self: T[]) {
+    return self.indexOf(value) === index;
+}

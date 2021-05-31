@@ -65,6 +65,10 @@ const data: IIdeology[] = [
             {
                 id: "cryptoPositive",
                 opinion: "yes"
+            },
+            {
+                id: "netNeutrality",
+                opinion: "no"
             }
         ]
     },
@@ -74,7 +78,19 @@ const data: IIdeology[] = [
         opinions: [
             {
                 id: "transparentState",
-                opinion: "yes"
+                opinion: "yes",
+                sources: [
+                    {
+                        url: "https://en.wikipedia.org/wiki/Pirate_Party",
+                        lang: "en",
+                        title: "Pirate Party - Wikipedia"
+                    },
+                    {
+                        url: "https://pp-international.net/about-ppi/",
+                        lang: "en",
+                        title: "ABOUT PPI – Pirate Parties International"
+                    }
+                ]
             },
             {
                 id: "sameSexMarriage",
@@ -119,6 +135,17 @@ const data: IIdeology[] = [
             {
                 id: "cryptoPositive",
                 opinion: "yes"
+            },
+            {
+                id: "netNeutrality",
+                opinion: "yes",
+                sources: [
+                    {
+                        url: "https://en.wikipedia.org/wiki/Pirate_Party",
+                        lang: "en",
+                        title: "Pirate Party - Wikipedia"
+                    }
+                ]
             }
         ]
     }

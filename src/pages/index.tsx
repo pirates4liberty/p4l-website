@@ -7,6 +7,7 @@ import CardButton from "../components/Content/CardButton";
 import Content from "../components/Content/Content";
 import ContentBox from "../components/Content/ContentBox";
 import HashtagBox from "../components/Hashtag/HashtagBox";
+import Recommendations from "../components/WebParts/Recommendations";
 import { HashtagsRepository } from "../data/Hashtags/Hashtags";
 import { ValuesRepository } from "../data/Hashtags/Values";
 import { StaticProps } from "../tools/Helpers/TranslationHelper";
@@ -113,7 +114,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <Content className="text-center fw-bold">
+                <Content>
                     <div className={"row"}>
                         {
                             ctaButtons.map((ctaButton, i) =>
@@ -132,10 +133,12 @@ export default function Home() {
                         }
                     </div>
 
-                    <ContentBox style={{fontSize: "1.5em"}}>
+                    <ContentBox style={{fontSize: "1.5em"}} className={"text-center fw-bold mb-5"}>
                         <HashtagBox hashtags={hashtags} className="mb-4"/>
                         <HashtagBox hashtags={values}/>
                     </ContentBox>
+
+                    <Recommendations />
                 </Content>
             </div>
         </>

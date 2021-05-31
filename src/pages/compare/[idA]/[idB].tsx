@@ -11,11 +11,8 @@ import ContentBox from "../../../components/Content/ContentBox";
 import ContentHeading from "../../../components/Content/ContentHeading";
 import LinkExternal from "../../../components/LinkExternal";
 import { IdeologiesRepository, IIdeology } from "../../../data/Ideologies";
+import { onlyUnique } from "../../../tools/Helpers/Tools";
 import { StaticProps } from "../../../tools/Helpers/TranslationHelper";
-
-function onlyUnique<T>(value: T, index: number, self: T[]) {
-    return self.indexOf(value) === index;
-}
 
 export default function Topics() {
     const {t} = useTranslation();
@@ -116,7 +113,11 @@ export default function Topics() {
                                                     <div>
                                                         {
                                                             opinion?.sources.map((source, j) =>
-                                                                <LinkExternal url={source.url}>[{j+1}]</LinkExternal>
+                                                                <LinkExternal key={j}
+                                                                    url={source.url}
+                                                                    className={"my-1"}>
+                                                                    [{j + 1}]
+                                                                </LinkExternal>
                                                             )
                                                         }
                                                     </div>
