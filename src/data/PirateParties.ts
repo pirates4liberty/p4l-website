@@ -29,7 +29,7 @@ export interface IPirateParty {
     tags?: string[];
 }
 
-const PirateParties: IPirateParty[] = [
+const data: IPirateParty[] = [
     {
         id: "international",
         title: "parties.international",
@@ -675,6 +675,6 @@ export class PiratePartiesRepository extends CachedRepository<IPirateParty> {
     }
 
     protected fetchAll() {
-        return PirateParties;
+        return data;
     }
 }

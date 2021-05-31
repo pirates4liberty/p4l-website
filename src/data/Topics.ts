@@ -11,7 +11,7 @@ export interface ITopic {
     tags?: string[]
 }
 
-const Topics: ITopic[] = [
+const data: ITopic[] = [
     {
         id: "eu",
         title: "topics.eu",
@@ -69,6 +69,20 @@ const Topics: ITopic[] = [
                 tags: ["recommended"]
             },
             {
+                title: "Bitcoin",
+                description: "Bitcoin is a decentralized open-source digital currency. It's an alternative to ordinary state money.",
+                url: "https://en.wikipedia.org/wiki/Bitcoin",
+                lang: "en",
+                tags: ["recommended:top"]
+            },
+            {
+                title: "Jitsi",
+                description: "Jitsi is a free open-source software for online video conferences. It's an alternative to Google Maps / Bing Maps / Apple Maps etc.",
+                url: "https://jitsi.org/",
+                lang: "en",
+                tags: ["recommended:top"]
+            },
+            {
                 title: "Mastodon",
                 description: "Social network alternative to Twitter. No ads, no corporate surveillance, ethical design, and decentralization! Own your data with Mastodon!",
                 url: "https://joinmastodon.org/",
@@ -77,10 +91,24 @@ const Topics: ITopic[] = [
             },
             {
                 title: "PeerTube",
-                description: "PeerTube is free decentralized alternative to YouTube or Vimeo.",
+                description: "PeerTube is a free decentralized alternative to YouTube or Vimeo.",
                 url: "https://joinpeertube.org/",
                 lang: "en",
                 tags: ["recommended:top"]
+            },
+            {
+                title: "GitLab",
+                description: "GitLab is an open-source software development platform. It's an alternative to GitHub.",
+                url: "https://about.gitlab.com/",
+                lang: "en",
+                tags: ["recommended:top"]
+            },
+            {
+                title: "OpenStreetMap",
+                description: "OpenStreetMap is a free collaborative alternative to Google Maps / Bing Maps / Apple Maps etc.",
+                url: "https://www.openstreetmap.org/",
+                lang: "en",
+                tags: ["recommended"]
             },
         ]
     },
@@ -131,6 +159,6 @@ export class TopicsRepository extends CachedRepository<ITopic> {
     }
 
     protected fetchAll() {
-        return Topics;
+        return data;
     }
 }

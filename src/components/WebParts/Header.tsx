@@ -5,7 +5,7 @@ import { i18n, useTranslation } from "next-i18next";
 import Link from "next/link"
 import React, { BaseSyntheticEvent } from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
-import { MenuItems } from "../../data/MenuItems";
+import { MenuItemsRepository } from "../../data/MenuItems";
 
 function onLangChange(e: BaseSyntheticEvent) {
     i18n?.changeLanguage(e.target.value);
@@ -13,7 +13,7 @@ function onLangChange(e: BaseSyntheticEvent) {
 
 export default function Header() {
     const {t} = useTranslation();
-    const menuItems = MenuItems;
+    const menuItems = (new MenuItemsRepository()).getAll();
 
     return (
         <header className="p-3 bg-dark text-white">
@@ -23,7 +23,7 @@ export default function Header() {
                         {
                             menuItems.map(menuItem => (
                                 <li key={menuItem.title}>
-                                    <Link href={menuItem.url}>
+                                    <Link href={menuItem.url || "#"}>
                                         <a className="nav-link px-2 text-white">
                                             {t(menuItem.title)}
                                         </a>
