@@ -42,6 +42,9 @@ export default function About() {
                 <p>
                     {t("pages.about.p3")}
                 </p>
+                <p>
+                    E-mail: <a href={"mailto:info@pirates4liberty.cz"}>info@pirates4liberty.cz</a>
+                </p>
             </ContentBox>
         </Content>
     )

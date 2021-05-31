@@ -10,7 +10,6 @@ import ContentBox from "../../../components/Content/ContentBox";
 import ContentHeading from "../../../components/Content/ContentHeading";
 import LinkExternal from "../../../components/LinkExternal";
 import { IdeologiesRepository, ideologyCategories, IIdeology, OpinionType } from "../../../data/Ideologies";
-import { onlyUnique } from "../../../tools/Helpers/Tools";
 import { StaticProps } from "../../../tools/Helpers/TranslationHelper";
 
 function getPositivity(opinion?: OpinionType): boolean | undefined {
@@ -68,6 +67,7 @@ function isMatch(opinionId: string, ...ideologies: IIdeology[]): boolean | undef
 }
 
 function renderCol(ideology: IIdeology, opinionId: string): JSX.Element {
+    const {t} = useTranslation();
     const opinion = ideology.opinions.find(opinion => opinion.id === opinionId);
     const isWarning = opinion?.tags?.find(tag => tag === "warning");
 
@@ -88,13 +88,20 @@ function renderCol(ideology: IIdeology, opinionId: string): JSX.Element {
                 <div>
                     {
                         opinion?.sources.map((source, j) =>
-                            <LinkExternal key={j}
-                                          url={source.url}
-                                          className={"my-1"}>
-                                [{j + 1}]
-                            </LinkExternal>
+                            <span className={"mr-1"}>
+                                <LinkExternal key={j}
+                                              url={source.url}>
+                                    [{j + 1}]
+                                </LinkExternal>
+                            </span>
                         )
                     }
+                </div>
+            }
+            {
+                opinion?.description &&
+                <div>
+                    {t(opinion.description)}
                 </div>
             }
         </td>

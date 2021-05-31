@@ -187,7 +187,14 @@
     "liberalPrefer": "Preferences of liberal attitudes",
     "liberalGunPolicy": "Liberalization of weapons possession and handling",
     "euPositive": "Positive attitude towards the EU",
-    "euMoneyPositive": "Positive attitude towards the euro"
+    "euMoneyPositive": "Positive attitude towards the euro",
+    "stateAdminEfficiency": "Streamlining the state apparatus for savings",
+    "privacy": "Privacy protection",
+    "subsidiarity": "Emphasis on the principle of subsidiarity",
+    "dutyFree": "Freedom of movement of goods (duty free union)",
+    "envProtection": "Environmental protection",
+    "copyrightReform": "Copyright reform",
+    "patentReform": "Patent reform"
   },
   "ideologyCat": {
     "general": "General attitudes",
@@ -196,10 +203,27 @@
     "economy": "Economy",
     "state": "State policy"
   },
+  "opinionTitle": {
+    "yes": "Kladný postoj",
+    "neutral": "Neutrální postoj",
+    "no": "Záporný postoj",
+    "unknown": "Neznámý postoj",
+    "higher": "Tendence zvýšit",
+    "equal": "Tendence ponechat",
+    "lower": "Tendence snížit"
+  },
   "parts": {
     "recommendations": {
       "title": "We recommend",
       "more": "More recommendations"
+    }
+  },
+  "ideology": {
+    "pirates": {
+      "socialPolicyDesc": "Social liberalism"
+    },
+    "libertarians": {
+      "socialPolicyDesc": "No redistribution of funds"
     }
   }
 }

@@ -168,7 +168,14 @@
     "liberalPrefer": "Preference liberálních postojů",
     "liberalGunPolicy": "Liberalizace držení zbraní a nakládání s nimi",
     "euPositive": "Pozitivní postoj k EU",
-    "euMoneyPositive": "Pozitivní postoj přijetí k eura"
+    "euMoneyPositive": "Pozitivní postoj přijetí k eura",
+    "stateAdminEfficiency": "Zefektivnění státního aparátu za účelem úspor",
+    "privacy": "Ochrana soukromí",
+    "subsidiarity": "Důraz na princip subsidiarity",
+    "dutyFree": "Svoboda pohybu zboží (bezcelní unie)",
+    "envProtection": "Ochrana životního prostředí",
+    "copyrightReform": "Reforma autorských práv",
+    "patentReform": "Reforma patentové ochrany"
   },
   "ideologyCat": {
     "general": "Obecné postoje",
@@ -181,6 +188,14 @@
     "recommendations": {
       "title": "Doporučujeme",
       "more": "Více doporučení"
+    }
+  },
+  "ideology": {
+    "pirates": {
+      "socialPolicyDesc": "Sociální liberalismus"
+    },
+    "libertarians": {
+      "socialPolicyDesc": "Žádné přerozdělování financí"
     }
   }
 }

@@ -5,6 +5,9 @@ import { faCheckCircle } from "@fortawesome/free-solid-svg-icons/faCheckCircle";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons/faQuestionCircle";
 import { faWindowClose } from "@fortawesome/free-solid-svg-icons/faWindowClose";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslation } from "next-i18next";
+import React from "react";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { OpinionType } from "../data/Ideologies";
 
 class Props {
@@ -14,6 +17,8 @@ class Props {
 }
 
 export default function CompareIcon(props: Props) {
+    const {t} = useTranslation();
+
     let positivityColors = props.colors || [
         "success",
         "secondary",
@@ -25,27 +30,43 @@ export default function CompareIcon(props: Props) {
         positivityColors = positivityColors.reverse();
     }
 
+    let out;
+
     switch (props.opinion) {
         case "higher":
-            return <FontAwesomeIcon icon={faArrowUp}
-                                    className={"text-" + positivityColors[0]}/>
+            out = <FontAwesomeIcon icon={faArrowUp}
+                                   className={"text-" + positivityColors[0]}/>
+            break;
         case "yes":
-            return <FontAwesomeIcon icon={faCheckCircle}
-                                    className={"text-" + positivityColors[0]}/>
+            out = <FontAwesomeIcon icon={faCheckCircle}
+                                   className={"text-" + positivityColors[0]}/>
+            break;
         case "equal":
-            return <FontAwesomeIcon icon={faArrowCircleRight}
-                                    className={"text-" + positivityColors[2]}/>
+            out = <FontAwesomeIcon icon={faArrowCircleRight}
+                                   className={"text-" + positivityColors[2]}/>
+            break;
         case "no":
-            return <FontAwesomeIcon icon={faWindowClose}
-                                    className={"text-" + positivityColors[3]}/>
+            out = <FontAwesomeIcon icon={faWindowClose}
+                                   className={"text-" + positivityColors[3]}/>
+            break;
         case "lower":
-            return <FontAwesomeIcon icon={faArrowDown}
-                                    className={"text-" + positivityColors[3]}/>
+            out = <FontAwesomeIcon icon={faArrowDown}
+                                   className={"text-" + positivityColors[3]}/>
+            break;
         case "neutral":
-            return <span className={"bange badge-pill badge-" + positivityColors[1]}>N</span>
+            out = <span className={"bange badge-pill badge-" + positivityColors[1]}>N</span>
+            break;
         case "unknown":
         default:
-            return <FontAwesomeIcon icon={faQuestionCircle}
-                                    className={"text-" + positivityColors[1]}/>
+            out = <FontAwesomeIcon icon={faQuestionCircle}
+                                   className={"text-" + positivityColors[1]}/>
+            break;
     }
+
+    return (
+        <OverlayTrigger placement="bottom"
+                        overlay={<Tooltip id={"3"}>{t("opinionTitle." + props.opinion)}</Tooltip>}>
+            {out}
+        </OverlayTrigger>
+    );
 }

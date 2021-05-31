@@ -6,8 +6,9 @@ import { CachedRepository } from "../tools/Repository/CachedRepository";
 export type OpinionType = "higher" | "yes" | "equal" | "unknown" | "neutral" | "no" | "lower";
 
 export interface IIdeologyOpinion {
-    id: string,
-    opinion?: OpinionType,
+    id: string;
+    opinion?: OpinionType;
+    description?: string;
     tags?: string[];
     sources?: IExternalLink[];
 }
@@ -20,8 +21,8 @@ export interface IIdeology {
 }
 
 export const ideologyCategories: {
-    id: string,
-    opinions: { id: string }[]
+    id: string;
+    opinions: { id: string }[];
 }[] = [
     {
         id: "general",
@@ -31,6 +32,12 @@ export const ideologyCategories: {
             },
             {
                 id: "decentralization"
+            },
+            {
+                id: "privacy"
+            },
+            {
+                id: "envProtection"
             }
         ]
     },
@@ -38,16 +45,22 @@ export const ideologyCategories: {
         id: "individual",
         opinions: [
             {
-                id: "sameSexMarriage"
+                id: "freeSpeech"
             },
             {
-                id: "freeSpeech"
+                id: "copyrightReform"
+            },
+            {
+                id: "patentReform"
             },
             {
                 id: "deregulationDrugs"
             },
             {
                 id: "liberalGunPolicy"
+            },
+            {
+                id: "sameSexMarriage"
             }
         ]
     },
@@ -72,10 +85,16 @@ export const ideologyCategories: {
                 id: "transparentState"
             },
             {
-                id: "socialState"
+                id: "stateAdminEfficiency"
             },
             {
                 id: "schoolLiberalization"
+            },
+            {
+                id: "socialState"
+            },
+            {
+                id: "subsidiarity"
             },
             {
                 id: "euPositive"
@@ -85,6 +104,9 @@ export const ideologyCategories: {
     {
         id: "economy",
         opinions: [
+            {
+                id: "dutyFree"
+            },
             {
                 id: "largeComSubsidies"
             },
@@ -125,7 +147,8 @@ const data: IIdeology[] = [
             },
             {
                 id: "socialState",
-                opinion: "no"
+                opinion: "no",
+                description: "ideology.libertarians.socialPolicyDesc"
             },
             {
                 id: "largeComSubsidies",
@@ -166,6 +189,34 @@ const data: IIdeology[] = [
             {
                 id: "euMoneyPositive",
                 opinion: "no"
+            },
+            {
+                id: "stateAdminEfficiency",
+                opinion: "yes"
+            },
+            {
+                id: "privacy",
+                opinion: "neutral"
+            },
+            {
+                id: "subsidiarity",
+                opinion: "yes"
+            },
+            {
+                id: "dutyFree",
+                opinion: "yes"
+            },
+            {
+                id: "envProtection",
+                opinion: "neutral"
+            },
+            {
+                id: "copyrightReform",
+                opinion: "yes"
+            },
+            {
+                id: "patentReform",
+                opinion: "yes"
             }
         ]
     },
@@ -207,7 +258,15 @@ const data: IIdeology[] = [
             },
             {
                 id: "socialState",
-                opinion: "yes"
+                opinion: "yes",
+                description: "ideology.pirates.socialPolicyDesc",
+                sources: [
+                    {
+                        title: "Pirate Party - Wikipedia",
+                        lang: "en",
+                        url: "https://en.wikipedia.org/wiki/Pirate_Party"
+                    }
+                ]
             },
             {
                 id: "largeComSubsidies",
@@ -276,6 +335,34 @@ const data: IIdeology[] = [
             },
             {
                 id: "euMoneyPositive",
+                opinion: "yes"
+            },
+            {
+                id: "stateAdminEfficiency",
+                opinion: "yes"
+            },
+            {
+                id: "privacy",
+                opinion: "yes"
+            },
+            {
+                id: "subsidiarity",
+                opinion: "yes"
+            },
+            {
+                id: "dutyFree",
+                opinion: "yes"
+            },
+            {
+                id: "envProtection",
+                opinion: "yes"
+            },
+            {
+                id: "copyrightReform",
+                opinion: "yes"
+            },
+            {
+                id: "patentReform",
                 opinion: "yes"
             }
         ]
