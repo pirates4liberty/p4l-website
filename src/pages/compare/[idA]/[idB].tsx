@@ -87,11 +87,10 @@ function renderCol(ideology: IIdeology, opinionId: string): JSX.Element {
                 opinion?.sources?.length &&
                 <div>
                     {
-                        opinion?.sources.map((source, j) =>
-                            <span className={"mr-1"}>
-                                <LinkExternal key={j}
-                                              url={source.url}>
-                                    [{j + 1}]
+                        opinion?.sources.map((source, i) =>
+                            <span className={"mr-1"} key={i}>
+                                <LinkExternal url={source.url}>
+                                    [{i + 1}]
                                 </LinkExternal>
                             </span>
                         )
@@ -172,12 +171,12 @@ export default function Topics() {
                                         </tr>
                                     );
 
-                                    ideologyCategory.opinions.map(opinion => {
+                                    ideologyCategory.opinions.map((opinion, j) => {
                                         const match = isMatch(opinion.id, ideologyA, ideologyB);
 
                                         out = <>
                                             {out}
-                                            <tr key={i}>
+                                            <tr key={j}>
                                                 <th style={{fontSize: "1.4em"}}
                                                     className={
                                                         match ? "text-success" : (match === false ? "text-danger" : "")
@@ -190,7 +189,7 @@ export default function Topics() {
                                         </>;
                                     })
 
-                                    return <tbody>{out}</tbody>;
+                                    return <tbody key={i}>{out}</tbody>;
                                 }
                             )
                         }

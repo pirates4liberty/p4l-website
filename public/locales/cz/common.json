@@ -175,14 +175,17 @@
     "dutyFree": "Svoboda pohybu zboží (bezcelní unie)",
     "envProtection": "Ochrana životního prostředí",
     "copyrightReform": "Reforma autorských práv",
-    "patentReform": "Reforma patentové ochrany"
+    "patentReform": "Reforma patentové ochrany",
+    "charitySupport": "Podpora dobročinných sbírek",
+    "participativeBudget": "Pozitivní vztah k participativním rozpočtům"
   },
   "ideologyCat": {
     "general": "Obecné postoje",
     "individual": "Práva jednotlivce",
     "technology": "Technologie",
     "economy": "Ekonomika",
-    "state": "Státní politika"
+    "state": "Státní politika",
+    "social": "Sociální záležitosti"
   },
   "parts": {
     "recommendations": {

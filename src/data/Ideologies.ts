@@ -91,13 +91,24 @@ export const ideologyCategories: {
                 id: "schoolLiberalization"
             },
             {
-                id: "socialState"
-            },
-            {
                 id: "subsidiarity"
             },
             {
+                id: "participativeBudget"
+            },
+            {
                 id: "euPositive"
+            }
+        ]
+    },
+    {
+        id: "social",
+        opinions: [
+            {
+                id: "charitySupport"
+            },
+            {
+                id: "socialState"
             }
         ]
     },
@@ -216,6 +227,14 @@ const data: IIdeology[] = [
             },
             {
                 id: "patentReform",
+                opinion: "yes"
+            },
+            {
+                id: "charitySupport",
+                opinion: "yes"
+            },
+            {
+                id: "participativeBudget",
                 opinion: "yes"
             }
         ]
@@ -363,6 +382,14 @@ const data: IIdeology[] = [
             },
             {
                 id: "patentReform",
+                opinion: "yes"
+            },
+            {
+                id: "charitySupport",
+                opinion: "yes"
+            },
+            {
+                id: "participativeBudget",
                 opinion: "yes"
             }
         ]

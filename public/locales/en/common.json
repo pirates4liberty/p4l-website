@@ -194,14 +194,17 @@
     "dutyFree": "Freedom of movement of goods (duty free union)",
     "envProtection": "Environmental protection",
     "copyrightReform": "Copyright reform",
-    "patentReform": "Patent reform"
+    "patentReform": "Patent reform",
+    "charitySupport": "Support for charitable collections",
+    "participativeBudget": "Positive attitude towards participatory budgets"
   },
   "ideologyCat": {
     "general": "General attitudes",
     "individual": "Individual rights",
     "technology": "Technology",
     "economy": "Economy",
-    "state": "State policy"
+    "state": "State policy",
+    "social": "Social attitudes"
   },
   "opinionTitle": {
     "yes": "Kladný postoj",

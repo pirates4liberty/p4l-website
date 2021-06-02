@@ -65,7 +65,7 @@ export default function CompareIcon(props: Props) {
 
     return (
         <OverlayTrigger placement="bottom"
-                        overlay={<Tooltip id={"3"}>{t("opinionTitle." + props.opinion)}</Tooltip>}>
+                        overlay={<Tooltip id={"3"}>{t("opinionTitle." + (props.opinion || "unknown"))}</Tooltip>}>
             {out}
         </OverlayTrigger>
     );
