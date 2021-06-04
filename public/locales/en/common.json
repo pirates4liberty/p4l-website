@@ -165,7 +165,8 @@
   },
   "btn": {
     "readMore": "Read more",
-    "goToWebsite": "Go to website"
+    "goToWebsite": "Go to website",
+    "buy": "Buy"
   },
   "ideologies": {
     "libertarians": "Libertarians",
@@ -227,6 +228,11 @@
     },
     "libertarians": {
       "socialPolicyDesc": "No redistribution of funds"
+    }
+  },
+  "components": {
+    "recommendedBooks": {
+      "title": "Recommended books"
     }
   }
 }

@@ -146,7 +146,8 @@
   },
   "btn": {
     "readMore": "Číst dále",
-    "goToWebsite": "Přejít na web"
+    "goToWebsite": "Přejít na web",
+    "buy": "Koupit"
   },
   "ideologies": {
     "libertarians": "Libertariáni",
@@ -199,6 +200,11 @@
     },
     "libertarians": {
       "socialPolicyDesc": "Žádné přerozdělování financí"
+    }
+  },
+  "components": {
+    "recommendedBooks": {
+      "title": "Doporučené knihy"
     }
   }
 }

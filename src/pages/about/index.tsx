@@ -4,6 +4,7 @@ import Link from "next/link";
 import Content from "../../components/Content/Content";
 import ContentBox from "../../components/Content/ContentBox";
 import ContentHeading from "../../components/Content/ContentHeading";
+import RecommendedBooks from "../../components/RecommendedBooks";
 import { StaticProps } from "../../tools/Helpers/TranslationHelper";
 
 export default function About() {
@@ -46,6 +47,8 @@ export default function About() {
                     E-mail: <a href={"mailto:info@pirates4liberty.cz"}>info@pirates4liberty.cz</a>
                 </p>
             </ContentBox>
+
+            <RecommendedBooks/>
         </Content>
     )
 }
