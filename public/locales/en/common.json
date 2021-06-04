@@ -5,6 +5,7 @@
   "pages": {
     "home": {
       "title": "Home",
+      "calendar": "Calendar",
       "cta": {
         "areYouLibertarian": {
           "title": "How libertarian are you?",

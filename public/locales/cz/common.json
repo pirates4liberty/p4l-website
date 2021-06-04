@@ -5,6 +5,7 @@
   "pages": {
     "home": {
       "title": "Úvod",
+      "calendar": "Kalendář",
       "cta": {
         "areYouLibertarian": {
           "title": "Do jaké míry jsi libertarián?",

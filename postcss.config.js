@@ -31,6 +31,7 @@ module.exports = {
                             /text-(primary|secondary|success|info|warning|danger|light|dark|white)$/,
                             /badge$/,
                             /badge-\.*$/,
+                            /card-\.*$/,
                             /ml-2$/,
                             /mr-2$/,
                             /tooltip/

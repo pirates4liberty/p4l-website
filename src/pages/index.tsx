@@ -1,4 +1,5 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
+import { faCalendar } from "@fortawesome/free-solid-svg-icons/faCalendar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { i18n, useTranslation } from "next-i18next";
 import Head from "next/head";
@@ -8,6 +9,7 @@ import { Carousel } from "react-bootstrap";
 import CardButton from "../components/Content/CardButton";
 import Content from "../components/Content/Content";
 import ContentBox from "../components/Content/ContentBox";
+import ContentHeading from "../components/Content/ContentHeading";
 import HashtagBox from "../components/Hashtag/HashtagBox";
 import LinkInternal from "../components/LinkInternal";
 import RecommendationsList from "../components/WebParts/RecommendationsList";
@@ -136,10 +138,25 @@ export default function Home() {
                         }
                     </div>
 
-                    <ContentBox style={{fontSize: "1.5em"}} className={"text-center fw-bold mb-5"}>
-                        <HashtagBox hashtags={hashtags} className="mb-4"/>
-                        <HashtagBox hashtags={values}/>
-                    </ContentBox>
+                    <div className={"row"}>
+                        <div className={"col-md-8"}>
+                            <ContentBox style={{fontSize: "1.5em"}} className={"text-center fw-bold mb-5"}>
+                                <HashtagBox hashtags={hashtags} className="mb-4"/>
+                                <HashtagBox hashtags={values}/>
+                            </ContentBox>
+                        </div>
+                        <div className={"col-md-4"}>
+                            <ContentBox>
+                                <ContentHeading>
+                                    <FontAwesomeIcon icon={faCalendar} className={"mr-2"}/>
+                                    {t("pages.home.calendar")}
+                                </ContentHeading>
+                                <iframe
+                                    src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=300&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=1i5s4rpq519gs9cpf1i4j96m3s%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=Europe%2FPrague"
+                                    style={{"border": 0}} width="320" height="300" frameBorder="0" scrolling="no"/>
+                            </ContentBox>
+                        </div>
+                    </div>
 
                     <div>
                         <h3>
