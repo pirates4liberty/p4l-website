@@ -32,6 +32,7 @@ module.exports = {
                             /badge$/,
                             /badge-\.*$/,
                             /card-\.*$/,
+                            /h[123456]$/,
                             /ml-2$/,
                             /mr-2$/,
                             /tooltip/
