@@ -8,13 +8,19 @@ interface IImage {
     tags?: string[];
 }
 
+export interface IAuthor {
+    name: string,
+    link?: IExternalLink;
+}
+
 export interface IBook {
     id: string;
     title: ITranslatableString[];
     titleTranslated?: string;
     description?: ITranslatableString[];
     descriptionTranslated?: string;
-    imgs?: IImage[],
+    authors?: IAuthor[];
+    imgs?: IImage[];
     buy?: IExternalLink[];
     languages?: string[];
     tags?: string[];
@@ -31,6 +37,14 @@ const data: IBook[] = [
             {
                 lang: "cz",
                 value: "Pokrok bez povolení"
+            }
+        ],
+        authors: [
+            {
+                name: "Róbert Chovanculiak",
+                link: {
+                    url: "https://www.databazeknih.cz/autori/robert-chovanculiak-129455"
+                }
             }
         ],
         buy: [
@@ -59,6 +73,14 @@ const data: IBook[] = [
                 value: "Anarchokapitalismus"
             }
         ],
+        authors: [
+            {
+                name: "Martin Urza",
+                link: {
+                    url: "https://www.databazeknih.cz/autori/martin-urza-113977"
+                }
+            }
+        ],
         buy: [
             {
                 title: "kosmas.cz",
@@ -69,6 +91,35 @@ const data: IBook[] = [
         imgs: [
             {
                 url: "ankap.jpg"
+            }
+        ]
+    },
+    {
+        id: "dark-web",
+        title: [
+            {
+                lang: "cz",
+                value: "Dark Web: Sex, drogy a bitcoiny"
+            }
+        ],
+        authors: [
+            {
+                name: "Dominik Stroukal",
+                link: {
+                    url: "https://www.databazeknih.cz/autori/dominik-stroukal-88283"
+                }
+            }
+        ],
+        buy: [
+            {
+                title: "kosmas.cz",
+                url: "https://www.grada.cz/dark-web-sex-drogy-a-bitcoiny-11493/",
+                lang: "cz"
+            }
+        ],
+        imgs: [
+            {
+                url: "dark-web.jpg"
             }
         ]
     }

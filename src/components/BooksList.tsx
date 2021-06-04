@@ -36,7 +36,29 @@ export default function BooksList(props: Props) {
                                         </Card.Title>
                                         <Card.Text>
                                             {book.descriptionTranslated}
+                                            {
+                                                book.authors &&
+                                                <div className={"mb-3"}>
+                                                    Autor: {
+                                                    book.authors.map((author, j) => {
+                                                            let out = <>{author.name}</>;
 
+                                                            if (author.link) {
+                                                                out = (
+                                                                    <LinkExternal data={author.link}>
+                                                                        {out}
+                                                                    </LinkExternal>
+                                                                );
+                                                            }
+
+                                                            return (
+                                                                <span key={j}>{out}</span>
+                                                            );
+                                                        }
+                                                    )
+                                                }
+                                                </div>
+                                            }
                                             {
                                                 book.buy && book.buy[0] &&
                                                 <LinkExternal data={book.buy[0]}>

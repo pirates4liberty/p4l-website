@@ -12,7 +12,7 @@ export default function RecommendedBooks(props: Props) {
 
     return (
         <>
-            <ContentHeading>
+            <ContentHeading className={"mt-4"}>
                 {t("components.recommendedBooks.title")}
             </ContentHeading>
 
