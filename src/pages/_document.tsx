@@ -3,7 +3,7 @@ import Document, { Head, Html, Main, NextScript } from "next/document"
 class MyDocument extends Document {
     render() {
         return (
-            <Html>
+            <Html prefix="og: https://ogp.me/ns#">
                 <Head>
                     <link rel="manifest" href="/manifest.json"/>
                     <link rel="icon" type="image/png" sizes="196x196" href="/img/pwa/p4l_square_196.png"/>
