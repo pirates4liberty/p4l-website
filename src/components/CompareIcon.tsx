@@ -54,7 +54,7 @@ export default function CompareIcon(props: Props) {
                                    className={"text-" + positivityColors[3]}/>
             break;
         case "neutral":
-            out = <span className={"bange badge-pill badge-" + positivityColors[1]}>N</span>
+            out = <span className={"badge badge-pill badge-" + positivityColors[1]}>N</span>
             break;
         case "unknown":
         default:
