@@ -3,16 +3,20 @@ import { faComments } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { i18n, useTranslation } from "next-i18next";
 import Link from "next/link"
-import React, { BaseSyntheticEvent } from "react";
+import { NextRouter, useRouter } from "next/router";
+import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { MenuItemsRepository } from "../../data/MenuItems";
 
-function onLangChange(e: BaseSyntheticEvent) {
-    i18n?.changeLanguage(e.target.value);
+function onLangChange(lang: string, router: NextRouter) {
+    i18n?.changeLanguage(lang);
+    router.push(router.pathname, router.pathname, {locale: lang})
 }
 
 export default function Header() {
     const {t} = useTranslation();
+    const router = useRouter();
+
     const menuItems = (new MenuItemsRepository()).getAll();
 
     return (
@@ -55,7 +59,8 @@ export default function Header() {
                         </OverlayTrigger>
 
                         <div className="d-inline-block mt-1">
-                            <select className="form-control" value={i18n?.language} onChange={onLangChange}>
+                            <select className="form-control" value={i18n?.language}
+                                    onChange={(e) => onLangChange(e.target.value, router)}>
                                 {["en", "cz"].map(lang => (
                                     <option key={lang} value={lang}>
                                         {lang.toUpperCase()}

@@ -196,12 +196,20 @@ const data: IPirateParty[] = [
                         url: "https://profil.pirati.cz/"
                     },
                     {
-                        title: "Mastodon",
-                        url: "https://mastodon.pirati.cz/"
+                        title: "Mrak (cloud)",
+                        url: "https://mrak.pirati.cz/"
+                    },
+                    {
+                        title: "Moodle (e-learning)",
+                        url: "https://moodle.pirati.cz/"
                     },
                     {
                         title: "Zulip",
                         url: "https://zulip.pirati.cz/"
+                    },
+                    {
+                        title: "Mastodon",
+                        url: "https://mastodon.pirati.cz/"
                     },
                     {
                         title: "Wiki",

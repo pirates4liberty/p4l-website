@@ -119,6 +119,9 @@ export const ideologyCategories: {
                 id: "dutyFree"
             },
             {
+                id: "sharedEconomy"
+            },
+            {
                 id: "largeComSubsidies"
             },
             {
@@ -164,6 +167,10 @@ const data: IIdeology[] = [
             {
                 id: "largeComSubsidies",
                 opinion: "no"
+            },
+            {
+                id: "sharedEconomy",
+                opinion: "yes"
             },
             {
                 id: "largeComRegulations",
@@ -290,6 +297,10 @@ const data: IIdeology[] = [
             {
                 id: "largeComSubsidies",
                 opinion: "no"
+            },
+            {
+                id: "sharedEconomy",
+                opinion: "yes"
             },
             {
                 id: "largeComRegulations",
