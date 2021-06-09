@@ -15,6 +15,7 @@ function MyApp({Component, pageProps}: AppProps) {
         <>
             <Head>
                 <title>{t("app.title")}</title>
+                <meta property="og:image" content="/img/carousel/p4l_cover_en.png"/>
             </Head>
 
             <Header/>
