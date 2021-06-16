@@ -58,6 +58,10 @@
     },
     "recommendations": {
       "title": "Recommendations"
+    },
+    "compare": {
+      "title": "Comparison",
+      "description": "The table shows the strongly prevailing views, in the case of a political party, and the generally accepted views related to the philosophy. The aim is to provide an unbiased view for basic orientation, especially for people who are beginning to be interested in the issue of comparing the two parties. If you see an apparent contradiction with reality in the comparison, please feel free to contact us."
     }
   },
   "topics": {
@@ -178,7 +182,9 @@
     "transparentState": "State transparency",
     "sameSexMarriage": "Same-sex marriage",
     "socialState": "State redistribution of funds to the needy (social policy)",
-    "largeComSubsidies": "Subsidies also for large companies",
+    "subsidies": "Subsidies",
+    "subsidiesSME": "Subsidies for small and medium enterprise",
+    "subsidiesLE": "Subsidies for large enterprise",
     "largeComRegulations": "Legislative regulation of dominant companies",
     "schoolLiberalization": "Liberalization of the school system",
     "freeSpeech": "Freedom of speech",

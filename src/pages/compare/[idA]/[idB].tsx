@@ -140,6 +140,9 @@ export default function Topics() {
                                 <a>{t("pages.home.title")}</a>
                             </Link>
                         </li>
+                        <li className="breadcrumb-item">
+                            {t("pages.compare.title")}
+                        </li>
                         <li className="breadcrumb-item active" aria-current="page">
                             {title}
                         </li>
@@ -151,6 +154,12 @@ export default function Topics() {
                 </ContentHeading>
 
                 <ContentBox>
+                    <p>
+                        {t("pages.compare.description")}
+                    </p>
+                </ContentBox>
+
+                <ContentBox noPadding={true}>
                     <table className={"table table-striped table-responsive"}>
                         <thead>
                         <tr>
@@ -194,6 +203,14 @@ export default function Topics() {
                             )
                         }
                     </table>
+                </ContentBox>
+
+                <ContentBox noPadding={true}>
+                    <iframe
+                        src="https://www.kialo.com/co-maj%C3%AD-pir%C3%A1ti-a-libertari%C3%A1ni-spole%C4%8Dn%C3%A9ho-50781?embedder&amp;scriptlessEmbedVersion=1"
+                        width="100%"
+                        height="1000px"
+                        allowFullScreen/>
                 </ContentBox>
             </Content>
         )

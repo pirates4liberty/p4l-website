@@ -54,6 +54,10 @@
     },
     "recommendations": {
       "title": "Doporučení"
+    },
+    "compare": {
+      "title": "Porovnání",
+      "description": "V tabulce jsou uváděny výrazně převažující názory, v případě politické strany, a obecně přijímané názory související s danou filosofií. Cílem je poskytnou nezaujatý pohled pro základní orientaci, zejména pro lidí, kteří se o problematiku srovnávání uvedených dvou stran začínají zajímat. V případě, že vidíte ve srovnání zjevný rozpor s realitou, neváhejte nás kontaktovat."
     }
   },
   "topics": {
@@ -159,7 +163,9 @@
     "transparentState": "Transparentnost státu",
     "sameSexMarriage": "Manželství stejnopohlavních párů",
     "socialState": "Státní přerozdělování prostředků potřebným (sociální politika)",
-    "largeComSubsidies": "Dotace i pro velké společnosti",
+    "subsidies": "Dotace",
+    "subsidiesSME": "Dotace pro malé a střední společnosti",
+    "subsidiesLE": "Dotace pro velké společnosti",
     "largeComRegulations": "Legislativní regulace velkých společností",
     "schoolLiberalization": "Liberalizace školského systému",
     "freeSpeech": "Svoboda projevu",

@@ -122,7 +122,13 @@ export const ideologyCategories: {
                 id: "sharedEconomy"
             },
             {
-                id: "largeComSubsidies"
+                id: "subsidies"
+            },
+            {
+                id: "subsidiesSME"
+            },
+            {
+                id: "subsidiesLE"
             },
             {
                 id: "largeComRegulations"
@@ -165,7 +171,15 @@ const data: IIdeology[] = [
                 description: "ideology.libertarians.socialPolicyDesc"
             },
             {
-                id: "largeComSubsidies",
+                id: "subsidies",
+                opinion: "no"
+            },
+            {
+                id: "subsidiesSME",
+                opinion: "no"
+            },
+            {
+                id: "subsidiesLE",
                 opinion: "no"
             },
             {
@@ -295,7 +309,15 @@ const data: IIdeology[] = [
                 ]
             },
             {
-                id: "largeComSubsidies",
+                id: "subsidies",
+                opinion: "yes"
+            },
+            {
+                id: "subsidiesSME",
+                opinion: "yes"
+            },
+            {
+                id: "subsidiesLE",
                 opinion: "no"
             },
             {

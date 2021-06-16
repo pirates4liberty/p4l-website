@@ -4,19 +4,30 @@ type Props = {
     title?: string,
     children?: ReactNode,
     className?: string,
-    style?: CSSProperties
+    style?: CSSProperties,
+    noPadding?: boolean
 }
 
 export default function ContentBox(props: Props) {
+    let content = (
+        <>
+            {
+                props.title &&
+                <h2>{props.title}</h2>
+            }
+            {props.children}
+        </>
+    );
+
+    let className = "my-3 bg-white rounded shadow-sm " + (props.className ?? "");
+
+    if (!props.noPadding) {
+        className += " p-3";
+    }
+
     return (
-        <div className={props.className} style={props.style}>
-            <div className={"p-3 my-3 bg-white rounded shadow-sm"}>
-                {
-                    props.title &&
-                    <h2>{props.title}</h2>
-                }
-                {props.children}
-            </div>
+        <div className={className} style={props.style}>
+            {content}
         </div>
     );
 }
