@@ -35,6 +35,7 @@ yarn-error.log*
 
 # IDEs
 .idea/
+.vscode/
 
 # Generated public files
 public/sitemap*.xml

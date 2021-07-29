@@ -204,14 +204,6 @@ export default function Topics() {
                         }
                     </table>
                 </ContentBox>
-
-                <ContentBox noPadding={true}>
-                    <iframe
-                        src="https://www.kialo.com/co-maj%C3%AD-pir%C3%A1ti-a-libertari%C3%A1ni-spole%C4%8Dn%C3%A9ho-50781?embedder&amp;scriptlessEmbedVersion=1"
-                        width="100%"
-                        height="1000px"
-                        allowFullScreen/>
-                </ContentBox>
             </Content>
         )
     }

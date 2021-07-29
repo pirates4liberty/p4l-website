@@ -15,7 +15,7 @@ function MyApp({Component, pageProps}: AppProps) {
         <>
             <Head>
                 <title>{t("app.title")}</title>
-                <meta property="og:image" content={"https://pirates4liberty.cz/img/carousel/p4l_cover_en.png"}/>
+                <meta property="og:image" content={"https://pirates4liberty.cz/img/carousel/p4l_cover_en_img_web.jpg"}/>
             </Head>
 
             <Header/>

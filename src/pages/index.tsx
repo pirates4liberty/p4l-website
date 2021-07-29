@@ -33,12 +33,12 @@ export default function Home() {
 
     if (i18n?.language === "cz") {
         carouselData.push({
-            imgSrc: "/img/carousel/p4l_cover_cz.png",
+            imgSrc: "/img/carousel/p4l_cover_cz_img_web.jpg",
             alt: "Pirates 4 Liberty - Svoboda a zodpovědnost",
         });
     } else {
         carouselData.push({
-            imgSrc: "/img/carousel/p4l_cover_en.png",
+            imgSrc: "/img/carousel/p4l_cover_en_img_web.jpg",
             alt: "Pirates 4 Liberty - Liberty & Responsibility"
         });
     }
