@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "next-i18next";
 import Link from "next/link"
 import { ReactNode } from "react";
-import { IHashtag } from "../../model/Hashtag";
+import { IHashtag } from "../../../model/Hashtag";
 
 interface Props {
     data?: IHashtag,

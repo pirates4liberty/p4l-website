@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "next-i18next";
 import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
-import { OpinionType } from "../data/Ideologies";
+import { OpinionType } from "../../data/Ideologies";
 
 class Props {
     opinion?: OpinionType;

@@ -20,10 +20,6 @@
         }
       }
     },
-    "links": {
-      "title": "Rozcestník",
-      "partiesByStates": "Pirátské strany dle států"
-    },
     "about": {
       "title": "O nás",
       "p1": "Utváříme hatefree prostor pro diskuzi a hledání porozumění mezi Piráty a anarchokapitalisty, libertariány či minarchisty.",
@@ -37,15 +33,6 @@
       "title": "Novinky",
       "source": "Zdroj"
     },
-    "parties": {
-      "fbGroups": "Facebook skupiny",
-      "fbPages": "Facebook stránky",
-      "webSystems": "Pirátské systémy",
-      "subParties": "Podřazená sdružení",
-      "superParty": "Nadřazené sdružení",
-      "unofficialInitiatives": "Neoficiální iniciativy",
-      "otherLinks": "Další odkazy"
-    },
     "projects": {
       "title": "Projekty"
     },
@@ -58,6 +45,11 @@
     "compare": {
       "title": "Porovnání",
       "description": "V tabulce jsou uváděny výrazně převažující názory, v případě politické strany, a obecně přijímané názory související s danou filosofií. Cílem je poskytnou nezaujatý pohled pro základní orientaci, zejména pro lidí, kteří se o problematiku srovnávání uvedených dvou stran začínají zajímat. V případě, že vidíte ve srovnání zjevný rozpor s realitou, neváhejte nás kontaktovat."
+    },
+    "teams": {
+      "title": "Týmy",
+      "organizationalTeams": "Orgranizační týmy",
+      "workgroups": "Pracovní skupiny"
     }
   },
   "topics": {
@@ -98,26 +90,6 @@
   "notices": {
     "notPolitical": "Tato iniciativa není řízena Pirátskou stranou, ani jinou politickou stranou."
   },
-  "states": {
-    "cz": "Česko",
-    "sk": "Slovensko",
-    "pl": "Polsko",
-    "at": "Rakousko",
-    "eu": "Evropská unie",
-    "by": "Bělorusko",
-    "ba": "Bosna a Hercegovina",
-    "br": "Brazílie",
-    "bg": "Bulharsko",
-    "cat": "Katalánsko",
-    "cl": "Chile",
-    "ee": "Estonsko",
-    "fr": "Francie",
-    "de": "Německo",
-    "gr": "Řecko",
-    "hu": "Maďarsko",
-    "is": "Island",
-    "au": "Austrálie"
-  },
   "footer": {
     "codeLicense": "Licence kódu",
     "textContent": "textový obsah",
@@ -127,32 +99,14 @@
     "fbPage": "Facebook stránka",
     "fbDiscussGroup": "Diskuzní skupina na Facebooku"
   },
-  "parties": {
-    "cz": "Česká pirátská strana",
-    "sk": "Pirátska strana – Slovensko",
-    "pl": "Polská pirátská strana",
-    "at": "Rakouská pirátská strana (piratenpartei)",
-    "eu": "Evropská pirátská strana",
-    "international": "Internacionála pirátských stran",
-    "by": "Pirátské centrum Běloruska",
-    "ba": "Pirátská strana Bosny a Hercegoviny",
-    "br": "Pirátská strana Brazílie",
-    "bg": "Pirátská strana Bulharska",
-    "cat": "Pirátská strana Katalánska",
-    "cl": "Pirátská strana Chile",
-    "ee": "Estonská pirátská strana",
-    "fr": "Pirátská strana Francie",
-    "de": "Pirátská strana Německo",
-    "gr": "Pirátská strana Řecka",
-    "hu": "Pirátská strana Maďarska"
-  },
   "msg": {
     "notFound": "Nenalezeno."
   },
   "btn": {
     "readMore": "Číst dále",
     "goToWebsite": "Přejít na web",
-    "buy": "Koupit"
+    "buy": "Koupit",
+    "read": "Přečíst"
   },
   "ideologies": {
     "libertarians": "Libertariáni",
@@ -212,7 +166,8 @@
   },
   "components": {
     "recommendedBooks": {
-      "title": "Doporučené knihy"
+      "title": "Doporučené knihy",
+      "author": "Autor"
     }
   }
 }

@@ -5,7 +5,7 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons/faUsers";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { IExternalLink } from "../../model/IExternalLink";
-import LinkExternal from "../LinkExternal";
+import LinkExternal from "../uni/LinkExternal";
 
 export default function Footer() {
     const {t} = useTranslation();

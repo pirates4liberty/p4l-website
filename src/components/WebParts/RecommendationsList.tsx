@@ -2,7 +2,7 @@ import { useTranslation } from "next-i18next";
 import React from "react";
 import { RecommendationsRepository } from "../../data/Recommendations";
 import { IExternalLink } from "../../model/IExternalLink";
-import CardButton from "../Content/CardButton";
+import CardButton from "../uni/Content/CardButton";
 
 type Props = {
     topOnly?: boolean
@@ -11,8 +11,6 @@ type Props = {
 const repository = new RecommendationsRepository();
 
 export default function RecommendationsList(props: Props) {
-    const {t} = useTranslation();
-
     let recommendations: IExternalLink[];
 
     if (props.topOnly) {

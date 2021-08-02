@@ -1,9 +1,10 @@
+import { faBookOpen } from "@fortawesome/free-solid-svg-icons/faBookOpen";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons/faShoppingCart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "next-i18next";
 import { Button, Card } from "react-bootstrap";
 import { IBook } from "../data/Books";
-import LinkExternal from "./LinkExternal";
+import LinkExternal from "./uni/LinkExternal";
 
 type Props = {
     data?: IBook[]
@@ -23,6 +24,40 @@ export default function BooksList(props: Props) {
                             bookImg = book.imgs[0].url;
                         }
 
+                        const bookButtons = [];
+                        for (i = 0; i < 2 && book.buy !== undefined && book.buy.length > i; i++) {
+                            bookButtons.push(
+                                <LinkExternal data={book.buy[i]}>
+                                    <Button
+                                        block={true}
+                                        className={"mb-1"}>
+                                        {
+                                            book.buy[i].tags?.includes("free") &&
+                                            <>
+                                                <FontAwesomeIcon
+                                                    icon={faBookOpen}
+                                                    className={"mr-2"}/>
+                                                {t("btn.read")}
+                                            </>
+                                        }
+                                        {
+                                            !book.buy[i].tags?.includes("free") &&
+                                            <>
+                                                <FontAwesomeIcon
+                                                    icon={faShoppingCart}
+                                                    className={"mr-2"}/>
+                                                {t("btn.buy")}
+                                            </>
+                                        }
+                                        <br/>
+                                        <small>
+                                            ({book.buy[i].title})
+                                        </small>
+                                    </Button>
+                                </LinkExternal>
+                            )
+                        }
+
                         return (
                             <div className={"col-md-3"} key={i}>
                                 <Card className={"m-1"}>
@@ -39,7 +74,7 @@ export default function BooksList(props: Props) {
                                             {
                                                 book.authors &&
                                                 <div className={"mb-3"}>
-                                                    Autor: {
+                                                    {t("components.recommendedBooks.author")}: {
                                                     book.authors.map((author, j) => {
                                                             let out = <>{author.name}</>;
 
@@ -59,16 +94,7 @@ export default function BooksList(props: Props) {
                                                 }
                                                 </div>
                                             }
-                                            {
-                                                book.buy && book.buy[0] &&
-                                                <LinkExternal data={book.buy[0]}>
-                                                    <Button block={true}>
-                                                        <FontAwesomeIcon icon={faShoppingCart}
-                                                                         className={"mr-2"}/>
-                                                        {t("btn.buy")}
-                                                    </Button>
-                                                </LinkExternal>
-                                            }
+                                            {bookButtons}
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>

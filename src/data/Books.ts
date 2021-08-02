@@ -86,11 +86,84 @@ const data: IBook[] = [
                 title: "kosmas.cz",
                 url: "https://www.kosmas.cz/knihy/251711/anarchokapitalismus/",
                 lang: "cz"
+            },
+            {
+                title: "mises.cz",
+                url: "https://www.mises.cz/literatura/anarchokapitalismus-69.aspx",
+                lang: "cz",
+                tags: ['free']
             }
         ],
         imgs: [
             {
                 url: "ankap.jpg"
+            }
+        ]
+    },
+    {
+        id: "nudge",
+        title: [
+            {
+                lang: "cz",
+                value: "Šťouch"
+            },
+            {
+                lang: "en",
+                value: "Nudge"
+            }
+        ],
+        authors: [
+            {
+                name: "Richard H. Thaler",
+                link: {
+                    url: "https://cs.wikipedia.org/wiki/Richard_Thaler"
+                }
+            }
+        ],
+        buy: [
+            {
+                title: "amazon.com",
+                url: "https://www.amazon.com/Nudge-Final-Richard-H-Thaler/dp/014313700X",
+                lang: "cz"
+            }
+        ],
+        imgs: [
+            {
+                url: "nudge.jpg"
+            }
+        ]
+    },
+    {
+        id: "free-to-learn",
+        title: [
+            {
+                lang: "cz",
+                value: "Svoboda učení"
+            },
+            {
+                lang: "en",
+                value: "Free to learn"
+            }
+        ],
+        authors: [
+            {
+                name: "Peter Gray",
+                link: {
+                    url: "https://en.wikipedia.org/wiki/Peter_Gray_(psychologist)"
+                }
+            }
+        ],
+        buy: [
+            {
+                title: "mises.cz",
+                url: "https://www.mises.cz/literatura/svoboda-uceni-49.aspx",
+                lang: "cz",
+                tags: ['free']
+            }
+        ],
+        imgs: [
+            {
+                url: "free-to-learn.jpg"
             }
         ]
     },

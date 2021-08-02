@@ -1,8 +1,8 @@
 import { useTranslation } from "next-i18next";
 import Parser from "rss-parser";
 import { RssFeed, RssItem } from "../../tools/Rss/NewsLoader";
-import ContentBox from "../Content/ContentBox";
-import LinkExternal from "../LinkExternal";
+import ContentBox from "../uni/Content/ContentBox";
+import LinkExternal from "../uni/LinkExternal";
 
 export type RssSource = {
     id: string;

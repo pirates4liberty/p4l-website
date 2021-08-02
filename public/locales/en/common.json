@@ -20,10 +20,6 @@
         }
       }
     },
-    "links": {
-      "title": "Links",
-      "partiesByStates": "Pirate parties by states"
-    },
     "about": {
       "title": "About Us",
       "p1": "We create a hate-free space for discussion and the search for understanding between Pirates and anarcho-capitalists, libertarians or minarchists.",
@@ -36,15 +32,6 @@
     "news": {
       "title": "News",
       "source": "Source"
-    },
-    "parties": {
-      "fbGroups": "Facebook groups",
-      "fbPages": "Facebook pages",
-      "webSystems": "Pirate systems",
-      "subParties": "Subordinate groups",
-      "superParty": "Parent group",
-      "unofficialInitiatives": "Unofficial initiatives",
-      "otherLinks": "Other links"
     },
     "projects": {
       "title": "Projects"
@@ -62,6 +49,11 @@
     "compare": {
       "title": "Comparison",
       "description": "The table shows the strongly prevailing views, in the case of a political party, and the generally accepted views related to the philosophy. The aim is to provide an unbiased view for basic orientation, especially for people who are beginning to be interested in the issue of comparing the two parties. If you see an apparent contradiction with reality in the comparison, please feel free to contact us."
+    },
+    "teams": {
+      "title": "Teams",
+      "organizationalTeams": "Orgranizational teams",
+      "workgroups": "Workgroups"
     }
   },
   "topics": {
@@ -111,67 +103,14 @@
     "fbPage": "Facebook page",
     "fbDiscussGroup": "Facebook discuss group"
   },
-  "states": {
-    "cz": "Czechia",
-    "sk": "Slovakia",
-    "pl": "Poland",
-    "at": "Austria",
-    "eu": "European Union",
-    "by": "Belarus",
-    "ba": "Bosnia and Herzegovina",
-    "br": "Brazil",
-    "bg": "Bulgaria",
-    "cat": "Catalonia",
-    "cl": "Chile",
-    "ee": "Estonia",
-    "fr": "France",
-    "de": "Germany",
-    "gr": "Greece",
-    "hu": "Hungary",
-    "il": "Israel",
-    "it": "Italy",
-    "se": "Sweden",
-    "ca": "Canada",
-    "is": "Iceland",
-    "au": "Australia",
-    "be": "Belgium",
-    "uk": "United Kingdom"
-  },
-  "parties": {
-    "cz": "Czech Pirate Party",
-    "sk": "Pirate Party - Slovakia",
-    "pl": "Polish Pirate Party",
-    "at": "Pirate Party of Austria (piratenpartei)",
-    "eu": "The European Pirate Party",
-    "international": "Pirate Parties International",
-    "by": "The Pirates Center of Belarus",
-    "ba": "Pirate Party of Bosnia and Herzegovina (PiratskaPartija.ba)",
-    "br": "Pirate Party of Brazil",
-    "bg": "Pirate Party of Bulgaria",
-    "cat": "Pirate Party of Catalonia",
-    "cl": "Pirate Party of Chile",
-    "ee": "Estonian Pirate Party",
-    "fr": "Pirate Party of France",
-    "de": "Pirate Party Germany",
-    "gr": "Pirate Party of Greece",
-    "hu": "Pirate Party of Hungary",
-    "il": "Pirate Party of Israel",
-    "it": "Italian Pirate Party",
-    "se": "Pirate Party (Sweden)",
-    "ca": "Pirate Party of Canada",
-    "is": "Pirate Party (Iceland)",
-    "au": "Pirate Party Australia",
-    "be": "Pirate Party (Belgium)",
-    "uk": "Pirate Party UK",
-    "pwb": "Pirates without Borders"
-  },
   "msg": {
     "notFound": "Not Found."
   },
   "btn": {
     "readMore": "Read more",
     "goToWebsite": "Go to website",
-    "buy": "Buy"
+    "buy": "Buy",
+    "read": "Read"
   },
   "ideologies": {
     "libertarians": "Libertarians",
@@ -240,7 +179,8 @@
   },
   "components": {
     "recommendedBooks": {
-      "title": "Recommended books"
+      "title": "Recommended books",
+      "author": "Author"
     }
   }
 }

@@ -2,8 +2,8 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
 import { ReactNode } from "react";
-import { IExternalLink } from "../model/IExternalLink";
-import { deepCopy } from "../tools/Helpers/Tools";
+import { IExternalLink } from "../../model/IExternalLink";
+import { deepCopy } from "../../tools/Helpers/Tools";
 
 type Props = {
     data?: IExternalLink,

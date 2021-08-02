@@ -14,19 +14,17 @@ const data: IMenuItem[] = [
         url: "/"
     },
     {
-        title: "pages.links.title",
-        url: "/links",
-        children: [
-            {
-                title: "pages.recommendations.title",
-                url: "/recommendations"
-            },
-        ]
+        title: "pages.teams.title",
+        url: "/teams"
     },
-    // {
-    //     title: "pages.events.title",
-    //     url: "/events"
-    // },
+    {
+        title: "pages.projects.title",
+        url: "/projects"
+    },
+    {
+        title: "pages.events.title",
+        url: "/events"
+    },
     {
         title: "pages.news.title",
         url: "/news"

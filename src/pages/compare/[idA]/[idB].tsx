@@ -4,11 +4,11 @@ import { useTranslation } from "next-i18next";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import CompareIcon from "../../../components/CompareIcon";
-import Content from "../../../components/Content/Content";
-import ContentBox from "../../../components/Content/ContentBox";
-import ContentHeading from "../../../components/Content/ContentHeading";
-import LinkExternal from "../../../components/LinkExternal";
+import CompareIcon from "../../../components/uni/CompareIcon";
+import Content from "../../../components/uni/Content/Content";
+import ContentBox from "../../../components/uni/Content/ContentBox";
+import ContentHeading from "../../../components/uni/Content/ContentHeading";
+import LinkExternal from "../../../components/uni/LinkExternal";
 import { IdeologiesRepository, ideologyCategories, IIdeology, OpinionType } from "../../../data/Ideologies";
 import { StaticProps } from "../../../tools/Helpers/TranslationHelper";
 

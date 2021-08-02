@@ -1,6 +1,6 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { ReactNode } from "react";
-import { IExternalLink } from "../model/IExternalLink";
+import { IExternalLink } from "../../model/IExternalLink";
 import LinkInternal from "./LinkInternal";
 
 type Props = {
