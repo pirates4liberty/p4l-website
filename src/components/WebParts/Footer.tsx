@@ -12,7 +12,7 @@ export default function Footer() {
 
     const extLinks: IExternalLink[] = [
         {
-            url: "https://github.com/miloshavlicek/pirates4liberty",
+            url: "https://github.com/pirates4liberty/p4l-website",
             faIcon: faGithub,
             title: "GitHub"
         },
@@ -55,7 +55,7 @@ export default function Footer() {
 
                 <p className="mb-0">
                     {t("footer.codeLicense")}:&nbsp;
-                    <a href=" https://github.com/miloshavlicek/pirates4liberty-web/tree/main/LICENSE"
+                    <a href=" https://github.com/pirates4liberty/p4l-website/tree/main/LICENSE"
                        rel="license noopener noreferrer"
                        target="_blank">
                         MIT

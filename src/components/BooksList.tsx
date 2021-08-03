@@ -25,14 +25,14 @@ export default function BooksList(props: Props) {
                         }
 
                         const bookButtons = [];
-                        for (i = 0; i < 2 && book.buy !== undefined && book.buy.length > i; i++) {
+                        for (let j = 0; j < 2 && book.buy !== undefined && book.buy.length > j; j++) {
                             bookButtons.push(
-                                <LinkExternal data={book.buy[i]}>
+                                <LinkExternal data={book.buy[j]} key={j}>
                                     <Button
                                         block={true}
                                         className={"mb-1"}>
                                         {
-                                            book.buy[i].tags?.includes("free") &&
+                                            book.buy[j].tags?.includes("free") &&
                                             <>
                                                 <FontAwesomeIcon
                                                     icon={faBookOpen}
@@ -41,7 +41,7 @@ export default function BooksList(props: Props) {
                                             </>
                                         }
                                         {
-                                            !book.buy[i].tags?.includes("free") &&
+                                            !book.buy[j].tags?.includes("free") &&
                                             <>
                                                 <FontAwesomeIcon
                                                     icon={faShoppingCart}
@@ -51,7 +51,7 @@ export default function BooksList(props: Props) {
                                         }
                                         <br/>
                                         <small>
-                                            ({book.buy[i].title})
+                                            ({book.buy[j].title})
                                         </small>
                                     </Button>
                                 </LinkExternal>

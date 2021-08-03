@@ -1,4 +1,4 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons/faFacebookF";
 import { faComments } from "@fortawesome/free-solid-svg-icons/faComments";
 import { faUsers } from "@fortawesome/free-solid-svg-icons/faUsers";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -74,7 +74,7 @@ export default function About() {
                 <div className="col-md-4">
                     <ContentBox>
                         <h3>
-                            Pracovní skupina proti regulacím kryptoměn
+                            Prac. skupina proti regulacím kryptoměn
                         </h3>
 
                         <b>Jazyk:</b> EN
@@ -84,6 +84,57 @@ export default function About() {
                         </div>
 
                         <LinkExternal url="https://matrix.to/#workgroup-crypto:matrix.org">
+                            <Button
+                                block={true}
+                                className={"mb-1"}>
+                                <FontAwesomeIcon
+                                    icon={faComments}
+                                    className={"mr-2"}/>
+                                Vstoupit
+                            </Button>
+                        </LinkExternal>
+                    </ContentBox>
+                </div>
+
+                <div className="col-md-4">
+                    <ContentBox>
+                        <h3>
+                            Libertariánská solidarita a podpora
+                        </h3>
+
+                        <b>Jazyk:</b> CZ
+
+                        <div className={"mb-2"}>
+                            <span className="badge badge-success">Otevřený přístup</span>
+                        </div>
+
+                        <LinkExternal url="https://matrix.to/#libertariani-solidarita:matrix.org">
+                            <Button
+                                block={true}
+                                className={"mb-1"}>
+                                <FontAwesomeIcon
+                                    icon={faComments}
+                                    className={"mr-2"}/>
+                                Vstoupit
+                            </Button>
+                        </LinkExternal>
+                    </ContentBox>
+                </div>
+
+
+                <div className="col-md-4">
+                    <ContentBox>
+                        <h3>
+                            Libertariáni za životní prostředí
+                        </h3>
+
+                        <b>Jazyk:</b> CZ
+
+                        <div className={"mb-2"}>
+                            <span className="badge badge-success">Otevřený přístup</span>
+                        </div>
+
+                        <LinkExternal url="https://matrix.to/#libertariani-zivotni-prostredi:matrix.org">
                             <Button
                                 block={true}
                                 className={"mb-1"}>
@@ -133,10 +184,10 @@ export default function About() {
                 <div className="col-md-4">
                     <ContentBox>
                         <h3>
-                            Veřejná diskuze
+                            Veřejné fórum
                         </h3>
 
-                        <p>Nejširší okruh pro obecnou diskuzi související s komunitou.</p>
+                        <p>Nejširší okruh pro obecnou diskuzi témat souvisejících s komunitou.</p>
 
                         <b>Jazyk:</b> CZ / EN
 
@@ -152,6 +203,17 @@ export default function About() {
                                     icon={faComments}
                                     className={"mr-2"}/>
                                 Vstoupit
+                            </Button>
+                        </LinkExternal>
+                        
+                        <LinkExternal url="https://www.facebook.com/groups/pirates4liberty.cz">
+                            <Button
+                                block={true}
+                                className={"mb-1"}>
+                                <FontAwesomeIcon
+                                    icon={faFacebookF}
+                                    className={"mr-2"}/>
+                                FB skupina
                             </Button>
                         </LinkExternal>
                     </ContentBox>

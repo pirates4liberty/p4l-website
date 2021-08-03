@@ -46,10 +46,10 @@ export default function Projects() {
                 <div className="col-md-4">
                     <ContentBox>
                         <h3>
-                            Generátor parodické kampaně
+                            Pirátský rozcestník
                         </h3>
 
-                        <LinkExternal url="https://generator.pirates4liberty.cz/">
+                        <LinkExternal url="https://rozcestnik.pirates4liberty.cz/">
                             <Button
                                 block={true}
                                 className={"mb-1"}>
@@ -59,7 +59,7 @@ export default function Projects() {
                                 Web
                             </Button>
                         </LinkExternal>
-                        <LinkExternal url="https://github.com/cothema/pirate-generator">
+                        <LinkExternal url="https://github.com/cothema/pirate-guide">
                             <Button
                                 block={true}
                                 className={"mb-1"}>
@@ -75,10 +75,10 @@ export default function Projects() {
                 <div className="col-md-4">
                     <ContentBox>
                         <h3>
-                            Pirátský rozcestník
+                            Generátor parodické kampaně
                         </h3>
 
-                        <LinkExternal url="https://rozcestnik.pirates4liberty.cz/">
+                        <LinkExternal url="https://generator.pirates4liberty.cz/">
                             <Button
                                 block={true}
                                 className={"mb-1"}>
@@ -88,7 +88,7 @@ export default function Projects() {
                                 Web
                             </Button>
                         </LinkExternal>
-                        <LinkExternal url="https://github.com/cothema/pirate-guide">
+                        <LinkExternal url="https://github.com/cothema/pirate-generator">
                             <Button
                                 block={true}
                                 className={"mb-1"}>
