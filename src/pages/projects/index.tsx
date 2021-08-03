@@ -59,7 +59,7 @@ export default function Projects() {
                                 Web
                             </Button>
                         </LinkExternal>
-                        <LinkExternal url="https://github.com/miloshavlicek/pirati-generator">
+                        <LinkExternal url="https://github.com/cothema/pirate-generator">
                             <Button
                                 block={true}
                                 className={"mb-1"}>
@@ -88,7 +88,36 @@ export default function Projects() {
                                 Web
                             </Button>
                         </LinkExternal>
-                        <LinkExternal url="https://github.com/miloshavlicek/pirates-guide">
+                        <LinkExternal url="https://github.com/cothema/pirate-guide">
+                            <Button
+                                block={true}
+                                className={"mb-1"}>
+                                <FontAwesomeIcon
+                                    icon={faGithub}
+                                    className={"mr-2"}/>
+                                Github
+                            </Button>
+                        </LinkExternal>
+                    </ContentBox>
+                </div>
+
+                <div className="col-md-4">
+                    <ContentBox>
+                        <h3>
+                            Pirátské zprávy
+                        </h3>
+
+                        <LinkExternal url="https://news.pirates4liberty.cz/">
+                            <Button
+                                block={true}
+                                className={"mb-1"}>
+                                <FontAwesomeIcon
+                                    icon={faGlobe}
+                                    className={"mr-2"}/>
+                                Web
+                            </Button>
+                        </LinkExternal>
+                        <LinkExternal url="https://github.com/pirates4liberty/pirate-news">
                             <Button
                                 block={true}
                                 className={"mb-1"}>

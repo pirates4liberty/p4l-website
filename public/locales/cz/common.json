@@ -29,10 +29,6 @@
     "events": {
       "title": "Akce"
     },
-    "news": {
-      "title": "Novinky",
-      "source": "Zdroj"
-    },
     "projects": {
       "title": "Projekty"
     },
@@ -103,7 +99,6 @@
     "notFound": "Nenalezeno."
   },
   "btn": {
-    "readMore": "Číst dále",
     "goToWebsite": "Přejít na web",
     "buy": "Koupit",
     "read": "Přečíst"

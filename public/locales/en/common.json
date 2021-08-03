@@ -29,10 +29,6 @@
     "events": {
       "title": "Events"
     },
-    "news": {
-      "title": "News",
-      "source": "Source"
-    },
     "projects": {
       "title": "Projects"
     },
@@ -107,7 +103,6 @@
     "notFound": "Not Found."
   },
   "btn": {
-    "readMore": "Read more",
     "goToWebsite": "Go to website",
     "buy": "Buy",
     "read": "Read"

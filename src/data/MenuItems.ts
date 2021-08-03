@@ -26,10 +26,6 @@ const data: IMenuItem[] = [
         url: "/events"
     },
     {
-        title: "pages.news.title",
-        url: "/news"
-    },
-    {
         title: "pages.about.title",
         url: "/about"
     }
