@@ -4,10 +4,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "next-i18next";
 import { Button, Card } from "react-bootstrap";
 import { IBook } from "../data/Books";
+import { IExternalLink } from "../model/IExternalLink";
 import LinkExternal from "./uni/LinkExternal";
 
 type Props = {
     data?: IBook[]
+}
+
+function wrap(el: JSX.Element | string | undefined, buyElement: IExternalLink[] | undefined, key?: number): JSX.Element {
+    let out = <>{el}</>;
+
+    if (buyElement?.length) {
+        out = <LinkExternal data={buyElement[0]} key={key}>{out}</LinkExternal>
+    }
+
+    return out;
 }
 
 export default function BooksList(props: Props) {
@@ -27,7 +38,7 @@ export default function BooksList(props: Props) {
                         const bookButtons = [];
                         for (let j = 0; j < 2 && book.buy !== undefined && book.buy.length > j; j++) {
                             bookButtons.push(
-                                <LinkExternal data={book.buy[j]} key={j}>
+                                wrap(
                                     <Button
                                         block={true}
                                         className={"mb-1"}>
@@ -53,8 +64,10 @@ export default function BooksList(props: Props) {
                                         <small>
                                             ({book.buy[j].title})
                                         </small>
-                                    </Button>
-                                </LinkExternal>
+                                    </Button>,
+                                    book.buy,
+                                    j
+                                )
                             )
                         }
 
@@ -63,11 +76,17 @@ export default function BooksList(props: Props) {
                                 <Card className={"m-1"}>
                                     {
                                         bookImg &&
-                                        <Card.Img variant="top" src={"/img/book/" + bookImg} style={{"height": "360px"}}/>
+                                        wrap(
+                                            <Card.Img
+                                                variant="top"
+                                                src={"/img/book/" + bookImg}
+                                                style={{"height": "360px"}}
+                                            />,
+                                            book.buy)
                                     }
                                     <Card.Body>
                                         <Card.Title>
-                                            {book.titleTranslated}
+                                            {wrap(book.titleTranslated, book.buy)}
                                         </Card.Title>
                                         <Card.Text>
                                             {book.descriptionTranslated}
