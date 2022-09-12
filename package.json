@@ -21,7 +21,7 @@
     "next": "10.2.0",
     "next-i18next": "^8.3.0",
     "next-pwa": "^5.2.24",
-    "next-sitemap": "^1.6.80",
+    "next-sitemap": "^3.1.22",
     "node-sass": "^5.0.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^6.7.0",
